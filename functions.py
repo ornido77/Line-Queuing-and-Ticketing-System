@@ -6,6 +6,8 @@ from MyProject import *
 ## ==> GLOBALS
 
 GLOBAL_STATE = 0
+lcd1 = 1
+lcd2 = 1
 
 class UIFunctions(realMainWindow):
 
@@ -59,13 +61,22 @@ class UIFunctions(realMainWindow):
         # CLOSE
         self.ui.btn_close.clicked.connect(lambda: self.close())
 
+        self.sc1 = QShortcut(QKeySequence('1'), self)
+        self.sc1.activated.connect(self.lcd1Increment)
+        self.sc2 = QShortcut(QKeySequence('2'), self)
+        self.sc2.activated.connect(self.lcd2Increment)
+
         ## ==> CREATE SIZE GRIP TO RESIZE WINDOW
         self.sizegrip = QSizeGrip(self.ui.frame_grip)
         self.sizegrip.setStyleSheet("QSizeGrip { width: 10px; height: 10px; margin: 5px } QSizeGrip:hover { background-color: rgb(50, 42, 94) }")
         self.sizegrip.setToolTip("Resize Window")
 
+    def mousePressEvent(self, event):
+        self.dragPos = event.globalPos()
 
 
     ## RETURN STATUS IF WINDOWS IS MAXIMIZE OR RESTAURED
     def returnStatus():
         return GLOBAL_STATE
+
+
