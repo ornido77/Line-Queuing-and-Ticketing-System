@@ -31,7 +31,7 @@ class UIFunctions(realMainWindow):
             GLOBAL_STATE = 0
             self.showNormal()
             self.resize(self.width()+1, self.height()+1)
-            self.ui.frame_main_bg_layout.setContentsMargins(10, 10, 10, 10)
+            self.ui.frame_main_bg_layout.setContentsMargins(0, 0, 0, 0)
             self.ui.frame_main_bg.setStyleSheet("background-color: #000000; border-radius: 10px;")
             self.ui.btn_maximize.setToolTip("Maximize")
 

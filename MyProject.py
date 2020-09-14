@@ -41,6 +41,9 @@ class realMainWindow(QMainWindow):
 
     ## APP EVENTS
     ########################################################################
+    def mousePressEvent(self, event):
+        self.dragPos = event.globalPos()
+
     def lcd1Increment(self):
         global lcd1
         self.ui.lcd_no1.display(lcd1)
