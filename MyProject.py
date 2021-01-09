@@ -41,16 +41,49 @@ class realMainWindow(QMainWindow):
 
     ## APP EVENTS
     ########################################################################
-    def lcd1Increment(self):
-        global lcd1
-        self.ui.lcd_no1.display(lcd1)
-        lcd1 += 1
-    def lcd2Increment(self):
-        global lcd2
-        self.ui.lcd_no2.display(lcd2)
-        lcd2 += 1
+    def mousePressEvent(self, event):
+        self.dragPos = event.globalPos()
 
-
+    ##TICKET INCREMENT
+    def ticketIncrement1(self):
+        global value1
+        if value1 > 99:
+            self.ui.label_ticketValue1.setText(("CU") + str(value1))
+            self.ui.label_ticketValue.setText(("CU") + str(value1))
+        elif value1 < 10:
+            self.ui.label_ticketValue1.setText(("CU00") + str(value1))
+            self.ui.label_ticketValue.setText(("CU00") + str(value1))
+        else:
+            self.ui.label_ticketValue1.setText(("CU0") + str(value1))
+            self.ui.label_ticketValue.setText(("CU0") + str(value1))
+        self.ui.label_roomNo.setText("Room 101")
+        value1 += 1
+    def ticketIncrement2(self):
+        global value2
+        if value2 > 99:
+            self.ui.label_ticketValue2.setText(("VC") + str(value2))
+            self.ui.label_ticketValue.setText(("VC") + str(value2))
+        elif value2 < 10:
+            self.ui.label_ticketValue2.setText(("VC00") + str(value2))
+            self.ui.label_ticketValue.setText(("VC00") + str(value2))
+        else:
+            self.ui.label_ticketValue2.setText(("VC0") + str(value2))
+            self.ui.label_ticketValue.setText(("VC0") + str(value2))
+        self.ui.label_roomNo.setText("Room 102")
+        value2 += 1
+    def ticketIncrement3(self):
+        global value3
+        if value3 > 99:
+            self.ui.label_ticketValue3.setText(("DT") + str(value3))
+            self.ui.label_ticketValue.setText(("DT") + str(value3))
+        elif value3 < 10:
+            self.ui.label_ticketValue3.setText(("DT00") + str(value3))
+            self.ui.label_ticketValue.setText(("DT00") + str(value3))
+        else:
+            self.ui.label_ticketValue3.setText(("DT0") + str(value3))
+            self.ui.label_ticketValue.setText(("DT0") + str(value3))
+        self.ui.label_roomNo.setText("Room 103")
+        value3 += 1
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = realMainWindow()

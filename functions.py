@@ -6,8 +6,9 @@ from MyProject import *
 ## ==> GLOBALS
 
 GLOBAL_STATE = 0
-lcd1 = 1
-lcd2 = 1
+value1 = 1
+value2 = 1
+value3 = 1
 
 class UIFunctions(realMainWindow):
 
@@ -25,14 +26,13 @@ class UIFunctions(realMainWindow):
 
             # IF MAXIMIZED REMOVE MARGINS AND BORDER RADIUS
             self.ui.frame_main_bg_layout.setContentsMargins(0, 0, 0, 0)
-            self.ui.frame_main_bg.setStyleSheet("background-color: #000000; border-radius: 0px;")
+            self.ui.frame_main_bg.setStyleSheet("background-color: #ffffff; border-radius: 0px;")
             self.ui.btn_maximize.setToolTip("Restore")
         else:
             GLOBAL_STATE = 0
             self.showNormal()
             self.resize(self.width()+1, self.height()+1)
-            self.ui.frame_main_bg_layout.setContentsMargins(10, 10, 10, 10)
-            self.ui.frame_main_bg.setStyleSheet("background-color: #000000; border-radius: 10px;")
+            self.ui.frame_main_bg.setStyleSheet("background-color: #ffffff; border-radius: 10px;")
             self.ui.btn_maximize.setToolTip("Maximize")
 
     ## ==> UI DEFINITIONS
@@ -61,10 +61,12 @@ class UIFunctions(realMainWindow):
         # CLOSE
         self.ui.btn_close.clicked.connect(lambda: self.close())
 
-        self.sc1 = QShortcut(QKeySequence('1'), self)
-        self.sc1.activated.connect(self.lcd1Increment)
-        self.sc2 = QShortcut(QKeySequence('2'), self)
-        self.sc2.activated.connect(self.lcd2Increment)
+        self.btn1 = QShortcut(QKeySequence('1'), self)
+        self.btn1.activated.connect(self.ticketIncrement1)
+        self.btn2 = QShortcut(QKeySequence('2'), self)
+        self.btn2.activated.connect(self.ticketIncrement2)
+        self.btn3 = QShortcut(QKeySequence('3'), self)
+        self.btn3.activated.connect(self.ticketIncrement3)
 
         ## ==> CREATE SIZE GRIP TO RESIZE WINDOW
         self.sizegrip = QSizeGrip(self.ui.frame_grip)
