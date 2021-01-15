@@ -7,783 +7,1138 @@
     <x>0</x>
     <y>0</y>
     <width>1000</width>
-    <height>800</height>
+    <height>600</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>0</width>
-    <height>0</height>
+    <width>1000</width>
+    <height>600</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>1000</width>
-    <height>800</height>
+    <height>600</height>
    </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0" colspan="2">
-     <widget class="QLabel" name="name_label">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>100</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>100</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Times New Roman</family>
-        <pointsize>28</pointsize>
-       </font>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Panel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <property name="lineWidth">
-       <number>5</number>
-      </property>
-      <property name="text">
-       <string>Bagbaguin Health Center and Lying - In Clinic</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QFrame" name="leftBody">
-      <property name="maximumSize">
-       <size>
-        <width>400</width>
-        <height>16777215</height>
-       </size>
+   <layout class="QVBoxLayout" name="frame_centralwidget_layout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="frame_main_bg">
+      <property name="styleSheet">
+       <string notr="true">border-radius: 10px;
+background-color: rgb(234, 234, 234);
+</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Panel</enum>
+       <enum>QFrame::Box</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Sunken</enum>
       </property>
       <property name="lineWidth">
-       <number>3</number>
+       <number>1</number>
       </property>
-      <layout class="QGridLayout" name="gridLayout_2">
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_3">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Name</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1" colspan="2">
-        <widget class="QLineEdit" name="lineEdit"/>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_4">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Age</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1" colspan="2">
-        <widget class="QLineEdit" name="lineEdit_2"/>
-       </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="label_5">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Address</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1" colspan="2">
-        <widget class="QLineEdit" name="lineEdit_3"/>
-       </item>
-       <item row="4" column="0">
-        <widget class="QLabel" name="label_6">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Contact</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="1" colspan="2">
-        <widget class="QLineEdit" name="lineEdit_4"/>
-       </item>
-       <item row="6" column="0">
-        <widget class="QCheckBox" name="checkBox">
-         <property name="text">
-          <string>Check Up</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="1">
-        <widget class="QCheckBox" name="checkBox_2">
-         <property name="text">
-          <string>Vaccine</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="2">
-        <widget class="QCheckBox" name="checkBox_3">
-         <property name="text">
-          <string>Dental</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0" colspan="3">
-        <widget class="QLabel" name="label_2">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>100</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>Times New Roman</family>
-           <pointsize>18</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Patient's Information</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="0" colspan="3">
-        <widget class="QLabel" name="label_7">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>100</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>Times New Roman</family>
-           <pointsize>18</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Service Needed</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QFrame" name="rightBody">
-      <property name="maximumSize">
-       <size>
-        <width>600</width>
-        <height>16777215</height>
-       </size>
+      <property name="midLineWidth">
+       <number>0</number>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::Panel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <property name="lineWidth">
-       <number>3</number>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout">
+      <layout class="QVBoxLayout" name="frame_main_bg_layout">
+       <property name="spacing">
+        <number>5</number>
+       </property>
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <property name="topMargin">
+        <number>5</number>
+       </property>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
+       <property name="bottomMargin">
+        <number>5</number>
+       </property>
        <item>
-        <widget class="QTabWidget" name="service_tab">
-         <property name="currentIndex">
+        <widget class="QFrame" name="frame_title_bar">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="title_bar_layout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="frame_title">
+            <property name="styleSheet">
+             <string notr="true">background-color: none;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="title_layout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>5</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_title">
+               <property name="font">
+                <font>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(52, 217, 182);</string>
+               </property>
+               <property name="text">
+                <string>Patients Information Window</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_btns">
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: none;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="btn_layout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="btn_minimize">
+               <property name="minimumSize">
+                <size>
+                 <width>16</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+	background-color: rgb(0, 170, 0);
+	border-radius: 8px;
+}
+QPushButton:hover{
+	background-color: rgb(85, 170, 0);
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_close">
+               <property name="minimumSize">
+                <size>
+                 <width>16</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+	background-color: rgb(255, 0, 0);
+	border-radius: 8px;
+}
+QPushButton:hover{
+	
+	background-color: rgb(255, 60, 105);
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_content_bar">
+         <property name="accessibleName">
+          <string/>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-radius: 1px;
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
           <number>0</number>
          </property>
-         <widget class="QWidget" name="checkUpTab_2">
-          <attribute name="title">
-           <string>Check Up</string>
-          </attribute>
-          <layout class="QGridLayout" name="gridLayout_3">
-           <item row="0" column="0">
-            <widget class="QLabel" name="CUlabel">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>75</height>
-              </size>
+         <layout class="QHBoxLayout" name="frame_contentBar_layout">
+          <property name="spacing">
+           <number>5</number>
+          </property>
+          <property name="leftMargin">
+           <number>5</number>
+          </property>
+          <property name="topMargin">
+           <number>5</number>
+          </property>
+          <property name="rightMargin">
+           <number>5</number>
+          </property>
+          <property name="bottomMargin">
+           <number>5</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="frame_leftBody">
+            <property name="maximumSize">
+             <size>
+              <width>350</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(46, 64, 87);
+color: white;
+border: outset;
+border-radius: 5px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <property name="lineWidth">
+             <number>10</number>
+            </property>
+            <property name="midLineWidth">
+             <number>10</number>
+            </property>
+            <layout class="QGridLayout" name="gridLayout">
+             <property name="leftMargin">
+              <number>30</number>
              </property>
-             <property name="font">
-              <font>
-               <family>Times New Roman</family>
-               <pointsize>18</pointsize>
-              </font>
+             <property name="topMargin">
+              <number>30</number>
              </property>
-             <property name="text">
-              <string>Patient's Record</string>
+             <property name="rightMargin">
+              <number>30</number>
              </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
+             <property name="bottomMargin">
+              <number>30</number>
              </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QTableWidget" name="checkUpTable">
-             <property name="rowCount">
-              <number>100</number>
+             <item row="0" column="0" colspan="5">
+              <widget class="QLabel" name="titleLabel">
+               <property name="maximumSize">
+                <size>
+                 <width>16777214</width>
+                 <height>100</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Consolas</family>
+                 <pointsize>18</pointsize>
+                 <weight>50</weight>
+                 <italic>false</italic>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(138, 155, 197);
+border-radius: 10px;</string>
+               </property>
+               <property name="text">
+                <string>Patients Information</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="3" colspan="2">
+              <widget class="QCheckBox" name="checkBox_4">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Consolas</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Priority</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="0" colspan="3">
+              <widget class="QCheckBox" name="dentalBox">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Consolas</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Dental</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0" colspan="2">
+              <widget class="QLabel" name="nameLabel">
+               <property name="font">
+                <font>
+                 <family>Consolas</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Full Name</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="ageLabel">
+               <property name="font">
+                <font>
+                 <family>Consolas</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Age</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="contactLabel">
+               <property name="font">
+                <font>
+                 <family>Consolas</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Contact</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="2" colspan="3">
+              <widget class="QLineEdit" name="ContactEdit">
+               <property name="styleSheet">
+                <string notr="true">QLineEdit{
+	background-color: rgb(229, 230, 220);
+	color: rgb(0, 71, 104);
+	border-style: outset;
+	border-width:2px;
+	border-radius: 5px;
+	border-color: black;
+}
+QLineEdit:hover{
+	background-color: rgb(233, 231, 255);
+}</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="3" colspan="2">
+              <widget class="QCheckBox" name="vaccineBox">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Consolas</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Vaccine</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0">
+              <widget class="QLabel" name="timeInLabel">
+               <property name="font">
+                <font>
+                 <family>Consolas</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Time In</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="2" colspan="3">
+              <widget class="QLineEdit" name="addressEdit">
+               <property name="styleSheet">
+                <string notr="true">QLineEdit{
+	background-color: rgb(229, 230, 220);
+	color: rgb(0, 71, 104);
+	border-style: outset;
+	border-width:2px;
+	border-radius: 5px;
+	border-color: black;
+}
+QLineEdit:hover{
+	background-color: rgb(233, 231, 255);
+}</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="2" colspan="3">
+              <widget class="QLineEdit" name="ageEdit">
+               <property name="styleSheet">
+                <string notr="true">QLineEdit{
+	background-color: rgb(229, 230, 220);
+	color: rgb(0, 71, 104);
+	border-style: outset;
+	border-width:2px;
+	border-radius: 5px;
+	border-color: black;
+}
+QLineEdit:hover{
+	background-color: rgb(233, 231, 255);
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="0" colspan="3">
+              <widget class="QCheckBox" name="checkUpBox">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Consolas</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Check Up</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="0" colspan="4">
+              <widget class="QPushButton" name="saveBtn">
+               <property name="minimumSize">
+                <size>
+                 <width>125</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Times New Roman</family>
+                 <pointsize>12</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+	background-color: rgb(138, 155, 197);
+	color: white;
+	border-style: outset;
+	border-width:1px;
+	border-radius: 10px;
+	border-color: black;
+	padding: 6px;
+	mid-width: 10px;
+}
+QPushButton:hover{
+	background-color: rgb(186, 172, 255);
+}</string>
+               </property>
+               <property name="text">
+                <string>Save</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="2" colspan="3">
+              <widget class="QLineEdit" name="timeInEdit">
+               <property name="styleSheet">
+                <string notr="true">QLineEdit{
+	background-color: rgb(229, 230, 220);
+	color: rgb(0, 71, 104);
+	border-style: outset;
+	border-width:2px;
+	border-radius: 5px;
+	border-color: black;
+}
+QLineEdit:hover{
+	background-color: rgb(233, 231, 255);
+}</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="addressLabel">
+               <property name="font">
+                <font>
+                 <family>Consolas</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Address</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="4">
+              <widget class="QPushButton" name="saveAndPrintBtn">
+               <property name="minimumSize">
+                <size>
+                 <width>125</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Times New Roman</family>
+                 <pointsize>12</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+	background-color: rgb(138, 155, 197);
+	color: white;
+	border-style: outset;
+	border-width:1px;
+	border-radius: 10px;
+	border-color: black;
+	padding: 6px;
+	mid-width: 10px;
+}
+QPushButton:hover{
+	background-color: rgb(186, 172, 255);
+}</string>
+               </property>
+               <property name="text">
+                <string>Save &amp; Print</string>
+               </property>
+               <property name="default">
+                <bool>false</bool>
+               </property>
+               <property name="flat">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2" colspan="3">
+              <widget class="QLineEdit" name="nameEdit">
+               <property name="styleSheet">
+                <string notr="true">QLineEdit{
+	background-color: rgb(229, 230, 220);
+	color: rgb(0, 71, 104);
+	border-style: outset;
+	border-width:2px;
+	border-radius: 5px;
+	border-color: black;
+}
+QLineEdit:hover{
+	background-color: rgb(233, 231, 255);
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_rightBody">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(74, 74, 111);
+border-radius: 5px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <widget class="QTabWidget" name="tabWidget">
+               <property name="tabPosition">
+                <enum>QTabWidget::North</enum>
+               </property>
+               <property name="tabShape">
+                <enum>QTabWidget::Rounded</enum>
+               </property>
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>16</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="documentMode">
+                <bool>false</bool>
+               </property>
+               <property name="tabsClosable">
+                <bool>false</bool>
+               </property>
+               <property name="movable">
+                <bool>true</bool>
+               </property>
+               <property name="tabBarAutoHide">
+                <bool>false</bool>
+               </property>
+               <widget class="QWidget" name="checkUpTab">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777209</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: none;
+border-raidus: 5px;</string>
+                </property>
+                <attribute name="title">
+                 <string>Check Up</string>
+                </attribute>
+                <layout class="QGridLayout" name="gridLayout_2">
+                 <item row="0" column="0" colspan="2">
+                  <widget class="QTableWidget" name="checkUpTable">
+                   <property name="rowCount">
+                    <number>0</number>
+                   </property>
+                   <attribute name="verticalHeaderVisible">
+                    <bool>false</bool>
+                   </attribute>
+                   <column>
+                    <property name="text">
+                     <string>New Column</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Full Name</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Age</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Address</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Contact</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Time In</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Time Out</string>
+                    </property>
+                   </column>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QPushButton" name="checkUpRefresh">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	background-color: rgb(138, 155, 197);
+	color: white;
+	border-style: outset;
+	border-width:1px;
+	border-radius: 5px;
+	border-color: black;
+	padding: 6px;
+	mid-width: 10px;
+}
+QPushButton:hover{
+	background-color: rgb(186, 172, 255);
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Refresh</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QPushButton" name="checkUpNew">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	background-color: rgb(138, 155, 197);
+	color: white;
+	border-style: outset;
+	border-width:1px;
+	border-radius: 5px;
+	border-color: black;
+	padding: 6px;
+	mid-width: 10px;
+}
+QPushButton:hover{
+	background-color: rgb(186, 172, 255);
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>New Record</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="vaccineTab">
+                <property name="styleSheet">
+                 <string notr="true">background-color: none;
+border-raidus: 5px;</string>
+                </property>
+                <attribute name="title">
+                 <string>Vaccine</string>
+                </attribute>
+                <layout class="QGridLayout" name="gridLayout_3">
+                 <item row="0" column="0" colspan="2">
+                  <widget class="QTableWidget" name="vaccineTable">
+                   <property name="rowCount">
+                    <number>0</number>
+                   </property>
+                   <attribute name="verticalHeaderVisible">
+                    <bool>false</bool>
+                   </attribute>
+                   <column>
+                    <property name="text">
+                     <string>New Column</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Full Name</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Age</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Address</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Contact</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Time In</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Time Out</string>
+                    </property>
+                   </column>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QPushButton" name="vaccineRefresh">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	background-color: rgb(138, 155, 197);
+	color: white;
+	border-style: outset;
+	border-width:1px;
+	border-radius: 5px;
+	border-color: black;
+	padding: 6px;
+	mid-width: 10px;
+}
+QPushButton:hover{
+	background-color: rgb(186, 172, 255);
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Refresh</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QPushButton" name="vaccineNew">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	background-color: rgb(138, 155, 197);
+	color: white;
+	border-style: outset;
+	border-width:1px;
+	border-radius: 5px;
+	border-color: black;
+	padding: 6px;
+	mid-width: 10px;
+}
+QPushButton:hover{
+	background-color: rgb(186, 172, 255);
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>New Record</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="dentalTab">
+                <property name="styleSheet">
+                 <string notr="true">background-color: none;
+border-raidus: 5px;</string>
+                </property>
+                <attribute name="title">
+                 <string>Dental</string>
+                </attribute>
+                <layout class="QGridLayout" name="gridLayout_4">
+                 <item row="0" column="0" colspan="2">
+                  <widget class="QTableWidget" name="dentalTable">
+                   <property name="rowCount">
+                    <number>0</number>
+                   </property>
+                   <attribute name="verticalHeaderVisible">
+                    <bool>false</bool>
+                   </attribute>
+                   <column>
+                    <property name="text">
+                     <string>New Column</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Full Name</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Age</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Address</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Contact</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Time In</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Time Out</string>
+                    </property>
+                   </column>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QPushButton" name="dentalRefresh">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	background-color: rgb(138, 155, 197);
+	color: white;
+	border-style: outset;
+	border-width:1px;
+	border-radius: 5px;
+	border-color: black;
+	padding: 6px;
+	mid-width: 10px;
+}
+QPushButton:hover{
+	background-color: rgb(186, 172, 255);
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>Refresh</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QPushButton" name="dentalNew">
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton{
+	background-color: rgb(138, 155, 197);
+	color: white;
+	border-style: outset;
+	border-width:1px;
+	border-radius: 5px;
+	border-color: black;
+	padding: 6px;
+	mid-width: 10px;
+}
+QPushButton:hover{
+	background-color: rgb(186, 172, 255);
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>New Record</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_etc_bar">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <layout class="QHBoxLayout" name="etc_layout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>5</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="frame_credits">
+            <property name="styleSheet">
+             <string notr="true">background-color: none;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="credits_layout">
+             <property name="leftMargin">
+              <number>5</number>
              </property>
-             <attribute name="verticalHeaderVisible">
-              <bool>false</bool>
-             </attribute>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <column>
-              <property name="text">
-               <string>Ticket Number</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Full Name</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Age</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Address</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Contact</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Time In</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Time Out</string>
-              </property>
-             </column>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QPushButton" name="CUrefresh">
-             <property name="text">
-              <string>Refresh</string>
+             <property name="bottomMargin">
+              <number>0</number>
              </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="vaccineTab">
-          <attribute name="title">
-           <string>Vaccine</string>
-          </attribute>
-          <layout class="QGridLayout" name="gridLayout_4">
-           <item row="0" column="0">
-            <widget class="QLabel" name="CUlabel_2">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>75</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Times New Roman</family>
-               <pointsize>18</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>Patient's Record</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QTableWidget" name="checkUpTable_2">
-             <property name="rowCount">
-              <number>100</number>
-             </property>
-             <attribute name="verticalHeaderVisible">
-              <bool>false</bool>
-             </attribute>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <column>
-              <property name="text">
-               <string>Ticket Number</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Full Name</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Age</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Address</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Contact</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Time In</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Time Out</string>
-              </property>
-             </column>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QPushButton" name="CUrefresh_2">
-             <property name="text">
-              <string>Refresh</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="dentalTab">
-          <attribute name="title">
-           <string>Dental</string>
-          </attribute>
-          <layout class="QGridLayout" name="gridLayout_5">
-           <item row="0" column="0">
-            <widget class="QLabel" name="CUlabel_3">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>75</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Times New Roman</family>
-               <pointsize>18</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>Patient's Record</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QTableWidget" name="checkUpTable_3">
-             <property name="rowCount">
-              <number>100</number>
-             </property>
-             <attribute name="verticalHeaderVisible">
-              <bool>false</bool>
-             </attribute>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <row/>
-             <column>
-              <property name="text">
-               <string>Ticket Number</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Full Name</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Age</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Address</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Contact</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Time In</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Time Out</string>
-              </property>
-             </column>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QPushButton" name="CUrefresh_3">
-             <property name="text">
-              <string>Refresh</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
+             <item>
+              <widget class="QLabel" name="label_credits">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(99, 99, 149);</string>
+               </property>
+               <property name="text">
+                <string>Powered By: Python</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_grip">
+            <property name="maximumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: none; padding: 5px; </string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
       </layout>
@@ -792,6 +1147,25 @@
    </layout>
   </widget>
  </widget>
- <resources/>
- <connections/>
+ <resources>
+  <include location="test.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btn_close</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1143</x>
+     <y>24</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>587</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
