@@ -50,6 +50,7 @@ class UIFunctions(realMainWindow):
 
         # CLOSE
         self.ui.btn_close.clicked.connect(lambda: self.close())
+        self.ui.checkUpRefresh.clicked.connect(self.loaddata)
 
         ## ==> CREATE SIZE GRIP TO RESIZE WINDOW
         self.sizegrip = QSizeGrip(self.ui.frame_grip)
@@ -63,6 +64,3 @@ class UIFunctions(realMainWindow):
     ## RETURN STATUS IF WINDOWS IS MAXIMIZE OR RESTAURED
     def returnStatus():
         return GLOBAL_STATE
-
-
-
