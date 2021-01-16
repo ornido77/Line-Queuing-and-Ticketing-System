@@ -50,7 +50,7 @@ class UIFunctions(realMainWindow):
 
         # CLOSE
         self.ui.btn_close.clicked.connect(lambda: self.close())
-        self.ui.checkUpRefresh.clicked.connect(self.loaddata)
+
 
         ## ==> CREATE SIZE GRIP TO RESIZE WINDOW
         self.sizegrip = QSizeGrip(self.ui.frame_grip)
@@ -64,3 +64,35 @@ class UIFunctions(realMainWindow):
     ## RETURN STATUS IF WINDOWS IS MAXIMIZE OR RESTAURED
     def returnStatus():
         return GLOBAL_STATE
+
+class dbWindow(realMainWindow):
+##DATABASE
+    def loaddata(self):
+        self.ui.checkUpTable.setRowCount(150)
+        self.ui.checkUpTable.setColumnWidth(0, 90)
+        self.ui.checkUpTable.setColumnWidth(2, 30)
+        self.ui.checkUpTable.setColumnWidth(3, 140)
+        self.ui.checkUpTable.setColumnWidth(4, 80)
+        self.ui.checkUpTable.setColumnWidth(5, 60)
+        self.ui.checkUpTable.setColumnWidth(6, 60)
+        connection = sqlite3.connect('patients')
+        cur = connection.cursor()
+        pInfo = 'SELECT * FROM checkUp'
+
+        tablerow=0
+        results = cur.execute(pInfo)
+        for row in results:
+            if row[0] < 10:
+                ticket = "CU00" + str(row[0])
+            elif row[0] > 99:
+                ticket = "CU" + str(row[0])
+            else:
+                ticket = "CU0" + str(row[0])
+            self.ui.checkUpTable.setItem(tablerow, 0, QtWidgets.QTableWidgetItem(ticket))
+            self.ui.checkUpTable.setItem(tablerow, 1, QtWidgets.QTableWidgetItem(row[1]))
+            self.ui.checkUpTable.setItem(tablerow, 2, QtWidgets.QTableWidgetItem(str(row[2])))
+            self.ui.checkUpTable.setItem(tablerow, 3, QtWidgets.QTableWidgetItem(row[3]))
+            self.ui.checkUpTable.setItem(tablerow, 4, QtWidgets.QTableWidgetItem(str(row[4])))
+            self.ui.checkUpTable.setItem(tablerow, 5, QtWidgets.QTableWidgetItem(row[5]))
+            self.ui.checkUpTable.setItem(tablerow, 6, QtWidgets.QTableWidgetItem(row[6]))
+            tablerow+=1
