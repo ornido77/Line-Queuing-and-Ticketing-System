@@ -757,57 +757,10 @@ border-raidus: 5px;</string>
                 </attribute>
                 <layout class="QGridLayout" name="gridLayout_2">
                  <item row="0" column="0" colspan="2">
-                  <widget class="QTableWidget" name="checkUpTable">
-                   <property name="frameShape">
-                    <enum>QFrame::WinPanel</enum>
-                   </property>
-                   <property name="horizontalScrollBarPolicy">
-                    <enum>Qt::ScrollBarAlwaysOff</enum>
-                   </property>
-                   <property name="showGrid">
-                    <bool>true</bool>
-                   </property>
-                   <property name="rowCount">
-                    <number>0</number>
-                   </property>
+                  <widget class="QTableView" name="cuView">
                    <attribute name="verticalHeaderVisible">
                     <bool>false</bool>
                    </attribute>
-                   <column>
-                    <property name="text">
-                     <string>Ticket Number</string>
-                    </property>
-                   </column>
-                   <column>
-                    <property name="text">
-                     <string>Full Name</string>
-                    </property>
-                   </column>
-                   <column>
-                    <property name="text">
-                     <string>Age</string>
-                    </property>
-                   </column>
-                   <column>
-                    <property name="text">
-                     <string>Address</string>
-                    </property>
-                   </column>
-                   <column>
-                    <property name="text">
-                     <string>Contact</string>
-                    </property>
-                   </column>
-                   <column>
-                    <property name="text">
-                     <string>Time In</string>
-                    </property>
-                   </column>
-                   <column>
-                    <property name="text">
-                     <string>Time Out</string>
-                    </property>
-                   </column>
                   </widget>
                  </item>
                  <item row="1" column="0">
@@ -866,48 +819,10 @@ border-raidus: 5px;</string>
                 </attribute>
                 <layout class="QGridLayout" name="gridLayout_3">
                  <item row="0" column="0" colspan="2">
-                  <widget class="QTableWidget" name="vaccineTable">
-                   <property name="rowCount">
-                    <number>0</number>
-                   </property>
+                  <widget class="QTableView" name="vcView">
                    <attribute name="verticalHeaderVisible">
                     <bool>false</bool>
                    </attribute>
-                   <column>
-                    <property name="text">
-                     <string>Ticket Number</string>
-                    </property>
-                   </column>
-                   <column>
-                    <property name="text">
-                     <string>Full Name</string>
-                    </property>
-                   </column>
-                   <column>
-                    <property name="text">
-                     <string>Age</string>
-                    </property>
-                   </column>
-                   <column>
-                    <property name="text">
-                     <string>Address</string>
-                    </property>
-                   </column>
-                   <column>
-                    <property name="text">
-                     <string>Contact</string>
-                    </property>
-                   </column>
-                   <column>
-                    <property name="text">
-                     <string>Time In</string>
-                    </property>
-                   </column>
-                   <column>
-                    <property name="text">
-                     <string>Time Out</string>
-                    </property>
-                   </column>
                   </widget>
                  </item>
                  <item row="1" column="0">
@@ -966,48 +881,10 @@ border-raidus: 5px;</string>
                 </attribute>
                 <layout class="QGridLayout" name="gridLayout_4">
                  <item row="0" column="0" colspan="2">
-                  <widget class="QTableWidget" name="dentalTable">
-                   <property name="rowCount">
-                    <number>0</number>
-                   </property>
+                  <widget class="QTableView" name="tableView">
                    <attribute name="verticalHeaderVisible">
                     <bool>false</bool>
                    </attribute>
-                   <column>
-                    <property name="text">
-                     <string>Ticket Number</string>
-                    </property>
-                   </column>
-                   <column>
-                    <property name="text">
-                     <string>Full Name</string>
-                    </property>
-                   </column>
-                   <column>
-                    <property name="text">
-                     <string>Age</string>
-                    </property>
-                   </column>
-                   <column>
-                    <property name="text">
-                     <string>Address</string>
-                    </property>
-                   </column>
-                   <column>
-                    <property name="text">
-                     <string>Contact</string>
-                    </property>
-                   </column>
-                   <column>
-                    <property name="text">
-                     <string>Time In</string>
-                    </property>
-                   </column>
-                   <column>
-                    <property name="text">
-                     <string>Time Out</string>
-                    </property>
-                   </column>
                   </widget>
                  </item>
                  <item row="1" column="0">

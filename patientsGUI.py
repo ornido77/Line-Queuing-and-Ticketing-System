@@ -1,6 +1,6 @@
 import sys
 import platform
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtCore, QtGui, QtWidgets, QtSql
 from PyQt5.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
 from PyQt5.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
 from PyQt5.QtWidgets import *
@@ -17,8 +17,6 @@ class realMainWindow(QMainWindow):
         QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-
-
         # MOVE WINDOW
         def moveWindow(event):
             # RESTORE BEFORE MOVE
@@ -40,13 +38,67 @@ class realMainWindow(QMainWindow):
         ## SHOW ==> MAIN WINDOW
         ########################################################################
         self.show()
+        self.db = QtSql.QSqlDatabase.addDatabase('QSQLITE')
+        self.db.setDatabaseName('patients')
+        self.model = QtSql.QSqlTableModel()
+        self.model.setTable('checkUp')
+        self.model.setEditStrategy(QtSql.QSqlTableModel.OnFieldChange)
+        self.model.select()
+        self.model.setHeaderData(0, QtCore.Qt.Horizontal, "Ticket Number")
+        self.model.setHeaderData(1, QtCore.Qt.Horizontal, "Name")
+        self.model.setHeaderData(2, QtCore.Qt.Horizontal, "Age")
+        self.model.setHeaderData(3, QtCore.Qt.Horizontal, "Address")
+        self.model.setHeaderData(4, QtCore.Qt.Horizontal, "Contact")
+        self.model.setHeaderData(4, QtCore.Qt.Horizontal, "Time In")
+        self.model.setHeaderData(4, QtCore.Qt.Horizontal, "Time Out")
+        self.ui.cuView.setModel(self.model)
+        self.ui.saveBtn.clicked.connect(self.addToDb)
+        self.show()
+        self.ui.saveAndPrintBtn.clicked.connect(self.saveAndPrint)
+        self.i = self.model.rowCount()
 
-        ##SHOW DATABASE
-        dbWindow.loaddata(self)
     ## APP EVENTS
     ########################################################################
     def mousePressEvent(self, event):
         self.dragPos = event.globalPos()
+    def addToDb(self):
+        try:
+            if (self.ui.nameEdit.text()) and (self.ui.ageEdit.text() and
+                                              (self.ui.addressEdit.text()) and (self.ui.timeInEdit.text())) :
+                self.model.insertRows(self.i, 1)
+                self.model.setData(self.model.index(self.i, 1), self.ui.nameEdit.text())
+                self.model.setData(self.model.index(self.i, 2), self.ui.ageEdit.text())
+                self.model.setData(self.model.index(self.i, 3), self.ui.addressEdit.text())
+                self.model.setData(self.model.index(self.i, 4), self.ui.ContactEdit.text())
+                self.model.setData(self.model.index(self.i, 5), self.ui.timeInEdit.text())
+                self.model.submitAll()
+                self.i += 1
+                self.ui.nameEdit.clear()
+                self.ui.ageEdit.clear()
+                self.ui.addressEdit.clear()
+                self.ui.ContactEdit.clear()
+                self.ui.timeInEdit.clear()
+                QMessageBox.information(QMessageBox(), 'Successful', 'Data Input Successfully!')
+
+
+            else:
+                QMessageBox.warning(QMessageBox(), "Unsuccessful", "Please Input Necessary Informations!")
+        except:
+            QMessageBox.warning(QMessageBox(),'Unsuccessful','Data Input Unsuccessfully!')
+
+    def updaterow(self):
+        if self.ui.cuView.currentIndex().row() > -1:
+            record = self.model.record(self.ui.cuView.currentIndex().row())
+            record.setValue("Name", self.ui.nameEdit.text())
+            record.setValue("Surname", self.ui.ageEdit.text())
+            record.setValue("DOB", self.ui.addressEdit.text())
+            record.setValue("Phone", self.ui.ContactEdit.text())
+            self.model.setRecord(self.ui.cuView.currentIndex().row(), record)
+        else:
+            QMessageBox.question(self, 'Message', "Please select a row would you like to update", QMessageBox.Ok)
+            self.show()
+    def saveAndPrint(self):
+        QMessageBox.warning(QMessageBox(), 'Unsuccessful', 'ERROR!')
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = realMainWindow()
