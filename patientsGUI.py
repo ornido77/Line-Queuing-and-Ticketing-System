@@ -49,9 +49,15 @@ class realMainWindow(QMainWindow):
         self.model.setHeaderData(2, QtCore.Qt.Horizontal, "Age")
         self.model.setHeaderData(3, QtCore.Qt.Horizontal, "Address")
         self.model.setHeaderData(4, QtCore.Qt.Horizontal, "Contact")
-        self.model.setHeaderData(4, QtCore.Qt.Horizontal, "Time In")
-        self.model.setHeaderData(4, QtCore.Qt.Horizontal, "Time Out")
+        self.model.setHeaderData(5, QtCore.Qt.Horizontal, "Time In")
+        self.model.setHeaderData(6, QtCore.Qt.Horizontal, "Time Out")
         self.ui.cuView.setModel(self.model)
+        self.ui.cuView.setColumnWidth(0, 90)
+        self.ui.cuView.setColumnWidth(2, 30)
+        self.ui.cuView.setColumnWidth(3, 140)
+        self.ui.cuView.setColumnWidth(4, 80)
+        self.ui.cuView.setColumnWidth(5, 60)
+        self.ui.cuView.setColumnWidth(6, 60)
         self.ui.saveBtn.clicked.connect(self.addToDb)
         self.show()
         self.ui.saveAndPrintBtn.clicked.connect(self.saveAndPrint)
@@ -79,8 +85,6 @@ class realMainWindow(QMainWindow):
                 self.ui.ContactEdit.clear()
                 self.ui.timeInEdit.clear()
                 QMessageBox.information(QMessageBox(), 'Successful', 'Data Input Successfully!')
-
-
             else:
                 QMessageBox.warning(QMessageBox(), "Unsuccessful", "Please Input Necessary Informations!")
         except:
@@ -89,10 +93,7 @@ class realMainWindow(QMainWindow):
     def updaterow(self):
         if self.ui.cuView.currentIndex().row() > -1:
             record = self.model.record(self.ui.cuView.currentIndex().row())
-            record.setValue("Name", self.ui.nameEdit.text())
-            record.setValue("Surname", self.ui.ageEdit.text())
-            record.setValue("DOB", self.ui.addressEdit.text())
-            record.setValue("Phone", self.ui.ContactEdit.text())
+            record.setValue("Time Out", self.ui.timeOutEdit.text())
             self.model.setRecord(self.ui.cuView.currentIndex().row(), record)
         else:
             QMessageBox.question(self, 'Message', "Please select a row would you like to update", QMessageBox.Ok)

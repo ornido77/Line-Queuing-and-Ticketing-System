@@ -127,9 +127,10 @@ class Ui_MainWindow(object):
         self.frame_leftBody.setLineWidth(10)
         self.frame_leftBody.setMidLineWidth(10)
         self.frame_leftBody.setObjectName("frame_leftBody")
-        self.gridLayout = QtWidgets.QGridLayout(self.frame_leftBody)
-        self.gridLayout.setContentsMargins(30, 30, 30, 30)
-        self.gridLayout.setObjectName("gridLayout")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.frame_leftBody)
+        self.verticalLayout_2.setContentsMargins(20, 30, 20, 30)
+        self.verticalLayout_2.setSpacing(0)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.titleLabel = QtWidgets.QLabel(self.frame_leftBody)
         self.titleLabel.setMaximumSize(QtCore.QSize(16777214, 100))
         font = QtGui.QFont()
@@ -143,89 +144,43 @@ class Ui_MainWindow(object):
 "border-radius: 10px;")
         self.titleLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.titleLabel.setObjectName("titleLabel")
-        self.gridLayout.addWidget(self.titleLabel, 0, 0, 1, 5)
-        self.checkBox_4 = QtWidgets.QCheckBox(self.frame_leftBody)
-        self.checkBox_4.setMinimumSize(QtCore.QSize(150, 0))
-        font = QtGui.QFont()
-        font.setFamily("Consolas")
-        font.setPointSize(12)
-        self.checkBox_4.setFont(font)
-        self.checkBox_4.setObjectName("checkBox_4")
-        self.gridLayout.addWidget(self.checkBox_4, 7, 3, 1, 2)
-        self.dentalBox = QtWidgets.QCheckBox(self.frame_leftBody)
-        self.dentalBox.setMinimumSize(QtCore.QSize(150, 0))
-        self.dentalBox.setMaximumSize(QtCore.QSize(150, 16777215))
-        font = QtGui.QFont()
-        font.setFamily("Consolas")
-        font.setPointSize(12)
-        self.dentalBox.setFont(font)
-        self.dentalBox.setObjectName("dentalBox")
-        self.gridLayout.addWidget(self.dentalBox, 7, 0, 1, 3)
-        self.nameLabel = QtWidgets.QLabel(self.frame_leftBody)
+        self.verticalLayout_2.addWidget(self.titleLabel)
+        self.frame = QtWidgets.QFrame(self.frame_leftBody)
+        self.frame.setObjectName("frame")
+        self.gridLayout = QtWidgets.QGridLayout(self.frame)
+        self.gridLayout.setContentsMargins(-1, -1, -1, 0)
+        self.gridLayout.setVerticalSpacing(10)
+        self.gridLayout.setObjectName("gridLayout")
+        self.nameLabel = QtWidgets.QLabel(self.frame)
         font = QtGui.QFont()
         font.setFamily("Consolas")
         font.setPointSize(14)
         self.nameLabel.setFont(font)
         self.nameLabel.setObjectName("nameLabel")
-        self.gridLayout.addWidget(self.nameLabel, 1, 0, 1, 2)
-        self.ageLabel = QtWidgets.QLabel(self.frame_leftBody)
+        self.gridLayout.addWidget(self.nameLabel, 0, 0, 1, 1)
+        self.nameEdit = QtWidgets.QLineEdit(self.frame)
+        self.nameEdit.setStyleSheet("QLineEdit{\n"
+"    background-color: rgb(229, 230, 220);\n"
+"    color: rgb(0, 71, 104);\n"
+"    border-style: outset;\n"
+"    border-width:2px;\n"
+"    border-radius: 5px;\n"
+"    border-color: black;\n"
+"}\n"
+"QLineEdit:hover{\n"
+"    background-color: rgb(233, 231, 255);\n"
+"}")
+        self.nameEdit.setText("")
+        self.nameEdit.setObjectName("nameEdit")
+        self.gridLayout.addWidget(self.nameEdit, 0, 1, 1, 1)
+        self.ageLabel = QtWidgets.QLabel(self.frame)
         font = QtGui.QFont()
         font.setFamily("Consolas")
         font.setPointSize(14)
         self.ageLabel.setFont(font)
         self.ageLabel.setObjectName("ageLabel")
-        self.gridLayout.addWidget(self.ageLabel, 2, 0, 1, 1)
-        self.contactLabel = QtWidgets.QLabel(self.frame_leftBody)
-        font = QtGui.QFont()
-        font.setFamily("Consolas")
-        font.setPointSize(14)
-        self.contactLabel.setFont(font)
-        self.contactLabel.setObjectName("contactLabel")
-        self.gridLayout.addWidget(self.contactLabel, 4, 0, 1, 1)
-        self.ContactEdit = QtWidgets.QLineEdit(self.frame_leftBody)
-        self.ContactEdit.setStyleSheet("QLineEdit{\n"
-"    background-color: rgb(229, 230, 220);\n"
-"    color: rgb(0, 71, 104);\n"
-"    border-style: outset;\n"
-"    border-width:2px;\n"
-"    border-radius: 5px;\n"
-"    border-color: black;\n"
-"}\n"
-"QLineEdit:hover{\n"
-"    background-color: rgb(233, 231, 255);\n"
-"}")
-        self.ContactEdit.setObjectName("ContactEdit")
-        self.gridLayout.addWidget(self.ContactEdit, 4, 2, 1, 3)
-        self.vaccineBox = QtWidgets.QCheckBox(self.frame_leftBody)
-        self.vaccineBox.setMinimumSize(QtCore.QSize(150, 0))
-        font = QtGui.QFont()
-        font.setFamily("Consolas")
-        font.setPointSize(12)
-        self.vaccineBox.setFont(font)
-        self.vaccineBox.setObjectName("vaccineBox")
-        self.gridLayout.addWidget(self.vaccineBox, 6, 3, 1, 2)
-        self.timeInLabel = QtWidgets.QLabel(self.frame_leftBody)
-        font = QtGui.QFont()
-        font.setFamily("Consolas")
-        font.setPointSize(14)
-        self.timeInLabel.setFont(font)
-        self.timeInLabel.setObjectName("timeInLabel")
-        self.gridLayout.addWidget(self.timeInLabel, 5, 0, 1, 1)
-        self.addressEdit = QtWidgets.QLineEdit(self.frame_leftBody)
-        self.addressEdit.setStyleSheet("QLineEdit{\n"
-"    background-color: rgb(229, 230, 220);\n"
-"    color: rgb(0, 71, 104);\n"
-"    border-style: outset;\n"
-"    border-width:2px;\n"
-"    border-radius: 5px;\n"
-"    border-color: black;\n"
-"}\n"
-"QLineEdit:hover{\n"
-"    background-color: rgb(233, 231, 255);\n"
-"}")
-        self.addressEdit.setObjectName("addressEdit")
-        self.gridLayout.addWidget(self.addressEdit, 3, 2, 1, 3)
-        self.ageEdit = QtWidgets.QLineEdit(self.frame_leftBody)
+        self.gridLayout.addWidget(self.ageLabel, 1, 0, 1, 1)
+        self.ageEdit = QtWidgets.QLineEdit(self.frame)
         self.ageEdit.setStyleSheet("QLineEdit{\n"
 "    background-color: rgb(229, 230, 220);\n"
 "    color: rgb(0, 71, 104);\n"
@@ -239,8 +194,95 @@ class Ui_MainWindow(object):
 "}")
         self.ageEdit.setText("")
         self.ageEdit.setObjectName("ageEdit")
-        self.gridLayout.addWidget(self.ageEdit, 2, 2, 1, 3)
-        self.checkUpBox = QtWidgets.QCheckBox(self.frame_leftBody)
+        self.gridLayout.addWidget(self.ageEdit, 1, 1, 1, 1)
+        self.addressLabel = QtWidgets.QLabel(self.frame)
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(14)
+        self.addressLabel.setFont(font)
+        self.addressLabel.setObjectName("addressLabel")
+        self.gridLayout.addWidget(self.addressLabel, 2, 0, 1, 1)
+        self.addressEdit = QtWidgets.QLineEdit(self.frame)
+        self.addressEdit.setStyleSheet("QLineEdit{\n"
+"    background-color: rgb(229, 230, 220);\n"
+"    color: rgb(0, 71, 104);\n"
+"    border-style: outset;\n"
+"    border-width:2px;\n"
+"    border-radius: 5px;\n"
+"    border-color: black;\n"
+"}\n"
+"QLineEdit:hover{\n"
+"    background-color: rgb(233, 231, 255);\n"
+"}")
+        self.addressEdit.setObjectName("addressEdit")
+        self.gridLayout.addWidget(self.addressEdit, 2, 1, 1, 1)
+        self.contactLabel = QtWidgets.QLabel(self.frame)
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(14)
+        self.contactLabel.setFont(font)
+        self.contactLabel.setObjectName("contactLabel")
+        self.gridLayout.addWidget(self.contactLabel, 3, 0, 1, 1)
+        self.ContactEdit = QtWidgets.QLineEdit(self.frame)
+        self.ContactEdit.setStyleSheet("QLineEdit{\n"
+"    background-color: rgb(229, 230, 220);\n"
+"    color: rgb(0, 71, 104);\n"
+"    border-style: outset;\n"
+"    border-width:2px;\n"
+"    border-radius: 5px;\n"
+"    border-color: black;\n"
+"}\n"
+"QLineEdit:hover{\n"
+"    background-color: rgb(233, 231, 255);\n"
+"}")
+        self.ContactEdit.setObjectName("ContactEdit")
+        self.gridLayout.addWidget(self.ContactEdit, 3, 1, 1, 1)
+        self.verticalLayout_2.addWidget(self.frame)
+        self.frame1 = QtWidgets.QFrame(self.frame_leftBody)
+        self.frame1.setMinimumSize(QtCore.QSize(0, 100))
+        self.frame1.setMaximumSize(QtCore.QSize(16777215, 100))
+        self.frame1.setObjectName("frame1")
+        self.gridLayout_5 = QtWidgets.QGridLayout(self.frame1)
+        self.gridLayout_5.setObjectName("gridLayout_5")
+        self.timeInEdit = QtWidgets.QLineEdit(self.frame1)
+        self.timeInEdit.setMinimumSize(QtCore.QSize(60, 0))
+        self.timeInEdit.setMaximumSize(QtCore.QSize(60, 16777215))
+        self.timeInEdit.setStyleSheet("QLineEdit{\n"
+"    background-color: rgb(229, 230, 220);\n"
+"    color: rgb(0, 71, 104);\n"
+"    border-style: outset;\n"
+"    border-width:2px;\n"
+"    border-radius: 5px;\n"
+"    border-color: black;\n"
+"}\n"
+"QLineEdit:hover{\n"
+"    background-color: rgb(233, 231, 255);\n"
+"}")
+        self.timeInEdit.setObjectName("timeInEdit")
+        self.gridLayout_5.addWidget(self.timeInEdit, 2, 1, 1, 1)
+        self.timeInLabel = QtWidgets.QLabel(self.frame1)
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(12)
+        self.timeInLabel.setFont(font)
+        self.timeInLabel.setObjectName("timeInLabel")
+        self.gridLayout_5.addWidget(self.timeInLabel, 2, 0, 1, 1)
+        self.checkBox_4 = QtWidgets.QCheckBox(self.frame1)
+        self.checkBox_4.setMinimumSize(QtCore.QSize(150, 0))
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(12)
+        self.checkBox_4.setFont(font)
+        self.checkBox_4.setObjectName("checkBox_4")
+        self.gridLayout_5.addWidget(self.checkBox_4, 1, 2, 1, 2)
+        self.timeOutLabel = QtWidgets.QLabel(self.frame1)
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(12)
+        self.timeOutLabel.setFont(font)
+        self.timeOutLabel.setObjectName("timeOutLabel")
+        self.gridLayout_5.addWidget(self.timeOutLabel, 2, 2, 1, 1)
+        self.checkUpBox = QtWidgets.QCheckBox(self.frame1)
         self.checkUpBox.setMinimumSize(QtCore.QSize(150, 0))
         self.checkUpBox.setMaximumSize(QtCore.QSize(150, 16777215))
         font = QtGui.QFont()
@@ -248,10 +290,52 @@ class Ui_MainWindow(object):
         font.setPointSize(12)
         self.checkUpBox.setFont(font)
         self.checkUpBox.setObjectName("checkUpBox")
-        self.gridLayout.addWidget(self.checkUpBox, 6, 0, 1, 3)
-        self.saveBtn = QtWidgets.QPushButton(self.frame_leftBody)
-        self.saveBtn.setMinimumSize(QtCore.QSize(125, 0))
-        self.saveBtn.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.gridLayout_5.addWidget(self.checkUpBox, 0, 0, 1, 2)
+        self.vaccineBox = QtWidgets.QCheckBox(self.frame1)
+        self.vaccineBox.setMinimumSize(QtCore.QSize(150, 0))
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(12)
+        self.vaccineBox.setFont(font)
+        self.vaccineBox.setObjectName("vaccineBox")
+        self.gridLayout_5.addWidget(self.vaccineBox, 0, 2, 1, 2)
+        self.dentalBox = QtWidgets.QCheckBox(self.frame1)
+        self.dentalBox.setMinimumSize(QtCore.QSize(150, 0))
+        self.dentalBox.setMaximumSize(QtCore.QSize(150, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(12)
+        self.dentalBox.setFont(font)
+        self.dentalBox.setObjectName("dentalBox")
+        self.gridLayout_5.addWidget(self.dentalBox, 1, 0, 1, 2)
+        self.timeOutEdit = QtWidgets.QLineEdit(self.frame1)
+        self.timeOutEdit.setMinimumSize(QtCore.QSize(60, 0))
+        self.timeOutEdit.setMaximumSize(QtCore.QSize(60, 16777215))
+        self.timeOutEdit.setStyleSheet("QLineEdit{\n"
+"    background-color: rgb(229, 230, 220);\n"
+"    color: rgb(0, 71, 104);\n"
+"    border-style: outset;\n"
+"    border-width:2px;\n"
+"    border-radius: 5px;\n"
+"    border-color: black;\n"
+"}\n"
+"QLineEdit:hover{\n"
+"    background-color: rgb(233, 231, 255);\n"
+"}")
+        self.timeOutEdit.setObjectName("timeOutEdit")
+        self.gridLayout_5.addWidget(self.timeOutEdit, 2, 3, 1, 1)
+        self.verticalLayout_2.addWidget(self.frame1)
+        self.frame2 = QtWidgets.QFrame(self.frame_leftBody)
+        self.frame2.setMinimumSize(QtCore.QSize(0, 50))
+        self.frame2.setMaximumSize(QtCore.QSize(16777215, 50))
+        self.frame2.setObjectName("frame2")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.frame2)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setSpacing(10)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.saveBtn = QtWidgets.QPushButton(self.frame2)
+        self.saveBtn.setMinimumSize(QtCore.QSize(90, 0))
+        self.saveBtn.setMaximumSize(QtCore.QSize(0, 16777215))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(12)
@@ -272,31 +356,10 @@ class Ui_MainWindow(object):
 "    background-color: rgb(186, 172, 255);\n"
 "}")
         self.saveBtn.setObjectName("saveBtn")
-        self.gridLayout.addWidget(self.saveBtn, 8, 0, 1, 4)
-        self.timeInEdit = QtWidgets.QLineEdit(self.frame_leftBody)
-        self.timeInEdit.setStyleSheet("QLineEdit{\n"
-"    background-color: rgb(229, 230, 220);\n"
-"    color: rgb(0, 71, 104);\n"
-"    border-style: outset;\n"
-"    border-width:2px;\n"
-"    border-radius: 5px;\n"
-"    border-color: black;\n"
-"}\n"
-"QLineEdit:hover{\n"
-"    background-color: rgb(233, 231, 255);\n"
-"}")
-        self.timeInEdit.setObjectName("timeInEdit")
-        self.gridLayout.addWidget(self.timeInEdit, 5, 2, 1, 3)
-        self.addressLabel = QtWidgets.QLabel(self.frame_leftBody)
-        font = QtGui.QFont()
-        font.setFamily("Consolas")
-        font.setPointSize(14)
-        self.addressLabel.setFont(font)
-        self.addressLabel.setObjectName("addressLabel")
-        self.gridLayout.addWidget(self.addressLabel, 3, 0, 1, 1)
-        self.saveAndPrintBtn = QtWidgets.QPushButton(self.frame_leftBody)
-        self.saveAndPrintBtn.setMinimumSize(QtCore.QSize(125, 0))
-        self.saveAndPrintBtn.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.horizontalLayout.addWidget(self.saveBtn)
+        self.saveAndPrintBtn = QtWidgets.QPushButton(self.frame2)
+        self.saveAndPrintBtn.setMinimumSize(QtCore.QSize(90, 0))
+        self.saveAndPrintBtn.setMaximumSize(QtCore.QSize(0, 16777215))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(12)
@@ -319,22 +382,32 @@ class Ui_MainWindow(object):
         self.saveAndPrintBtn.setDefault(False)
         self.saveAndPrintBtn.setFlat(False)
         self.saveAndPrintBtn.setObjectName("saveAndPrintBtn")
-        self.gridLayout.addWidget(self.saveAndPrintBtn, 8, 4, 1, 1)
-        self.nameEdit = QtWidgets.QLineEdit(self.frame_leftBody)
-        self.nameEdit.setStyleSheet("QLineEdit{\n"
-"    background-color: rgb(229, 230, 220);\n"
-"    color: rgb(0, 71, 104);\n"
+        self.horizontalLayout.addWidget(self.saveAndPrintBtn)
+        self.saveBtn_2 = QtWidgets.QPushButton(self.frame2)
+        self.saveBtn_2.setMinimumSize(QtCore.QSize(90, 0))
+        self.saveBtn_2.setMaximumSize(QtCore.QSize(90, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.saveBtn_2.setFont(font)
+        self.saveBtn_2.setStyleSheet("QPushButton{\n"
+"    background-color: rgb(138, 155, 197);\n"
+"    color: white;\n"
 "    border-style: outset;\n"
-"    border-width:2px;\n"
-"    border-radius: 5px;\n"
+"    border-width:1px;\n"
+"    border-radius: 10px;\n"
 "    border-color: black;\n"
+"    padding: 6px;\n"
+"    mid-width: 10px;\n"
 "}\n"
-"QLineEdit:hover{\n"
-"    background-color: rgb(233, 231, 255);\n"
+"QPushButton:hover{\n"
+"    background-color: rgb(186, 172, 255);\n"
 "}")
-        self.nameEdit.setText("")
-        self.nameEdit.setObjectName("nameEdit")
-        self.gridLayout.addWidget(self.nameEdit, 1, 2, 1, 3)
+        self.saveBtn_2.setObjectName("saveBtn_2")
+        self.horizontalLayout.addWidget(self.saveBtn_2)
+        self.verticalLayout_2.addWidget(self.frame2)
         self.frame_contentBar_layout.addWidget(self.frame_leftBody)
         self.frame_rightBody = QtWidgets.QFrame(self.frame_content_bar)
         self.frame_rightBody.setStyleSheet("background-color: rgb(74, 74, 111);\n"
@@ -364,22 +437,6 @@ class Ui_MainWindow(object):
         self.cuView.setObjectName("cuView")
         self.cuView.verticalHeader().setVisible(False)
         self.gridLayout_2.addWidget(self.cuView, 0, 0, 1, 2)
-        self.checkUpRefresh = QtWidgets.QPushButton(self.checkUpTab)
-        self.checkUpRefresh.setStyleSheet("QPushButton{\n"
-"    background-color: rgb(138, 155, 197);\n"
-"    color: white;\n"
-"    border-style: outset;\n"
-"    border-width:1px;\n"
-"    border-radius: 5px;\n"
-"    border-color: black;\n"
-"    padding: 6px;\n"
-"    mid-width: 10px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"    background-color: rgb(186, 172, 255);\n"
-"}")
-        self.checkUpRefresh.setObjectName("checkUpRefresh")
-        self.gridLayout_2.addWidget(self.checkUpRefresh, 1, 0, 1, 1)
         self.checkUpNew = QtWidgets.QPushButton(self.checkUpTab)
         self.checkUpNew.setStyleSheet("QPushButton{\n"
 "    background-color: rgb(138, 155, 197);\n"
@@ -396,6 +453,22 @@ class Ui_MainWindow(object):
 "}")
         self.checkUpNew.setObjectName("checkUpNew")
         self.gridLayout_2.addWidget(self.checkUpNew, 1, 1, 1, 1)
+        self.checkUpRefresh = QtWidgets.QPushButton(self.checkUpTab)
+        self.checkUpRefresh.setStyleSheet("QPushButton{\n"
+"    background-color: rgb(138, 155, 197);\n"
+"    color: white;\n"
+"    border-style: outset;\n"
+"    border-width:1px;\n"
+"    border-radius: 5px;\n"
+"    border-color: black;\n"
+"    padding: 6px;\n"
+"    mid-width: 10px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"    background-color: rgb(186, 172, 255);\n"
+"}")
+        self.checkUpRefresh.setObjectName("checkUpRefresh")
+        self.gridLayout_2.addWidget(self.checkUpRefresh, 1, 0, 1, 1)
         self.tabWidget.addTab(self.checkUpTab, "")
         self.vaccineTab = QtWidgets.QWidget()
         self.vaccineTab.setStyleSheet("background-color: none;\n"
@@ -530,19 +603,21 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label_title.setText(_translate("MainWindow", "Patients Information Window"))
         self.titleLabel.setText(_translate("MainWindow", "Patients Information"))
-        self.checkBox_4.setText(_translate("MainWindow", "Priority"))
-        self.dentalBox.setText(_translate("MainWindow", "Dental"))
         self.nameLabel.setText(_translate("MainWindow", "Full Name"))
         self.ageLabel.setText(_translate("MainWindow", "Age"))
-        self.contactLabel.setText(_translate("MainWindow", "Contact"))
-        self.vaccineBox.setText(_translate("MainWindow", "Vaccine"))
-        self.timeInLabel.setText(_translate("MainWindow", "Time In"))
-        self.checkUpBox.setText(_translate("MainWindow", "Check Up"))
-        self.saveBtn.setText(_translate("MainWindow", "Save"))
         self.addressLabel.setText(_translate("MainWindow", "Address"))
+        self.contactLabel.setText(_translate("MainWindow", "Contact"))
+        self.timeInLabel.setText(_translate("MainWindow", "Time In"))
+        self.checkBox_4.setText(_translate("MainWindow", "Priority"))
+        self.timeOutLabel.setText(_translate("MainWindow", "Time Out"))
+        self.checkUpBox.setText(_translate("MainWindow", "Check Up"))
+        self.vaccineBox.setText(_translate("MainWindow", "Vaccine"))
+        self.dentalBox.setText(_translate("MainWindow", "Dental"))
+        self.saveBtn.setText(_translate("MainWindow", "Save"))
         self.saveAndPrintBtn.setText(_translate("MainWindow", "Save & Print"))
-        self.checkUpRefresh.setText(_translate("MainWindow", "Refresh"))
+        self.saveBtn_2.setText(_translate("MainWindow", "Update"))
         self.checkUpNew.setText(_translate("MainWindow", "New Record"))
+        self.checkUpRefresh.setText(_translate("MainWindow", "Refresh"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.checkUpTab), _translate("MainWindow", "Check Up"))
         self.vaccineRefresh.setText(_translate("MainWindow", "Refresh"))
         self.vaccineNew.setText(_translate("MainWindow", "New Record"))
@@ -551,4 +626,3 @@ class Ui_MainWindow(object):
         self.dentalNew.setText(_translate("MainWindow", "New Record"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.dentalTab), _translate("MainWindow", "Dental"))
         self.label_credits.setText(_translate("MainWindow", "Powered By: Python"))
-
