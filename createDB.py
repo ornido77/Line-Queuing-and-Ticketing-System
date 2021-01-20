@@ -14,8 +14,8 @@ c.execute(''' CREATE TABLE checkUp(
             time_out        TEXT
             )''');
 """
-c.execute("INSERT INTO checkUp (full_name, age, address, contact, time_in, time_out) "
-          "VALUES ('Sonny Ornido', 21, 'Bagong Nayon', 787724, '1707', '0000')")
+#c.execute("INSERT INTO checkUp (full_name, age, address, contact, time_in, time_out) "
+          #"VALUES ('Sonny Ornido', 21, 'Bagong Nayon', 787724, '1707', '0000')")
 c.execute("SELECT * FROM checkUp")
 print(c.fetchall())
 conn.commit()

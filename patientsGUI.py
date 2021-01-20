@@ -2,7 +2,8 @@ import sys
 import platform
 from PyQt5 import QtCore, QtGui, QtWidgets, QtSql
 from PyQt5.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
-from PyQt5.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
+from PyQt5.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence,
+                         QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient, QIntValidator)
 from PyQt5.QtWidgets import *
 import sqlite3
 
@@ -60,8 +61,18 @@ class realMainWindow(QMainWindow):
         self.ui.cuView.setColumnWidth(6, 60)
         self.ui.saveBtn.clicked.connect(self.addToDb)
         self.show()
+        self.ui.updateBtn.clicked.connect(self.updaterow)
         self.ui.saveAndPrintBtn.clicked.connect(self.saveAndPrint)
         self.i = self.model.rowCount()
+        self.onlyInt = QIntValidator()
+        self.ui.ageEdit.setValidator(self.onlyInt)
+        self.ui.ContactEdit.setValidator(self.onlyInt)
+        self.ui.timeInEdit.setValidator(self.onlyInt)
+        self.ui.timeOutEdit.setValidator(self.onlyInt)
+        self.ui.ageEdit.setMaxLength(3)
+        self.ui.ContactEdit.setMaxLength(11)
+        self.ui.timeInEdit.setMaxLength(4)
+        self.ui.timeOutEdit.setMaxLength(4)
 
     ## APP EVENTS
     ########################################################################
@@ -75,7 +86,7 @@ class realMainWindow(QMainWindow):
                 self.model.setData(self.model.index(self.i, 1), self.ui.nameEdit.text())
                 self.model.setData(self.model.index(self.i, 2), self.ui.ageEdit.text())
                 self.model.setData(self.model.index(self.i, 3), self.ui.addressEdit.text())
-                self.model.setData(self.model.index(self.i, 4), self.ui.ContactEdit.text())
+                self.model.setData(self.model.index(self.i, 4), str(self.ui.ContactEdit.text()))
                 self.model.setData(self.model.index(self.i, 5), self.ui.timeInEdit.text())
                 self.model.submitAll()
                 self.i += 1
@@ -93,7 +104,7 @@ class realMainWindow(QMainWindow):
     def updaterow(self):
         if self.ui.cuView.currentIndex().row() > -1:
             record = self.model.record(self.ui.cuView.currentIndex().row())
-            record.setValue("Time Out", self.ui.timeOutEdit.text())
+            record.setValue(6, self.ui.timeOutEdit.text())
             self.model.setRecord(self.ui.cuView.currentIndex().row(), record)
         else:
             QMessageBox.question(self, 'Message', "Please select a row would you like to update", QMessageBox.Ok)

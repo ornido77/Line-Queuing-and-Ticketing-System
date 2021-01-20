@@ -383,16 +383,16 @@ class Ui_MainWindow(object):
         self.saveAndPrintBtn.setFlat(False)
         self.saveAndPrintBtn.setObjectName("saveAndPrintBtn")
         self.horizontalLayout.addWidget(self.saveAndPrintBtn)
-        self.saveBtn_2 = QtWidgets.QPushButton(self.frame2)
-        self.saveBtn_2.setMinimumSize(QtCore.QSize(90, 0))
-        self.saveBtn_2.setMaximumSize(QtCore.QSize(90, 16777215))
+        self.updateBtn = QtWidgets.QPushButton(self.frame2)
+        self.updateBtn.setMinimumSize(QtCore.QSize(90, 0))
+        self.updateBtn.setMaximumSize(QtCore.QSize(90, 16777215))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
-        self.saveBtn_2.setFont(font)
-        self.saveBtn_2.setStyleSheet("QPushButton{\n"
+        self.updateBtn.setFont(font)
+        self.updateBtn.setStyleSheet("QPushButton{\n"
 "    background-color: rgb(138, 155, 197);\n"
 "    color: white;\n"
 "    border-style: outset;\n"
@@ -405,8 +405,8 @@ class Ui_MainWindow(object):
 "QPushButton:hover{\n"
 "    background-color: rgb(186, 172, 255);\n"
 "}")
-        self.saveBtn_2.setObjectName("saveBtn_2")
-        self.horizontalLayout.addWidget(self.saveBtn_2)
+        self.updateBtn.setObjectName("updateBtn")
+        self.horizontalLayout.addWidget(self.updateBtn)
         self.verticalLayout_2.addWidget(self.frame2)
         self.frame_contentBar_layout.addWidget(self.frame_leftBody)
         self.frame_rightBody = QtWidgets.QFrame(self.frame_content_bar)
@@ -615,7 +615,7 @@ class Ui_MainWindow(object):
         self.dentalBox.setText(_translate("MainWindow", "Dental"))
         self.saveBtn.setText(_translate("MainWindow", "Save"))
         self.saveAndPrintBtn.setText(_translate("MainWindow", "Save & Print"))
-        self.saveBtn_2.setText(_translate("MainWindow", "Update"))
+        self.updateBtn.setText(_translate("MainWindow", "Update"))
         self.checkUpNew.setText(_translate("MainWindow", "New Record"))
         self.checkUpRefresh.setText(_translate("MainWindow", "Refresh"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.checkUpTab), _translate("MainWindow", "Check Up"))

@@ -366,7 +366,7 @@ border-radius: 10px;</string>
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="">
+              <widget class="QFrame" name="frame">
                <layout class="QGridLayout" name="gridLayout">
                 <property name="bottomMargin">
                  <number>0</number>
@@ -504,7 +504,7 @@ QLineEdit:hover{
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="">
+              <widget class="QFrame" name="frame">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -694,7 +694,7 @@ QLineEdit:hover{
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="">
+              <widget class="QFrame" name="frame">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -814,7 +814,7 @@ QPushButton:hover{
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="saveBtn_2">
+                 <widget class="QPushButton" name="updateBtn">
                   <property name="minimumSize">
                    <size>
                     <width>90</width>
