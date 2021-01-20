@@ -61,18 +61,16 @@ class realMainWindow(QMainWindow):
         self.ui.cuView.setColumnWidth(6, 60)
         self.ui.saveBtn.clicked.connect(self.addToDb)
         self.show()
-        self.ui.updateBtn.clicked.connect(self.updaterow)
+        self.ui.timeOutBtn.clicked.connect(self.timeOut)
         self.ui.saveAndPrintBtn.clicked.connect(self.saveAndPrint)
         self.i = self.model.rowCount()
         self.onlyInt = QIntValidator()
         self.ui.ageEdit.setValidator(self.onlyInt)
         self.ui.ContactEdit.setValidator(self.onlyInt)
         self.ui.timeInEdit.setValidator(self.onlyInt)
-        self.ui.timeOutEdit.setValidator(self.onlyInt)
         self.ui.ageEdit.setMaxLength(3)
         self.ui.ContactEdit.setMaxLength(11)
         self.ui.timeInEdit.setMaxLength(4)
-        self.ui.timeOutEdit.setMaxLength(4)
 
     ## APP EVENTS
     ########################################################################
@@ -101,16 +99,23 @@ class realMainWindow(QMainWindow):
         except:
             QMessageBox.warning(QMessageBox(),'Unsuccessful','Data Input Unsuccessfully!')
 
-    def updaterow(self):
+    def timeOut(self):
         if self.ui.cuView.currentIndex().row() > -1:
-            record = self.model.record(self.ui.cuView.currentIndex().row())
-            record.setValue(6, self.ui.timeOutEdit.text())
-            self.model.setRecord(self.ui.cuView.currentIndex().row(), record)
+            text, ok = QInputDialog.getInt(self, "TIME OUT", "Enter Patient's Time Out")
+            if ok:
+                record = self.model.record(self.ui.cuView.currentIndex().row())
+                if text > 2359:
+                    QMessageBox.warning(QMessageBox(), 'Unsuccessful', 'Please Input Military Time!')
+                else:
+                    record.setValue(6, text)
+                    self.model.setRecord(self.ui.cuView.currentIndex().row(), record)
+                    QMessageBox.information(QMessageBox(), 'Successful', 'Time Out Successfully!')
         else:
             QMessageBox.question(self, 'Message', "Please select a row would you like to update", QMessageBox.Ok)
             self.show()
     def saveAndPrint(self):
         QMessageBox.warning(QMessageBox(), 'Unsuccessful', 'ERROR!')
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = realMainWindow()
