@@ -787,6 +787,9 @@ border-radius: 5px;</string>
              <enum>QFrame::Raised</enum>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
              <item>
               <widget class="QTabWidget" name="tabWidget">
                <property name="tabPosition">
@@ -830,8 +833,8 @@ border-raidus: 5px;</string>
                 <attribute name="title">
                  <string>Check Up</string>
                 </attribute>
-                <layout class="QGridLayout" name="gridLayout_2">
-                 <item row="0" column="0">
+                <layout class="QVBoxLayout" name="verticalLayout_3">
+                 <item>
                   <widget class="QTableWidget" name="checkUpTable">
                    <property name="rowCount">
                     <number>150</number>
@@ -1021,16 +1024,80 @@ border-raidus: 5px;</string>
                    </column>
                   </widget>
                  </item>
-                 <item row="2" column="0">
-                  <widget class="QPushButton" name="checkUpNew">
-                   <property name="maximumSize">
-                    <size>
-                     <width>150</width>
-                     <height>16777215</height>
-                    </size>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_2">
+                   <property name="spacing">
+                    <number>15</number>
                    </property>
-                   <property name="styleSheet">
-                    <string notr="true">QPushButton{
+                   <item>
+                    <widget class="QLabel" name="cuLabel">
+                     <property name="minimumSize">
+                      <size>
+                       <width>180</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>180</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QLabel{
+	
+	background-color: rgb(211, 211, 211);
+	border-style: outset;
+	border-width:1px;
+	border-radius: 3px;
+	border-color: black;
+	padding: 6px;
+	mid-width: 10px;
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>New Check Up Record</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="cuNewEdit">
+                     <property name="minimumSize">
+                      <size>
+                       <width>125</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>125</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="cuCreateBtn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>75</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>75</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton{
 	background-color: rgb(138, 155, 197);
 	color: white;
 	border-style: outset;
@@ -1043,11 +1110,22 @@ border-raidus: 5px;</string>
 QPushButton:hover{
 	background-color: rgb(186, 172, 255);
 }</string>
-                   </property>
-                   <property name="text">
-                    <string>New Record</string>
-                   </property>
-                  </widget>
+                     </property>
+                     <property name="text">
+                      <string>Create</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="cuRecord">
+                     <item>
+                      <property name="text">
+                       <string>Check Up, January 21, 2021</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                  </layout>
                  </item>
                 </layout>
                </widget>
@@ -1059,36 +1137,8 @@ border-raidus: 5px;</string>
                 <attribute name="title">
                  <string>Vaccine</string>
                 </attribute>
-                <layout class="QGridLayout" name="gridLayout_3">
-                 <item row="1" column="0">
-                  <widget class="QPushButton" name="vaccineNew">
-                   <property name="maximumSize">
-                    <size>
-                     <width>150</width>
-                     <height>16777215</height>
-                    </size>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">QPushButton{
-	background-color: rgb(138, 155, 197);
-	color: white;
-	border-style: outset;
-	border-width:1px;
-	border-radius: 5px;
-	border-color: black;
-	padding: 6px;
-	mid-width: 10px;
-}
-QPushButton:hover{
-	background-color: rgb(186, 172, 255);
-}</string>
-                   </property>
-                   <property name="text">
-                    <string>New Record</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="0">
+                <layout class="QVBoxLayout" name="verticalLayout_4">
+                 <item>
                   <widget class="QTableWidget" name="vaccineTable">
                    <property name="rowCount">
                     <number>150</number>
@@ -1278,27 +1328,80 @@ QPushButton:hover{
                    </column>
                   </widget>
                  </item>
-                </layout>
-               </widget>
-               <widget class="QWidget" name="dentalTab">
-                <property name="styleSheet">
-                 <string notr="true">background-color: none;
-border-raidus: 5px;</string>
-                </property>
-                <attribute name="title">
-                 <string>Dental</string>
-                </attribute>
-                <layout class="QGridLayout" name="gridLayout_4">
-                 <item row="1" column="0">
-                  <widget class="QPushButton" name="dentalNew">
-                   <property name="maximumSize">
-                    <size>
-                     <width>150</width>
-                     <height>16777215</height>
-                    </size>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_3">
+                   <property name="spacing">
+                    <number>15</number>
                    </property>
-                   <property name="styleSheet">
-                    <string notr="true">QPushButton{
+                   <item>
+                    <widget class="QLabel" name="vcLabel">
+                     <property name="minimumSize">
+                      <size>
+                       <width>180</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>180</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QLabel{
+	
+	background-color: rgb(211, 211, 211);
+	border-style: outset;
+	border-width:1px;
+	border-radius: 3px;
+	border-color: black;
+	padding: 6px;
+	mid-width: 10px;
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>New Check Up Record</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="vcNewEdit">
+                     <property name="minimumSize">
+                      <size>
+                       <width>125</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>125</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="vcCreateBtn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>75</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>75</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton{
 	background-color: rgb(138, 155, 197);
 	color: white;
 	border-style: outset;
@@ -1311,13 +1414,35 @@ border-raidus: 5px;</string>
 QPushButton:hover{
 	background-color: rgb(186, 172, 255);
 }</string>
-                   </property>
-                   <property name="text">
-                    <string>New Record</string>
-                   </property>
-                  </widget>
+                     </property>
+                     <property name="text">
+                      <string>Create</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="vcRecord">
+                     <item>
+                      <property name="text">
+                       <string>Check Up, January 21, 2021</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                  </layout>
                  </item>
-                 <item row="0" column="0">
+                </layout>
+               </widget>
+               <widget class="QWidget" name="dentalTab">
+                <property name="styleSheet">
+                 <string notr="true">background-color: none;
+border-raidus: 5px;</string>
+                </property>
+                <attribute name="title">
+                 <string>Dental</string>
+                </attribute>
+                <layout class="QVBoxLayout" name="verticalLayout_5">
+                 <item>
                   <widget class="QTableWidget" name="dentalTable">
                    <property name="rowCount">
                     <number>150</number>
@@ -1506,6 +1631,109 @@ QPushButton:hover{
                     </property>
                    </column>
                   </widget>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_4">
+                   <property name="spacing">
+                    <number>15</number>
+                   </property>
+                   <item>
+                    <widget class="QLabel" name="dtLabel">
+                     <property name="minimumSize">
+                      <size>
+                       <width>180</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>180</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QLabel{
+	
+	background-color: rgb(211, 211, 211);
+	border-style: outset;
+	border-width:1px;
+	border-radius: 3px;
+	border-color: black;
+	padding: 6px;
+	mid-width: 10px;
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>New Check Up Record</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="dtNewEdit">
+                     <property name="minimumSize">
+                      <size>
+                       <width>125</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>125</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="dtCreateBtn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>75</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>75</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton{
+	background-color: rgb(138, 155, 197);
+	color: white;
+	border-style: outset;
+	border-width:1px;
+	border-radius: 5px;
+	border-color: black;
+	padding: 6px;
+	mid-width: 10px;
+}
+QPushButton:hover{
+	background-color: rgb(186, 172, 255);
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>Create</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="dtRecord">
+                     <item>
+                      <property name="text">
+                       <string>Check Up, January 21, 2021</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                  </layout>
                  </item>
                 </layout>
                </widget>

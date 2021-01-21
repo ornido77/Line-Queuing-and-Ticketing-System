@@ -42,6 +42,14 @@ class realMainWindow(QMainWindow):
         self.show()
 
         ## LOAD DATABASE
+        self.onlyInt = QIntValidator()
+        self.num = QtCore.QRegExp("[0-9]{11}")
+        self.val = QtGui.QRegExpValidator(self.num)
+        self.ui.ageEdit.setValidator(self.onlyInt)
+        self.ui.ContactEdit.setValidator(self.val)
+        self.ui.nameEdit.setMaxLength(50)
+        self.ui.ageEdit.setMaxLength(3)
+        self.ui.addressEdit.setMaxLength(100)
         dbWindow.loadCheckUp(self)
         dbWindow.loadVaccine(self)
         dbWindow.loadDental(self)

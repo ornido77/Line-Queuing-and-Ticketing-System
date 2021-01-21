@@ -355,6 +355,7 @@ class Ui_MainWindow(object):
         self.frame_rightBody.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_rightBody.setObjectName("frame_rightBody")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.frame_rightBody)
+        self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName("verticalLayout")
         self.tabWidget = QtWidgets.QTabWidget(self.frame_rightBody)
         self.tabWidget.setTabPosition(QtWidgets.QTabWidget.North)
@@ -370,8 +371,8 @@ class Ui_MainWindow(object):
         self.checkUpTab.setStyleSheet("background-color: none;\n"
 "border-raidus: 5px;")
         self.checkUpTab.setObjectName("checkUpTab")
-        self.gridLayout_2 = QtWidgets.QGridLayout(self.checkUpTab)
-        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.checkUpTab)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.checkUpTable = QtWidgets.QTableWidget(self.checkUpTab)
         self.checkUpTable.setRowCount(150)
         self.checkUpTable.setObjectName("checkUpTable")
@@ -389,10 +390,38 @@ class Ui_MainWindow(object):
         item = QtWidgets.QTableWidgetItem()
         self.checkUpTable.setHorizontalHeaderItem(5, item)
         self.checkUpTable.verticalHeader().setVisible(False)
-        self.gridLayout_2.addWidget(self.checkUpTable, 0, 0, 1, 1)
-        self.checkUpNew = QtWidgets.QPushButton(self.checkUpTab)
-        self.checkUpNew.setMaximumSize(QtCore.QSize(150, 16777215))
-        self.checkUpNew.setStyleSheet("QPushButton{\n"
+        self.verticalLayout_3.addWidget(self.checkUpTable)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setSpacing(15)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.cuLabel = QtWidgets.QLabel(self.checkUpTab)
+        self.cuLabel.setMinimumSize(QtCore.QSize(180, 0))
+        self.cuLabel.setMaximumSize(QtCore.QSize(180, 16777215))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.cuLabel.setFont(font)
+        self.cuLabel.setStyleSheet("QLabel{\n"
+"    \n"
+"    background-color: rgb(211, 211, 211);\n"
+"    border-style: outset;\n"
+"    border-width:1px;\n"
+"    border-radius: 3px;\n"
+"    border-color: black;\n"
+"    padding: 6px;\n"
+"    mid-width: 10px;\n"
+"}\n"
+"")
+        self.cuLabel.setObjectName("cuLabel")
+        self.horizontalLayout_2.addWidget(self.cuLabel)
+        self.cuNewEdit = QtWidgets.QLineEdit(self.checkUpTab)
+        self.cuNewEdit.setMinimumSize(QtCore.QSize(125, 0))
+        self.cuNewEdit.setMaximumSize(QtCore.QSize(125, 16777215))
+        self.cuNewEdit.setObjectName("cuNewEdit")
+        self.horizontalLayout_2.addWidget(self.cuNewEdit)
+        self.cuCreateBtn = QtWidgets.QPushButton(self.checkUpTab)
+        self.cuCreateBtn.setMinimumSize(QtCore.QSize(75, 0))
+        self.cuCreateBtn.setMaximumSize(QtCore.QSize(75, 16777215))
+        self.cuCreateBtn.setStyleSheet("QPushButton{\n"
 "    background-color: rgb(138, 155, 197);\n"
 "    color: white;\n"
 "    border-style: outset;\n"
@@ -405,32 +434,20 @@ class Ui_MainWindow(object):
 "QPushButton:hover{\n"
 "    background-color: rgb(186, 172, 255);\n"
 "}")
-        self.checkUpNew.setObjectName("checkUpNew")
-        self.gridLayout_2.addWidget(self.checkUpNew, 2, 0, 1, 1)
+        self.cuCreateBtn.setObjectName("cuCreateBtn")
+        self.horizontalLayout_2.addWidget(self.cuCreateBtn)
+        self.cuRecord = QtWidgets.QComboBox(self.checkUpTab)
+        self.cuRecord.setObjectName("cuRecord")
+        self.cuRecord.addItem("")
+        self.horizontalLayout_2.addWidget(self.cuRecord)
+        self.verticalLayout_3.addLayout(self.horizontalLayout_2)
         self.tabWidget.addTab(self.checkUpTab, "")
         self.vaccineTab = QtWidgets.QWidget()
         self.vaccineTab.setStyleSheet("background-color: none;\n"
 "border-raidus: 5px;")
         self.vaccineTab.setObjectName("vaccineTab")
-        self.gridLayout_3 = QtWidgets.QGridLayout(self.vaccineTab)
-        self.gridLayout_3.setObjectName("gridLayout_3")
-        self.vaccineNew = QtWidgets.QPushButton(self.vaccineTab)
-        self.vaccineNew.setMaximumSize(QtCore.QSize(150, 16777215))
-        self.vaccineNew.setStyleSheet("QPushButton{\n"
-"    background-color: rgb(138, 155, 197);\n"
-"    color: white;\n"
-"    border-style: outset;\n"
-"    border-width:1px;\n"
-"    border-radius: 5px;\n"
-"    border-color: black;\n"
-"    padding: 6px;\n"
-"    mid-width: 10px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"    background-color: rgb(186, 172, 255);\n"
-"}")
-        self.vaccineNew.setObjectName("vaccineNew")
-        self.gridLayout_3.addWidget(self.vaccineNew, 1, 0, 1, 1)
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.vaccineTab)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.vaccineTable = QtWidgets.QTableWidget(self.vaccineTab)
         self.vaccineTable.setRowCount(150)
         self.vaccineTable.setObjectName("vaccineTable")
@@ -448,17 +465,38 @@ class Ui_MainWindow(object):
         item = QtWidgets.QTableWidgetItem()
         self.vaccineTable.setHorizontalHeaderItem(5, item)
         self.vaccineTable.verticalHeader().setVisible(False)
-        self.gridLayout_3.addWidget(self.vaccineTable, 0, 0, 1, 1)
-        self.tabWidget.addTab(self.vaccineTab, "")
-        self.dentalTab = QtWidgets.QWidget()
-        self.dentalTab.setStyleSheet("background-color: none;\n"
-"border-raidus: 5px;")
-        self.dentalTab.setObjectName("dentalTab")
-        self.gridLayout_4 = QtWidgets.QGridLayout(self.dentalTab)
-        self.gridLayout_4.setObjectName("gridLayout_4")
-        self.dentalNew = QtWidgets.QPushButton(self.dentalTab)
-        self.dentalNew.setMaximumSize(QtCore.QSize(150, 16777215))
-        self.dentalNew.setStyleSheet("QPushButton{\n"
+        self.verticalLayout_4.addWidget(self.vaccineTable)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setSpacing(15)
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.vcLabel = QtWidgets.QLabel(self.vaccineTab)
+        self.vcLabel.setMinimumSize(QtCore.QSize(180, 0))
+        self.vcLabel.setMaximumSize(QtCore.QSize(180, 16777215))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.vcLabel.setFont(font)
+        self.vcLabel.setStyleSheet("QLabel{\n"
+"    \n"
+"    background-color: rgb(211, 211, 211);\n"
+"    border-style: outset;\n"
+"    border-width:1px;\n"
+"    border-radius: 3px;\n"
+"    border-color: black;\n"
+"    padding: 6px;\n"
+"    mid-width: 10px;\n"
+"}\n"
+"")
+        self.vcLabel.setObjectName("vcLabel")
+        self.horizontalLayout_3.addWidget(self.vcLabel)
+        self.vcNewEdit = QtWidgets.QLineEdit(self.vaccineTab)
+        self.vcNewEdit.setMinimumSize(QtCore.QSize(125, 0))
+        self.vcNewEdit.setMaximumSize(QtCore.QSize(125, 16777215))
+        self.vcNewEdit.setObjectName("vcNewEdit")
+        self.horizontalLayout_3.addWidget(self.vcNewEdit)
+        self.vcCreateBtn = QtWidgets.QPushButton(self.vaccineTab)
+        self.vcCreateBtn.setMinimumSize(QtCore.QSize(75, 0))
+        self.vcCreateBtn.setMaximumSize(QtCore.QSize(75, 16777215))
+        self.vcCreateBtn.setStyleSheet("QPushButton{\n"
 "    background-color: rgb(138, 155, 197);\n"
 "    color: white;\n"
 "    border-style: outset;\n"
@@ -471,8 +509,20 @@ class Ui_MainWindow(object):
 "QPushButton:hover{\n"
 "    background-color: rgb(186, 172, 255);\n"
 "}")
-        self.dentalNew.setObjectName("dentalNew")
-        self.gridLayout_4.addWidget(self.dentalNew, 1, 0, 1, 1)
+        self.vcCreateBtn.setObjectName("vcCreateBtn")
+        self.horizontalLayout_3.addWidget(self.vcCreateBtn)
+        self.vcRecord = QtWidgets.QComboBox(self.vaccineTab)
+        self.vcRecord.setObjectName("vcRecord")
+        self.vcRecord.addItem("")
+        self.horizontalLayout_3.addWidget(self.vcRecord)
+        self.verticalLayout_4.addLayout(self.horizontalLayout_3)
+        self.tabWidget.addTab(self.vaccineTab, "")
+        self.dentalTab = QtWidgets.QWidget()
+        self.dentalTab.setStyleSheet("background-color: none;\n"
+"border-raidus: 5px;")
+        self.dentalTab.setObjectName("dentalTab")
+        self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.dentalTab)
+        self.verticalLayout_5.setObjectName("verticalLayout_5")
         self.dentalTable = QtWidgets.QTableWidget(self.dentalTab)
         self.dentalTable.setRowCount(150)
         self.dentalTable.setObjectName("dentalTable")
@@ -490,7 +540,57 @@ class Ui_MainWindow(object):
         item = QtWidgets.QTableWidgetItem()
         self.dentalTable.setHorizontalHeaderItem(5, item)
         self.dentalTable.verticalHeader().setVisible(False)
-        self.gridLayout_4.addWidget(self.dentalTable, 0, 0, 1, 1)
+        self.verticalLayout_5.addWidget(self.dentalTable)
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_4.setSpacing(15)
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.dtLabel = QtWidgets.QLabel(self.dentalTab)
+        self.dtLabel.setMinimumSize(QtCore.QSize(180, 0))
+        self.dtLabel.setMaximumSize(QtCore.QSize(180, 16777215))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.dtLabel.setFont(font)
+        self.dtLabel.setStyleSheet("QLabel{\n"
+"    \n"
+"    background-color: rgb(211, 211, 211);\n"
+"    border-style: outset;\n"
+"    border-width:1px;\n"
+"    border-radius: 3px;\n"
+"    border-color: black;\n"
+"    padding: 6px;\n"
+"    mid-width: 10px;\n"
+"}\n"
+"")
+        self.dtLabel.setObjectName("dtLabel")
+        self.horizontalLayout_4.addWidget(self.dtLabel)
+        self.dtNewEdit = QtWidgets.QLineEdit(self.dentalTab)
+        self.dtNewEdit.setMinimumSize(QtCore.QSize(125, 0))
+        self.dtNewEdit.setMaximumSize(QtCore.QSize(125, 16777215))
+        self.dtNewEdit.setObjectName("dtNewEdit")
+        self.horizontalLayout_4.addWidget(self.dtNewEdit)
+        self.dtCreateBtn = QtWidgets.QPushButton(self.dentalTab)
+        self.dtCreateBtn.setMinimumSize(QtCore.QSize(75, 0))
+        self.dtCreateBtn.setMaximumSize(QtCore.QSize(75, 16777215))
+        self.dtCreateBtn.setStyleSheet("QPushButton{\n"
+"    background-color: rgb(138, 155, 197);\n"
+"    color: white;\n"
+"    border-style: outset;\n"
+"    border-width:1px;\n"
+"    border-radius: 5px;\n"
+"    border-color: black;\n"
+"    padding: 6px;\n"
+"    mid-width: 10px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"    background-color: rgb(186, 172, 255);\n"
+"}")
+        self.dtCreateBtn.setObjectName("dtCreateBtn")
+        self.horizontalLayout_4.addWidget(self.dtCreateBtn)
+        self.dtRecord = QtWidgets.QComboBox(self.dentalTab)
+        self.dtRecord.setObjectName("dtRecord")
+        self.dtRecord.addItem("")
+        self.horizontalLayout_4.addWidget(self.dtRecord)
+        self.verticalLayout_5.addLayout(self.horizontalLayout_4)
         self.tabWidget.addTab(self.dentalTab, "")
         self.verticalLayout.addWidget(self.tabWidget)
         self.frame_contentBar_layout.addWidget(self.frame_rightBody)
@@ -561,9 +661,10 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "Contact"))
         item = self.checkUpTable.horizontalHeaderItem(5)
         item.setText(_translate("MainWindow", "Date and Time"))
-        self.checkUpNew.setText(_translate("MainWindow", "New Record"))
+        self.cuLabel.setText(_translate("MainWindow", "New Check Up Record"))
+        self.cuCreateBtn.setText(_translate("MainWindow", "Create"))
+        self.cuRecord.setItemText(0, _translate("MainWindow", "Check Up, January 21, 2021"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.checkUpTab), _translate("MainWindow", "Check Up"))
-        self.vaccineNew.setText(_translate("MainWindow", "New Record"))
         item = self.vaccineTable.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "Ticket Number"))
         item = self.vaccineTable.horizontalHeaderItem(1)
@@ -576,8 +677,10 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "Contact"))
         item = self.vaccineTable.horizontalHeaderItem(5)
         item.setText(_translate("MainWindow", "Date and Time"))
+        self.vcLabel.setText(_translate("MainWindow", "New Check Up Record"))
+        self.vcCreateBtn.setText(_translate("MainWindow", "Create"))
+        self.vcRecord.setItemText(0, _translate("MainWindow", "Check Up, January 21, 2021"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.vaccineTab), _translate("MainWindow", "Vaccine"))
-        self.dentalNew.setText(_translate("MainWindow", "New Record"))
         item = self.dentalTable.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "Ticket Number"))
         item = self.dentalTable.horizontalHeaderItem(1)
@@ -590,6 +693,8 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "Contact"))
         item = self.dentalTable.horizontalHeaderItem(5)
         item.setText(_translate("MainWindow", "Date and Time"))
+        self.dtLabel.setText(_translate("MainWindow", "New Check Up Record"))
+        self.dtCreateBtn.setText(_translate("MainWindow", "Create"))
+        self.dtRecord.setItemText(0, _translate("MainWindow", "Check Up, January 21, 2021"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.dentalTab), _translate("MainWindow", "Dental"))
         self.label_credits.setText(_translate("MainWindow", "Powered By: Python"))
-

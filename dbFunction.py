@@ -174,7 +174,7 @@ class dbWindow(realMainWindow):
                     self.ui.ageEdit.clear()
                     self.ui.addressEdit.clear()
                     self.ui.ContactEdit.clear()
-                if self.ui.vaccineBox.isChecked():
+                elif self.ui.vaccineBox.isChecked():
                     cur.execute("INSERT INTO vaccine(full_name, age, address, contact)"
                                 "VALUES('%s', '%s', '%s', '%s')" % (''.join(self.ui.nameEdit.text()),
                                                                     ''.join(self.ui.ageEdit.text()),
@@ -185,7 +185,7 @@ class dbWindow(realMainWindow):
                     self.ui.addressEdit.clear()
                     self.ui.ContactEdit.clear()
                     QMessageBox.about(self, 'Successful', 'Data Inserted Successfully')
-                if self.ui.dentalBox.isChecked():
+                elif self.ui.dentalBox.isChecked():
                     cur.execute("INSERT INTO dental(full_name, age, address, contact)"
                                 "VALUES('%s', '%s', '%s', '%s')" % (''.join(self.ui.nameEdit.text()),
                                                                     ''.join(self.ui.ageEdit.text()),
