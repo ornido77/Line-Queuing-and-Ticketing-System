@@ -15,7 +15,7 @@ c.execute(''' CREATE TABLE checkUp(
             )''');
 """
 #c.execute("INSERT INTO checkUp (full_name, age, address, contact, time_in, time_out) "
-          #"VALUES ('Sonny Ornido', 21, 'Bagong Nayon', 787724, '1707', '0000')")
+          #"VALUES ('Miko Reyes', 35, 'Punturin', 4523523, '', '')")
 c.execute("SELECT * FROM checkUp")
 print(c.fetchall())
 conn.commit()

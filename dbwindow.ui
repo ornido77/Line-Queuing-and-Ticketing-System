@@ -347,7 +347,7 @@ border-radius: 5px;</string>
                <property name="font">
                 <font>
                  <family>Consolas</family>
-                 <pointsize>18</pointsize>
+                 <pointsize>20</pointsize>
                  <weight>50</weight>
                  <italic>false</italic>
                  <bold>false</bold>
@@ -386,8 +386,8 @@ border-radius: 10px;</string>
                 <property name="verticalSpacing">
                  <number>0</number>
                 </property>
-                <item row="0" column="0">
-                 <widget class="QLabel" name="nameLabel">
+                <item row="2" column="0">
+                 <widget class="QLabel" name="addressLabel">
                   <property name="font">
                    <font>
                     <family>Consolas</family>
@@ -395,7 +395,50 @@ border-radius: 10px;</string>
                    </font>
                   </property>
                   <property name="text">
-                   <string>Full Name</string>
+                   <string>Address</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QLineEdit" name="ContactEdit">
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit{
+	background-color: rgb(229, 230, 220);
+	color: rgb(0, 71, 104);
+	border-style: outset;
+	border-width:2px;
+	border-radius: 5px;
+	border-color: black;
+}
+QLineEdit:hover{
+	background-color: rgb(233, 231, 255);
+}</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="ageLabel">
+                  <property name="font">
+                   <font>
+                    <family>Consolas</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Age</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="contactLabel">
+                  <property name="font">
+                   <font>
+                    <family>Consolas</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Contact</string>
                   </property>
                  </widget>
                 </item>
@@ -419,19 +462,6 @@ QLineEdit:hover{
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="0">
-                 <widget class="QLabel" name="ageLabel">
-                  <property name="font">
-                   <font>
-                    <family>Consolas</family>
-                    <pointsize>14</pointsize>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>Age</string>
-                  </property>
-                 </widget>
-                </item>
                 <item row="1" column="1">
                  <widget class="QLineEdit" name="ageEdit">
                   <property name="styleSheet">
@@ -452,19 +482,6 @@ QLineEdit:hover{
                   </property>
                  </widget>
                 </item>
-                <item row="2" column="0">
-                 <widget class="QLabel" name="addressLabel">
-                  <property name="font">
-                   <font>
-                    <family>Consolas</family>
-                    <pointsize>14</pointsize>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>Address</string>
-                  </property>
-                 </widget>
-                </item>
                 <item row="2" column="1">
                  <widget class="QLineEdit" name="addressEdit">
                   <property name="styleSheet">
@@ -482,8 +499,8 @@ QLineEdit:hover{
                   </property>
                  </widget>
                 </item>
-                <item row="3" column="0">
-                 <widget class="QLabel" name="contactLabel">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="nameLabel">
                   <property name="font">
                    <font>
                     <family>Consolas</family>
@@ -491,54 +508,7 @@ QLineEdit:hover{
                    </font>
                   </property>
                   <property name="text">
-                   <string>Contact</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="3" column="1">
-                 <widget class="QLineEdit" name="ContactEdit">
-                  <property name="styleSheet">
-                   <string notr="true">QLineEdit{
-	background-color: rgb(229, 230, 220);
-	color: rgb(0, 71, 104);
-	border-style: outset;
-	border-width:2px;
-	border-radius: 5px;
-	border-color: black;
-}
-QLineEdit:hover{
-	background-color: rgb(233, 231, 255);
-}</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="4" column="0">
-                 <widget class="QLabel" name="timeInLabel">
-                  <property name="font">
-                   <font>
-                    <family>Consolas</family>
-                    <pointsize>12</pointsize>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>Time In</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="4" column="1">
-                 <widget class="QLineEdit" name="timeInEdit">
-                  <property name="styleSheet">
-                   <string notr="true">QLineEdit{
-	background-color: rgb(229, 230, 220);
-	color: rgb(0, 71, 104);
-	border-style: outset;
-	border-width:2px;
-	border-radius: 5px;
-	border-color: black;
-}
-QLineEdit:hover{
-	background-color: rgb(233, 231, 255);
-}</string>
+                   <string>Full Name</string>
                   </property>
                  </widget>
                 </item>
@@ -654,7 +624,7 @@ QLineEdit:hover{
                     </widget>
                    </item>
                    <item row="1" column="1">
-                    <widget class="QCheckBox" name="checkBox_4">
+                    <widget class="QCheckBox" name="priorityBox">
                      <property name="minimumSize">
                       <size>
                        <width>150</width>
@@ -798,48 +768,6 @@ QPushButton:hover{
                   </property>
                  </widget>
                 </item>
-                <item>
-                 <widget class="QPushButton" name="timeOutBtn">
-                  <property name="minimumSize">
-                   <size>
-                    <width>90</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>90</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <family>Times New Roman</family>
-                    <pointsize>12</pointsize>
-                    <weight>75</weight>
-                    <bold>true</bold>
-                   </font>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">QPushButton{
-	background-color: rgb(138, 155, 197);
-	color: white;
-	border-style: outset;
-	border-width:1px;
-	border-radius: 10px;
-	border-color: black;
-	padding: 6px;
-	mid-width: 10px;
-}
-QPushButton:hover{
-	background-color: rgb(186, 172, 255);
-}</string>
-                  </property>
-                  <property name="text">
-                   <string>Time Out</string>
-                  </property>
-                 </widget>
-                </item>
                </layout>
               </widget>
              </item>
@@ -903,15 +831,204 @@ border-raidus: 5px;</string>
                  <string>Check Up</string>
                 </attribute>
                 <layout class="QGridLayout" name="gridLayout_2">
-                 <item row="0" column="0" colspan="2">
-                  <widget class="QTableView" name="cuView">
+                 <item row="0" column="0">
+                  <widget class="QTableWidget" name="checkUpTable">
+                   <property name="rowCount">
+                    <number>150</number>
+                   </property>
                    <attribute name="verticalHeaderVisible">
                     <bool>false</bool>
                    </attribute>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <column>
+                    <property name="text">
+                     <string>Ticket Number</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Name</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Age</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Address</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Contact</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Date and Time</string>
+                    </property>
+                   </column>
                   </widget>
                  </item>
-                 <item row="1" column="1">
+                 <item row="2" column="0">
                   <widget class="QPushButton" name="checkUpNew">
+                   <property name="maximumSize">
+                    <size>
+                     <width>150</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
                    <property name="styleSheet">
                     <string notr="true">QPushButton{
 	background-color: rgb(138, 155, 197);
@@ -929,28 +1046,6 @@ QPushButton:hover{
                    </property>
                    <property name="text">
                     <string>New Record</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="0">
-                  <widget class="QPushButton" name="checkUpRefresh">
-                   <property name="styleSheet">
-                    <string notr="true">QPushButton{
-	background-color: rgb(138, 155, 197);
-	color: white;
-	border-style: outset;
-	border-width:1px;
-	border-radius: 5px;
-	border-color: black;
-	padding: 6px;
-	mid-width: 10px;
-}
-QPushButton:hover{
-	background-color: rgb(186, 172, 255);
-}</string>
-                   </property>
-                   <property name="text">
-                    <string>Refresh</string>
                    </property>
                   </widget>
                  </item>
@@ -965,37 +1060,14 @@ border-raidus: 5px;</string>
                  <string>Vaccine</string>
                 </attribute>
                 <layout class="QGridLayout" name="gridLayout_3">
-                 <item row="0" column="0" colspan="2">
-                  <widget class="QTableView" name="vcView">
-                   <attribute name="verticalHeaderVisible">
-                    <bool>false</bool>
-                   </attribute>
-                  </widget>
-                 </item>
                  <item row="1" column="0">
-                  <widget class="QPushButton" name="vaccineRefresh">
-                   <property name="styleSheet">
-                    <string notr="true">QPushButton{
-	background-color: rgb(138, 155, 197);
-	color: white;
-	border-style: outset;
-	border-width:1px;
-	border-radius: 5px;
-	border-color: black;
-	padding: 6px;
-	mid-width: 10px;
-}
-QPushButton:hover{
-	background-color: rgb(186, 172, 255);
-}</string>
-                   </property>
-                   <property name="text">
-                    <string>Refresh</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="1">
                   <widget class="QPushButton" name="vaccineNew">
+                   <property name="maximumSize">
+                    <size>
+                     <width>150</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
                    <property name="styleSheet">
                     <string notr="true">QPushButton{
 	background-color: rgb(138, 155, 197);
@@ -1014,6 +1086,196 @@ QPushButton:hover{
                    <property name="text">
                     <string>New Record</string>
                    </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <widget class="QTableWidget" name="vaccineTable">
+                   <property name="rowCount">
+                    <number>150</number>
+                   </property>
+                   <attribute name="verticalHeaderVisible">
+                    <bool>false</bool>
+                   </attribute>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <column>
+                    <property name="text">
+                     <string>Ticket Number</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Name</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Age</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>New Column</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Contact</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Date and Time</string>
+                    </property>
+                   </column>
                   </widget>
                  </item>
                 </layout>
@@ -1027,37 +1289,14 @@ border-raidus: 5px;</string>
                  <string>Dental</string>
                 </attribute>
                 <layout class="QGridLayout" name="gridLayout_4">
-                 <item row="0" column="0" colspan="2">
-                  <widget class="QTableView" name="tableView">
-                   <attribute name="verticalHeaderVisible">
-                    <bool>false</bool>
-                   </attribute>
-                  </widget>
-                 </item>
                  <item row="1" column="0">
-                  <widget class="QPushButton" name="dentalRefresh">
-                   <property name="styleSheet">
-                    <string notr="true">QPushButton{
-	background-color: rgb(138, 155, 197);
-	color: white;
-	border-style: outset;
-	border-width:1px;
-	border-radius: 5px;
-	border-color: black;
-	padding: 6px;
-	mid-width: 10px;
-}
-QPushButton:hover{
-	background-color: rgb(186, 172, 255);
-}</string>
-                   </property>
-                   <property name="text">
-                    <string>Refresh</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="1">
                   <widget class="QPushButton" name="dentalNew">
+                   <property name="maximumSize">
+                    <size>
+                     <width>150</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
                    <property name="styleSheet">
                     <string notr="true">QPushButton{
 	background-color: rgb(138, 155, 197);
@@ -1078,6 +1317,196 @@ QPushButton:hover{
                    </property>
                   </widget>
                  </item>
+                 <item row="0" column="0">
+                  <widget class="QTableWidget" name="dentalTable">
+                   <property name="rowCount">
+                    <number>150</number>
+                   </property>
+                   <attribute name="verticalHeaderVisible">
+                    <bool>false</bool>
+                   </attribute>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <column>
+                    <property name="text">
+                     <string>Ticket Number</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Name</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Age</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Address</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Contact</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Date and Time</string>
+                    </property>
+                   </column>
+                  </widget>
+                 </item>
                 </layout>
                </widget>
               </widget>
@@ -1086,6 +1515,16 @@ QPushButton:hover{
            </widget>
           </item>
          </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_credits">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(99, 99, 149);</string>
+         </property>
+         <property name="text">
+          <string>Powered By: Python</string>
+         </property>
         </widget>
        </item>
        <item>
@@ -1139,16 +1578,6 @@ QPushButton:hover{
              <property name="bottomMargin">
               <number>0</number>
              </property>
-             <item>
-              <widget class="QLabel" name="label_credits">
-               <property name="styleSheet">
-                <string notr="true">color: rgb(99, 99, 149);</string>
-               </property>
-               <property name="text">
-                <string>Powered By: Python</string>
-               </property>
-              </widget>
-             </item>
             </layout>
            </widget>
           </item>
