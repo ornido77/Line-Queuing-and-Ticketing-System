@@ -1,49 +1,18 @@
-import sys
-from PyQt5 import QtWidgets
-import logging
-
-# Uncomment below for terminal log messages
-# logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(name)s - %(levelname)s - %(message)s')
-
-class QTextEditLogger(logging.Handler):
-    def __init__(self, parent):
-        super().__init__()
-        self.widget = QtWidgets.QPlainTextEdit(parent)
-        self.widget.setReadOnly(True)
-
-    def emit(self, record):
-        msg = self.format(record)
-        self.widget.appendPlainText(msg)
+import sqlite3
 
 
-class MyDialog(QtWidgets.QDialog, QtWidgets.QPlainTextEdit):
-    def __init__(self, parent=None):
-        super().__init__(parent)
+conn = sqlite3.connect("test")
 
-        logTextBox = QTextEditLogger(self)
-        # You can format what is printed to text box
-        logTextBox.setFormatter(logging.Formatter('%(asctime)s'))
-        logging.getLogger().addHandler(logTextBox)
-        # You can control the logging level
-        logging.getLogger().setLevel(logging.DEBUG)
-
-        self._button = QtWidgets.QPushButton(self)
-        self._button.setText('Test Me')
-
-        layout = QtWidgets.QVBoxLayout()
-        # Add the new logging box widget to the layout
-        layout.addWidget(logTextBox.widget)
-        layout.addWidget(self._button)
-        self.setLayout(layout)
-
-        # Connect signal to slot
-        self._button.clicked.connect(self.test)
-
-    def test(self):
-        logging.info('something to remember')
-
-app = QtWidgets.QApplication(sys.argv)
-dlg = MyDialog()
-dlg.show()
-dlg.raise_()
-sys.exit(app.exec_())
+c = conn.cursor()
+"""
+c.execute(''' CREATE TABLE date(
+            id       INTEGER     PRIMARY KEY,
+            username NOT NULL,
+            time_in  DATETIME   DEFAULT     CURRENT_TIMESTAMP
+            )''')
+"""
+c.execute("INSERT INTO date(username) VALUES('awaw')")
+c.execute("SELECT * FROM date")
+print(c.fetchall())
+conn.commit()
+conn.close()

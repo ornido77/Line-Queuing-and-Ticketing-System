@@ -76,9 +76,9 @@ class dbWindow(realMainWindow):
         self.ui.checkUpTable.setRowCount(150)
         self.ui.checkUpTable.setColumnWidth(0, 90)
         self.ui.checkUpTable.setColumnWidth(2, 30)
-        self.ui.checkUpTable.setColumnWidth(3, 150)
+        self.ui.checkUpTable.setColumnWidth(3, 135)
         self.ui.checkUpTable.setColumnWidth(4, 80)
-        self.ui.checkUpTable.setColumnWidth(5, 100)
+        self.ui.checkUpTable.setColumnWidth(5, 120)
         connection = sqlite3.connect('patients')
         cur = connection.cursor()
         pInfo = 'SELECT * FROM checkUp'
@@ -103,9 +103,9 @@ class dbWindow(realMainWindow):
         self.ui.vaccineTable.setRowCount(150)
         self.ui.vaccineTable.setColumnWidth(0, 90)
         self.ui.vaccineTable.setColumnWidth(2, 30)
-        self.ui.vaccineTable.setColumnWidth(3, 150)
+        self.ui.vaccineTable.setColumnWidth(3, 135)
         self.ui.vaccineTable.setColumnWidth(4, 80)
-        self.ui.vaccineTable.setColumnWidth(5, 100)
+        self.ui.vaccineTable.setColumnWidth(5, 120)
         connection = sqlite3.connect('patients')
         cur = connection.cursor()
         pInfo = 'SELECT * FROM vaccine'
@@ -130,9 +130,9 @@ class dbWindow(realMainWindow):
         self.ui.dentalTable.setRowCount(150)
         self.ui.dentalTable.setColumnWidth(0, 90)
         self.ui.dentalTable.setColumnWidth(2, 30)
-        self.ui.dentalTable.setColumnWidth(3, 150)
+        self.ui.dentalTable.setColumnWidth(3, 135)
         self.ui.dentalTable.setColumnWidth(4, 80)
-        self.ui.dentalTable.setColumnWidth(5, 100)
+        self.ui.dentalTable.setColumnWidth(5, 120)
         connection = sqlite3.connect('patients')
         cur = connection.cursor()
         pInfo = 'SELECT * FROM dental'
@@ -161,38 +161,47 @@ class dbWindow(realMainWindow):
             if(self.ui.nameEdit.text()) and (self.ui.ageEdit.text() and
                                               (self.ui.addressEdit.text())) :
                 if self.ui.checkUpBox.isChecked():
-                    cur.execute("INSERT INTO checkUp(full_name, age, address, contact)"
-                                "VALUES('%s', '%s', '%s', '%s')" % (''.join(self.ui.nameEdit.text()),
-                                                                    ''.join(self.ui.ageEdit.text()),
-                                                                    ''.join(self.ui.addressEdit.text()),
-                                                                    ''.join(self.ui.ContactEdit.text())))
-                    QMessageBox.about(self, 'Successful', 'Data Inserted Successfully')
-                    self.ui.nameEdit.clear()
-                    self.ui.ageEdit.clear()
-                    self.ui.addressEdit.clear()
-                    self.ui.ContactEdit.clear()
+                    try:
+                        cur.execute("INSERT INTO checkUp(full_name, age, address, contact)"
+                                    "VALUES('%s', '%s', '%s', '%s')" % (''.join(self.ui.nameEdit.text()),
+                                                                        ''.join(self.ui.ageEdit.text()),
+                                                                        ''.join(self.ui.addressEdit.text()),
+                                                                        ''.join(self.ui.ContactEdit.text())))
+                        QMessageBox.about(self, 'Successful', 'Data Inserted Successfully')
+                        self.ui.nameEdit.clear()
+                        self.ui.ageEdit.clear()
+                        self.ui.addressEdit.clear()
+                        self.ui.ContactEdit.clear()
+                    except:
+                        QMessageBox.information(self, 'Information', 'Please Try Again')
                 elif self.ui.vaccineBox.isChecked():
-                    cur.execute("INSERT INTO vaccine(full_name, age, address, contact)"
-                                "VALUES('%s', '%s', '%s', '%s')" % (''.join(self.ui.nameEdit.text()),
-                                                                    ''.join(self.ui.ageEdit.text()),
-                                                                    ''.join(self.ui.addressEdit.text()),
-                                                                    ''.join(self.ui.ContactEdit.text())))
-                    self.ui.nameEdit.clear()
-                    self.ui.ageEdit.clear()
-                    self.ui.addressEdit.clear()
-                    self.ui.ContactEdit.clear()
-                    QMessageBox.about(self, 'Successful', 'Data Inserted Successfully')
+                    try:
+                        cur.execute("INSERT INTO vaccine(full_name, age, address, contact)"
+                                    "VALUES('%s', '%s', '%s', '%s')" % (''.join(self.ui.nameEdit.text()),
+                                                                        ''.join(self.ui.ageEdit.text()),
+                                                                        ''.join(self.ui.addressEdit.text()),
+                                                                        ''.join(self.ui.ContactEdit.text())))
+                        self.ui.nameEdit.clear()
+                        self.ui.ageEdit.clear()
+                        self.ui.addressEdit.clear()
+                        self.ui.ContactEdit.clear()
+                        QMessageBox.about(self, 'Successful', 'Data Inserted Successfully')
+                    except:
+                        QMessageBox.information(self, 'Information', 'Please Try Again')
                 elif self.ui.dentalBox.isChecked():
-                    cur.execute("INSERT INTO dental(full_name, age, address, contact)"
-                                "VALUES('%s', '%s', '%s', '%s')" % (''.join(self.ui.nameEdit.text()),
-                                                                    ''.join(self.ui.ageEdit.text()),
-                                                                    ''.join(self.ui.addressEdit.text()),
-                                                                    ''.join(self.ui.ContactEdit.text())))
-                    self.ui.nameEdit.clear()
-                    self.ui.ageEdit.clear()
-                    self.ui.addressEdit.clear()
-                    self.ui.ContactEdit.clear()
-                    QMessageBox.about(self, 'Successful', 'Data Inserted Successfully')
+                    try:
+                        cur.execute("INSERT INTO dental(full_name, age, address, contact)"
+                                    "VALUES('%s', '%s', '%s', '%s')" % (''.join(self.ui.nameEdit.text()),
+                                                                        ''.join(self.ui.ageEdit.text()),
+                                                                        ''.join(self.ui.addressEdit.text()),
+                                                                         ''.join(self.ui.ContactEdit.text())))
+                        self.ui.nameEdit.clear()
+                        self.ui.ageEdit.clear()
+                        self.ui.addressEdit.clear()
+                        self.ui.ContactEdit.clear()
+                        QMessageBox.about(self, 'Successful', 'Data Inserted Successfully')
+                    except:
+                        QMessageBox.information(self, 'Information', 'Please Try Again')
                 else:
                     pass
             else:
