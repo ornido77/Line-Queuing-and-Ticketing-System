@@ -55,6 +55,7 @@ class UIFunctions(realMainWindow):
         self.ui.saveBtn.clicked.connect(lambda: dbWindow.loadCheckUp(self))
         self.ui.saveBtn.clicked.connect(lambda: dbWindow.loadVaccine(self))
         self.ui.saveBtn.clicked.connect(lambda: dbWindow.loadDental(self))
+        self.ui.saveBtn.clicked.connect(lambda: dbWindow.loadPriority(self))
 
 
         ## ==> CREATE SIZE GRIP TO RESIZE WINDOW
@@ -153,6 +154,33 @@ class dbWindow(realMainWindow):
             self.ui.dentalTable.setItem(tablerow, 4, QtWidgets.QTableWidgetItem(str(row[4])))
             self.ui.dentalTable.setItem(tablerow, 5, QtWidgets.QTableWidgetItem(row[5]))
             tablerow+=1
+    def loadPriority(self):
+        self.ui.priorityTable.setRowCount(150)
+        self.ui.priorityTable.setColumnWidth(0, 90)
+        self.ui.priorityTable.setColumnWidth(2, 30)
+        self.ui.priorityTable.setColumnWidth(3, 135)
+        self.ui.priorityTable.setColumnWidth(4, 80)
+        self.ui.priorityTable.setColumnWidth(5, 120)
+        connection = sqlite3.connect('patients')
+        cur = connection.cursor()
+        pInfo = 'SELECT * FROM priority'
+
+        tablerow=0
+        results = cur.execute(pInfo)
+        for row in results:
+            if row[0] < 10:
+                ticket = "PRT00" + str(row[0])
+            elif row[0] > 99:
+                ticket = "PRT" + str(row[0])
+            else:
+                ticket = "PRT0" + str(row[0])
+            self.ui.priorityTable.setItem(tablerow, 0, QtWidgets.QTableWidgetItem(ticket))
+            self.ui.priorityTable.setItem(tablerow, 1, QtWidgets.QTableWidgetItem(row[1]))
+            self.ui.priorityTable.setItem(tablerow, 2, QtWidgets.QTableWidgetItem(str(row[2])))
+            self.ui.priorityTable.setItem(tablerow, 3, QtWidgets.QTableWidgetItem(row[3]))
+            self.ui.priorityTable.setItem(tablerow, 4, QtWidgets.QTableWidgetItem(str(row[4])))
+            self.ui.priorityTable.setItem(tablerow, 5, QtWidgets.QTableWidgetItem(row[5]))
+            tablerow+=1
 
     def insertData(self):
         connection = sqlite3.connect('patients')
@@ -191,6 +219,20 @@ class dbWindow(realMainWindow):
                 elif self.ui.dentalBox.isChecked():
                     try:
                         cur.execute("INSERT INTO dental(full_name, age, address, contact)"
+                                    "VALUES('%s', '%s', '%s', '%s')" % (''.join(self.ui.nameEdit.text()),
+                                                                        ''.join(self.ui.ageEdit.text()),
+                                                                        ''.join(self.ui.addressEdit.text()),
+                                                                         ''.join(self.ui.ContactEdit.text())))
+                        self.ui.nameEdit.clear()
+                        self.ui.ageEdit.clear()
+                        self.ui.addressEdit.clear()
+                        self.ui.ContactEdit.clear()
+                        QMessageBox.about(self, 'Successful', 'Data Inserted Successfully')
+                    except:
+                        QMessageBox.information(self, 'Information', 'Please Try Again')
+                elif self.ui.priorityBox.isChecked():
+                    try:
+                        cur.execute("INSERT INTO priority(full_name, age, address, contact)"
                                     "VALUES('%s', '%s', '%s', '%s')" % (''.join(self.ui.nameEdit.text()),
                                                                         ''.join(self.ui.ageEdit.text()),
                                                                         ''.join(self.ui.addressEdit.text()),

@@ -53,6 +53,7 @@ class realMainWindow(QMainWindow):
         dbWindow.loadCheckUp(self)
         dbWindow.loadVaccine(self)
         dbWindow.loadDental(self)
+        dbWindow.loadPriority(self)
 
     ## APP EVENTS
     ########################################################################

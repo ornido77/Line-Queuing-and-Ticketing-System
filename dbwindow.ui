@@ -577,6 +577,9 @@ QLineEdit:hover{
                      <property name="text">
                       <string>Check Up</string>
                      </property>
+                     <attribute name="buttonGroup">
+                      <string notr="true">buttonGroup</string>
+                     </attribute>
                     </widget>
                    </item>
                    <item row="0" column="1">
@@ -596,6 +599,9 @@ QLineEdit:hover{
                      <property name="text">
                       <string>Vaccine</string>
                      </property>
+                     <attribute name="buttonGroup">
+                      <string notr="true">buttonGroup</string>
+                     </attribute>
                     </widget>
                    </item>
                    <item row="1" column="0">
@@ -621,6 +627,9 @@ QLineEdit:hover{
                      <property name="text">
                       <string>Dental</string>
                      </property>
+                     <attribute name="buttonGroup">
+                      <string notr="true">buttonGroup</string>
+                     </attribute>
                     </widget>
                    </item>
                    <item row="1" column="1">
@@ -640,6 +649,9 @@ QLineEdit:hover{
                      <property name="text">
                       <string>Priority</string>
                      </property>
+                     <attribute name="buttonGroup">
+                      <string notr="true">buttonGroup</string>
+                     </attribute>
                     </widget>
                    </item>
                   </layout>
@@ -1313,7 +1325,7 @@ border-raidus: 5px;</string>
                    </column>
                    <column>
                     <property name="text">
-                     <string>New Column</string>
+                     <string>Address</string>
                     </property>
                    </column>
                    <column>
@@ -1366,7 +1378,7 @@ border-raidus: 5px;</string>
 </string>
                      </property>
                      <property name="text">
-                      <string>New Check Up Record</string>
+                      <string>New Vaccine Record</string>
                      </property>
                     </widget>
                    </item>
@@ -1670,7 +1682,7 @@ border-raidus: 5px;</string>
 </string>
                      </property>
                      <property name="text">
-                      <string>New Check Up Record</string>
+                      <string>New Dental Record</string>
                      </property>
                     </widget>
                    </item>
@@ -1726,6 +1738,310 @@ QPushButton:hover{
                    </item>
                    <item>
                     <widget class="QComboBox" name="dtRecord">
+                     <item>
+                      <property name="text">
+                       <string>Check Up, January 21, 2021</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="priorityTab">
+                <property name="styleSheet">
+                 <string notr="true">background-color: none;
+border-raidus: 5px;</string>
+                </property>
+                <attribute name="title">
+                 <string>Priority</string>
+                </attribute>
+                <layout class="QVBoxLayout" name="verticalLayout_6">
+                 <item>
+                  <widget class="QTableWidget" name="priorityTable">
+                   <property name="rowCount">
+                    <number>150</number>
+                   </property>
+                   <attribute name="verticalHeaderVisible">
+                    <bool>false</bool>
+                   </attribute>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <row/>
+                   <column>
+                    <property name="text">
+                     <string>Ticket Number</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Name</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Age</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Address</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Contact</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Date and Time</string>
+                    </property>
+                   </column>
+                  </widget>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_6">
+                   <property name="spacing">
+                    <number>15</number>
+                   </property>
+                   <item>
+                    <widget class="QLabel" name="prLabel">
+                     <property name="minimumSize">
+                      <size>
+                       <width>180</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>180</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>12</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QLabel{
+	
+	background-color: rgb(211, 211, 211);
+	border-style: outset;
+	border-width:1px;
+	border-radius: 3px;
+	border-color: black;
+	padding: 6px;
+	mid-width: 10px;
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>New Priority Record</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="prNewEdit">
+                     <property name="minimumSize">
+                      <size>
+                       <width>125</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>125</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="prCreateBtn">
+                     <property name="minimumSize">
+                      <size>
+                       <width>75</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>75</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton{
+	background-color: rgb(138, 155, 197);
+	color: white;
+	border-style: outset;
+	border-width:1px;
+	border-radius: 5px;
+	border-color: black;
+	padding: 6px;
+	mid-width: 10px;
+}
+QPushButton:hover{
+	background-color: rgb(186, 172, 255);
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>Create</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="prRecord">
                      <item>
                       <property name="text">
                        <string>Check Up, January 21, 2021</string>
@@ -1858,4 +2174,7 @@ QPushButton:hover{
    </hints>
   </connection>
  </connections>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+ </buttongroups>
 </ui>
