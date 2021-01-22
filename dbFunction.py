@@ -98,7 +98,6 @@ class dbWindow(realMainWindow):
             self.ui.checkUpTable.setItem(tablerow, 3, QtWidgets.QTableWidgetItem(row[3]))
             self.ui.checkUpTable.setItem(tablerow, 4, QtWidgets.QTableWidgetItem(str(row[4])))
             self.ui.checkUpTable.setItem(tablerow, 5, QtWidgets.QTableWidgetItem(row[5]))
-            self.ui.checkUpTable.setItem(tablerow, 6, QtWidgets.QTableWidgetItem(row[6]))
             tablerow+=1
     def loadVaccine(self):
         self.ui.vaccineTable.setRowCount(150)
@@ -126,7 +125,6 @@ class dbWindow(realMainWindow):
             self.ui.vaccineTable.setItem(tablerow, 3, QtWidgets.QTableWidgetItem(row[3]))
             self.ui.vaccineTable.setItem(tablerow, 4, QtWidgets.QTableWidgetItem(str(row[4])))
             self.ui.vaccineTable.setItem(tablerow, 5, QtWidgets.QTableWidgetItem(row[5]))
-            self.ui.vaccineTable.setItem(tablerow, 6, QtWidgets.QTableWidgetItem(row[6]))
             tablerow+=1
     def loadDental(self):
         self.ui.dentalTable.setRowCount(150)
@@ -154,7 +152,6 @@ class dbWindow(realMainWindow):
             self.ui.dentalTable.setItem(tablerow, 3, QtWidgets.QTableWidgetItem(row[3]))
             self.ui.dentalTable.setItem(tablerow, 4, QtWidgets.QTableWidgetItem(str(row[4])))
             self.ui.dentalTable.setItem(tablerow, 5, QtWidgets.QTableWidgetItem(row[5]))
-            self.ui.dentalTable.setItem(tablerow, 6, QtWidgets.QTableWidgetItem(row[6]))
             tablerow+=1
 
     def insertData(self):
