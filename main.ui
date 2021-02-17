@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>943</width>
-    <height>620</height>
+    <width>1239</width>
+    <height>830</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -402,7 +402,7 @@ border-radius: 10px;</string>
                       <string notr="true">color: rgb(255, 255, 0);</string>
                      </property>
                      <property name="text">
-                      <string>CU00</string>
+                      <string>0</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -519,7 +519,7 @@ border-radius: 10px;</string>
                       <string notr="true">color: rgb(255, 255, 0);</string>
                      </property>
                      <property name="text">
-                      <string>VC00</string>
+                      <string>0</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -636,7 +636,7 @@ border-radius: 10px;</string>
                       <string notr="true">color: rgb(255, 255, 0);</string>
                      </property>
                      <property name="text">
-                      <string>DT00</string>
+                      <string>0</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -756,7 +756,7 @@ border-radius: 10px;</string>
                       <string notr="true">color: rgb(0, 255, 0);</string>
                      </property>
                      <property name="text">
-                      <string>PRT00</string>
+                      <string>0</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -892,7 +892,7 @@ background-image: url(:/newPrefix/01.png);</string>
                 <string notr="true">color: rgb(255, 0, 0); background-color:none</string>
                </property>
                <property name="text">
-                <string>NULL</string>
+                <string>---</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
