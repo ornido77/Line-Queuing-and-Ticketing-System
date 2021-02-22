@@ -43,10 +43,21 @@ class realMainWindow(QMainWindow):
         UIFunctions.uiDefinitions(self)
 
         self.ui.checkUpBtn.clicked.connect(self.printCuTicket)
-        self.ui.vaccineBtn.clicked.connect(self.print_preview_dialog)
+        self.ui.checkUpBtn.clicked.connect(self.cuIncre)
+        self.ui.vaccineBtn.clicked.connect(self.printVcTicket)
+        self.ui.vaccineBtn.clicked.connect(self.vcIncre)
+        self.ui.dentalBtn.clicked.connect(self.printDtTicket)
+        self.ui.dentalBtn.clicked.connect(self.dtIncre)
+        self.ui.priorityBtn.clicked.connect(self.printPtTicket)
+        self.ui.priorityBtn.clicked.connect(self.ptIncre)
+
         ## SHOW ==> MAIN WINDOW
         ########################################################################
         self.show()
+        self.ui.cuTicket.setText(str(checkup))
+        self.ui.vcTicket.setText(str(vaccine))
+        self.ui.dtTicket.setText(str(dental))
+        self.ui.ptTicket.setText(str(priority))
 
 
     ## APP EVENTS
@@ -59,7 +70,49 @@ class realMainWindow(QMainWindow):
         dialog = QPrintDialog(printer, self)
 
         if dialog.exec_() == QPrintDialog.Accepted:
-            self.ui.textEdit.print_(printer)
+            self.ui.cuTicket.print_(printer)
+    def printVcTicket(self):
+        printer = QPrinter(QPrinter.HighResolution)
+        dialog = QPrintDialog(printer, self)
+
+        if dialog.exec_() == QPrintDialog.Accepted:
+            self.ui.vcTicket.print_(printer)
+    def printDtTicket(self):
+        printer = QPrinter(QPrinter.HighResolution)
+        dialog = QPrintDialog(printer, self)
+
+        if dialog.exec_() == QPrintDialog.Accepted:
+            self.ui.dtTicket.print_(printer)
+    def printPtTicket(self):
+        printer = QPrinter(QPrinter.HighResolution)
+        dialog = QPrintDialog(printer, self)
+
+        if dialog.exec_() == QPrintDialog.Accepted:
+            self.ui.ptTicket.print_(printer)
+
+    def cuIncre(self):
+        global checkup
+        checkup += 1
+        self.ui.cuTicket.setText(str(checkup))
+    def vcIncre(self):
+        global vaccine
+        vaccine += 1
+        self.ui.vcTicket.setText(str(vaccine))
+    def dtIncre(self):
+        global dental
+        dental += 1
+        self.ui.dtTicket.setText(str(dental))
+    def ptIncre(self):
+        global priority
+        priority += 1
+        self.ui.ptTicket.setText(str(priority))
+
+
+
+
+
+
+###
     def print_preview_dialog(self):
         printer = QPrinter(QPrinter.HighResolution)
         previewDialog = QPrintPreviewDialog(printer, self)

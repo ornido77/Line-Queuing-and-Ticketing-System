@@ -14,9 +14,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1200, 800)
+        MainWindow.resize(1200, 905)
         MainWindow.setMinimumSize(QtCore.QSize(1200, 800))
-        MainWindow.setMaximumSize(QtCore.QSize(1200, 800))
+        MainWindow.setMaximumSize(QtCore.QSize(1200, 1000))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.frame_centralwidget_layout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -117,15 +117,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.frame = QtWidgets.QFrame(self.frame_content_bar)
-        self.frame.setMaximumSize(QtCore.QSize(200, 16777215))
-        self.frame.setStyleSheet("background-color: rgb(170, 170, 255);")
+        self.frame.setMaximumSize(QtCore.QSize(50, 16777215))
+        self.frame.setStyleSheet("background-color: rgb(68, 68, 102);")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
-        self.textEdit = QtWidgets.QTextEdit(self.frame)
-        self.textEdit.setGeometry(QtCore.QRect(90, 260, 104, 99))
-        self.textEdit.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.textEdit.setObjectName("textEdit")
         self.horizontalLayout.addWidget(self.frame)
         self.frame_buttons = QtWidgets.QFrame(self.frame_content_bar)
         self.frame_buttons.setStyleSheet("background-color: rgb(0, 85, 127);")
@@ -133,8 +129,8 @@ class Ui_MainWindow(object):
         self.frame_buttons.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_buttons.setObjectName("frame_buttons")
         self.label = QtWidgets.QLabel(self.frame_buttons)
-        self.label.setGeometry(QtCore.QRect(80, 20, 600, 75))
-        self.label.setMinimumSize(QtCore.QSize(600, 75))
+        self.label.setGeometry(QtCore.QRect(40, 30, 1000, 100))
+        self.label.setMinimumSize(QtCore.QSize(1000, 100))
         self.label.setMaximumSize(QtCore.QSize(600, 75))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
@@ -150,26 +146,8 @@ class Ui_MainWindow(object):
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setWordWrap(False)
         self.label.setObjectName("label")
-        self.label_2 = QtWidgets.QLabel(self.frame_buttons)
-        self.label_2.setGeometry(QtCore.QRect(130, 100, 500, 75))
-        self.label_2.setMinimumSize(QtCore.QSize(500, 75))
-        self.label_2.setMaximumSize(QtCore.QSize(500, 75))
-        font = QtGui.QFont()
-        font.setFamily("Times New Roman")
-        font.setPointSize(28)
-        self.label_2.setFont(font)
-        self.label_2.setStyleSheet("background-color: rgb(170, 170, 255);\n"
-"border-style: outset;\n"
-"border-width:1px;\n"
-"border-radius: 10px;\n"
-"border-color: black;\n"
-"padding: 6px;\n"
-"mid-width: 10px;")
-        self.label_2.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_2.setWordWrap(False)
-        self.label_2.setObjectName("label_2")
         self.layoutWidget = QtWidgets.QWidget(self.frame_buttons)
-        self.layoutWidget.setGeometry(QtCore.QRect(0, 171, 761, 531))
+        self.layoutWidget.setGeometry(QtCore.QRect(150, 300, 771, 531))
         self.layoutWidget.setObjectName("layoutWidget")
         self.gridLayout = QtWidgets.QGridLayout(self.layoutWidget)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
@@ -278,10 +256,185 @@ class Ui_MainWindow(object):
 "}")
         self.dentalBtn.setObjectName("dentalBtn")
         self.gridLayout.addWidget(self.dentalBtn, 1, 0, 1, 1)
+        self.layoutWidget1 = QtWidgets.QWidget(self.frame_buttons)
+        self.layoutWidget1.setGeometry(QtCore.QRect(60, 160, 961, 61))
+        self.layoutWidget1.setObjectName("layoutWidget1")
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.layoutWidget1)
+        self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_4.setSpacing(20)
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.label_2 = QtWidgets.QLabel(self.layoutWidget1)
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_2.setFont(font)
+        self.label_2.setStyleSheet("background-color: rgb(170, 170, 255);\n"
+"border-style: outset;\n"
+"border-width:1px;\n"
+"border-radius: 10px;\n"
+"border-color: black;\n"
+"padding: 6px;\n"
+"mid-width: 10px;")
+        self.label_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_2.setObjectName("label_2")
+        self.horizontalLayout_4.addWidget(self.label_2)
+        self.label_3 = QtWidgets.QLabel(self.layoutWidget1)
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_3.setFont(font)
+        self.label_3.setStyleSheet("background-color: rgb(170, 170, 255);\n"
+"border-style: outset;\n"
+"border-width:1px;\n"
+"border-radius: 10px;\n"
+"border-color: black;\n"
+"padding: 6px;\n"
+"mid-width: 10px;")
+        self.label_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_3.setObjectName("label_3")
+        self.horizontalLayout_4.addWidget(self.label_3)
+        self.label_5 = QtWidgets.QLabel(self.layoutWidget1)
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_5.setFont(font)
+        self.label_5.setStyleSheet("background-color: rgb(170, 170, 255);\n"
+"border-style: outset;\n"
+"border-width:1px;\n"
+"border-radius: 10px;\n"
+"border-color: black;\n"
+"padding: 6px;\n"
+"mid-width: 10px;")
+        self.label_5.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_5.setObjectName("label_5")
+        self.horizontalLayout_4.addWidget(self.label_5)
+        self.label_4 = QtWidgets.QLabel(self.layoutWidget1)
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_4.setFont(font)
+        self.label_4.setStyleSheet("background-color: rgb(170, 42, 62);\n"
+"border-style: outset;\n"
+"border-width:1px;\n"
+"border-radius: 10px;\n"
+"border-color: black;\n"
+"padding: 6px;\n"
+"mid-width: 10px;")
+        self.label_4.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_4.setObjectName("label_4")
+        self.horizontalLayout_4.addWidget(self.label_4)
+        self.layoutWidget2 = QtWidgets.QWidget(self.frame_buttons)
+        self.layoutWidget2.setGeometry(QtCore.QRect(60, 230, 961, 102))
+        self.layoutWidget2.setObjectName("layoutWidget2")
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.layoutWidget2)
+        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_3.setSpacing(100)
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.cuTicket = QtWidgets.QTextEdit(self.layoutWidget2)
+        self.cuTicket.setMinimumSize(QtCore.QSize(0, 0))
+        self.cuTicket.setMaximumSize(QtCore.QSize(150, 100))
+        font = QtGui.QFont()
+        font.setPointSize(28)
+        font.setBold(True)
+        font.setWeight(75)
+        self.cuTicket.setFont(font)
+        self.cuTicket.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.ForbiddenCursor))
+        self.cuTicket.setLayoutDirection(QtCore.Qt.RightToLeft)
+        self.cuTicket.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"color: green;\n"
+"border-style: outset;\n"
+"border-width:1px;\n"
+"border-radius: 10px;\n"
+"border-color: black;\n"
+"padding: 6px;\n"
+"mid-width: 10px;")
+        self.cuTicket.setFrameShadow(QtWidgets.QFrame.Plain)
+        self.cuTicket.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.cuTicket.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.cuTicket.setReadOnly(True)
+        self.cuTicket.setObjectName("cuTicket")
+        self.horizontalLayout_3.addWidget(self.cuTicket)
+        self.vcTicket = QtWidgets.QTextEdit(self.layoutWidget2)
+        self.vcTicket.setMaximumSize(QtCore.QSize(150, 100))
+        font = QtGui.QFont()
+        font.setPointSize(28)
+        font.setBold(True)
+        font.setWeight(75)
+        self.vcTicket.setFont(font)
+        self.vcTicket.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.ForbiddenCursor))
+        self.vcTicket.setLayoutDirection(QtCore.Qt.RightToLeft)
+        self.vcTicket.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"color: green;\n"
+"border-style: outset;\n"
+"border-width:1px;\n"
+"border-radius: 10px;\n"
+"border-color: black;\n"
+"padding: 6px;\n"
+"mid-width: 10px;")
+        self.vcTicket.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.vcTicket.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.vcTicket.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.vcTicket.setReadOnly(True)
+        self.vcTicket.setObjectName("vcTicket")
+        self.horizontalLayout_3.addWidget(self.vcTicket)
+        self.dtTicket = QtWidgets.QTextEdit(self.layoutWidget2)
+        self.dtTicket.setMaximumSize(QtCore.QSize(150, 100))
+        font = QtGui.QFont()
+        font.setPointSize(28)
+        font.setBold(True)
+        font.setWeight(75)
+        self.dtTicket.setFont(font)
+        self.dtTicket.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.ForbiddenCursor))
+        self.dtTicket.setLayoutDirection(QtCore.Qt.RightToLeft)
+        self.dtTicket.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"color: green;\n"
+"border-style: outset;\n"
+"border-width:1px;\n"
+"border-radius: 10px;\n"
+"border-color: black;\n"
+"padding: 6px;\n"
+"mid-width: 10px;")
+        self.dtTicket.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.dtTicket.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.dtTicket.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.dtTicket.setReadOnly(True)
+        self.dtTicket.setObjectName("dtTicket")
+        self.horizontalLayout_3.addWidget(self.dtTicket)
+        self.ptTicket = QtWidgets.QTextEdit(self.layoutWidget2)
+        self.ptTicket.setMaximumSize(QtCore.QSize(150, 100))
+        font = QtGui.QFont()
+        font.setPointSize(28)
+        font.setBold(True)
+        font.setWeight(75)
+        self.ptTicket.setFont(font)
+        self.ptTicket.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.ForbiddenCursor))
+        self.ptTicket.setLayoutDirection(QtCore.Qt.RightToLeft)
+        self.ptTicket.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"color: red;\n"
+"border-style: outset;\n"
+"border-width:1px;\n"
+"border-radius: 10px;\n"
+"border-color: black;\n"
+"padding: 6px;\n"
+"mid-width: 10px;")
+        self.ptTicket.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.ptTicket.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.ptTicket.setSizeAdjustPolicy(QtWidgets.QAbstractScrollArea.AdjustIgnored)
+        self.ptTicket.setReadOnly(True)
+        self.ptTicket.setObjectName("ptTicket")
+        self.horizontalLayout_3.addWidget(self.ptTicket)
         self.horizontalLayout.addWidget(self.frame_buttons)
         self.frame_3 = QtWidgets.QFrame(self.frame_content_bar)
-        self.frame_3.setMaximumSize(QtCore.QSize(200, 16777215))
-        self.frame_3.setStyleSheet("background-color: rgb(170, 170, 255);")
+        self.frame_3.setMaximumSize(QtCore.QSize(50, 16777215))
+        self.frame_3.setStyleSheet("background-color: rgb(68, 68, 102);")
         self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_3.setObjectName("frame_3")
@@ -332,12 +485,14 @@ class Ui_MainWindow(object):
         self.label_title.setText(_translate("MainWindow", "Ticket System"))
         self.label.setToolTip(_translate("MainWindow", "<html><head/><body><p>Bagbaguin Health Center and Lying-In Clinic</p></body></html>"))
         self.label.setWhatsThis(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
-        self.label.setText(_translate("MainWindow", "Bagbaguin Health Center"))
-        self.label_2.setToolTip(_translate("MainWindow", "<html><head/><body><p>Bagbaguin Health Center and Lying-In Clinic</p></body></html>"))
-        self.label_2.setText(_translate("MainWindow", "and Lying - in Clinic"))
+        self.label.setText(_translate("MainWindow", "Bagbaguin Health Center and Lying - In Clinic"))
         self.checkUpBtn.setText(_translate("MainWindow", "Check Up"))
         self.vaccineBtn.setText(_translate("MainWindow", "Vaccine"))
         self.priorityBtn.setText(_translate("MainWindow", "Priority"))
         self.dentalBtn.setText(_translate("MainWindow", "Dental"))
+        self.label_2.setText(_translate("MainWindow", "Check Up"))
+        self.label_3.setText(_translate("MainWindow", "Vaccine"))
+        self.label_5.setText(_translate("MainWindow", "Dental"))
+        self.label_4.setText(_translate("MainWindow", "Priority"))
         self.label_credits.setText(_translate("MainWindow", "Powered By: Python"))
 
