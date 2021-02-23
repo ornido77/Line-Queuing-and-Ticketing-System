@@ -152,17 +152,17 @@ class Ui_MainWindow(object):
         self.gridLayout = QtWidgets.QGridLayout(self.layoutWidget)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setObjectName("gridLayout")
-        self.checkUpBtn = QtWidgets.QPushButton(self.layoutWidget)
-        self.checkUpBtn.setMinimumSize(QtCore.QSize(250, 150))
-        self.checkUpBtn.setMaximumSize(QtCore.QSize(0, 16777215))
+        self.dentalBtn = QtWidgets.QPushButton(self.layoutWidget)
+        self.dentalBtn.setMinimumSize(QtCore.QSize(250, 150))
+        self.dentalBtn.setMaximumSize(QtCore.QSize(0, 16777215))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(24)
         font.setBold(True)
         font.setWeight(75)
-        self.checkUpBtn.setFont(font)
-        self.checkUpBtn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.checkUpBtn.setStyleSheet("QPushButton{\n"
+        self.dentalBtn.setFont(font)
+        self.dentalBtn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.dentalBtn.setStyleSheet("QPushButton{\n"
 "    background-color: rgb(138, 155, 197);\n"
 "    color: white;\n"
 "    border-style: outset;\n"
@@ -176,8 +176,8 @@ class Ui_MainWindow(object):
 "    background-color: rgb(186, 172, 255);\n"
 "    color: blue;\n"
 "}")
-        self.checkUpBtn.setObjectName("checkUpBtn")
-        self.gridLayout.addWidget(self.checkUpBtn, 0, 0, 1, 1)
+        self.dentalBtn.setObjectName("dentalBtn")
+        self.gridLayout.addWidget(self.dentalBtn, 1, 0, 1, 1)
         self.vaccineBtn = QtWidgets.QPushButton(self.layoutWidget)
         self.vaccineBtn.setMinimumSize(QtCore.QSize(250, 150))
         self.vaccineBtn.setMaximumSize(QtCore.QSize(0, 16777215))
@@ -230,17 +230,17 @@ class Ui_MainWindow(object):
 "}")
         self.priorityBtn.setObjectName("priorityBtn")
         self.gridLayout.addWidget(self.priorityBtn, 1, 1, 1, 1)
-        self.dentalBtn = QtWidgets.QPushButton(self.layoutWidget)
-        self.dentalBtn.setMinimumSize(QtCore.QSize(250, 150))
-        self.dentalBtn.setMaximumSize(QtCore.QSize(0, 16777215))
+        self.checkUpBtn = QtWidgets.QPushButton(self.layoutWidget)
+        self.checkUpBtn.setMinimumSize(QtCore.QSize(250, 150))
+        self.checkUpBtn.setMaximumSize(QtCore.QSize(0, 16777215))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(24)
         font.setBold(True)
         font.setWeight(75)
-        self.dentalBtn.setFont(font)
-        self.dentalBtn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.dentalBtn.setStyleSheet("QPushButton{\n"
+        self.checkUpBtn.setFont(font)
+        self.checkUpBtn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.checkUpBtn.setStyleSheet("QPushButton{\n"
 "    background-color: rgb(138, 155, 197);\n"
 "    color: white;\n"
 "    border-style: outset;\n"
@@ -254,8 +254,8 @@ class Ui_MainWindow(object):
 "    background-color: rgb(186, 172, 255);\n"
 "    color: blue;\n"
 "}")
-        self.dentalBtn.setObjectName("dentalBtn")
-        self.gridLayout.addWidget(self.dentalBtn, 1, 0, 1, 1)
+        self.checkUpBtn.setObjectName("checkUpBtn")
+        self.gridLayout.addWidget(self.checkUpBtn, 0, 0, 1, 1)
         self.layoutWidget1 = QtWidgets.QWidget(self.frame_buttons)
         self.layoutWidget1.setGeometry(QtCore.QRect(60, 160, 961, 61))
         self.layoutWidget1.setObjectName("layoutWidget1")
@@ -431,6 +431,45 @@ class Ui_MainWindow(object):
         self.ptTicket.setReadOnly(True)
         self.ptTicket.setObjectName("ptTicket")
         self.horizontalLayout_3.addWidget(self.ptTicket)
+        self.dateTime = QtWidgets.QTextEdit(self.frame_buttons)
+        self.dateTime.setGeometry(QtCore.QRect(940, 760, 121, 61))
+        self.dateTime.setMinimumSize(QtCore.QSize(0, 0))
+        self.dateTime.setMaximumSize(QtCore.QSize(150, 100))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.dateTime.setFont(font)
+        self.dateTime.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.ForbiddenCursor))
+        self.dateTime.setLayoutDirection(QtCore.Qt.RightToLeft)
+        self.dateTime.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"color: green;\n"
+"border-style: outset;\n"
+"border-width:1px;\n"
+"border-radius: 10px;\n"
+"border-color: black;\n"
+"padding: 6px;\n"
+"mid-width: 10px;")
+        self.dateTime.setFrameShadow(QtWidgets.QFrame.Plain)
+        self.dateTime.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.dateTime.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.dateTime.setReadOnly(False)
+        self.dateTime.setObjectName("dateTime")
+        self.label_6 = QtWidgets.QLabel(self.frame_buttons)
+        self.label_6.setGeometry(QtCore.QRect(950, 730, 101, 31))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_6.setFont(font)
+        self.label_6.setStyleSheet("background-color: rgb(170, 255, 0);\n"
+"border-style: outset;\n"
+"border-width:1px;\n"
+"border-color: black;\n"
+"mid-width: 10px;")
+        self.label_6.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_6.setObjectName("label_6")
         self.horizontalLayout.addWidget(self.frame_buttons)
         self.frame_3 = QtWidgets.QFrame(self.frame_content_bar)
         self.frame_3.setMaximumSize(QtCore.QSize(50, 16777215))
@@ -486,13 +525,14 @@ class Ui_MainWindow(object):
         self.label.setToolTip(_translate("MainWindow", "<html><head/><body><p>Bagbaguin Health Center and Lying-In Clinic</p></body></html>"))
         self.label.setWhatsThis(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
         self.label.setText(_translate("MainWindow", "Bagbaguin Health Center and Lying - In Clinic"))
-        self.checkUpBtn.setText(_translate("MainWindow", "Check Up"))
+        self.dentalBtn.setText(_translate("MainWindow", "Dental"))
         self.vaccineBtn.setText(_translate("MainWindow", "Vaccine"))
         self.priorityBtn.setText(_translate("MainWindow", "Priority"))
-        self.dentalBtn.setText(_translate("MainWindow", "Dental"))
+        self.checkUpBtn.setText(_translate("MainWindow", "Check Up"))
         self.label_2.setText(_translate("MainWindow", "Check Up"))
         self.label_3.setText(_translate("MainWindow", "Vaccine"))
         self.label_5.setText(_translate("MainWindow", "Dental"))
         self.label_4.setText(_translate("MainWindow", "Priority"))
+        self.label_6.setText(_translate("MainWindow", "Date"))
         self.label_credits.setText(_translate("MainWindow", "Powered By: Python"))
 

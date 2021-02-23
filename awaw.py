@@ -1,18 +1,14 @@
-import sqlite3
+from PyQt5.QtCore import QDate, QTime, QDateTime, Qt
 
+now = QDate.currentDate()
 
-conn = sqlite3.connect("test")
+print(now.toString(Qt.ISODate))
+print(now.toString(Qt.DefaultLocaleLongDate))
 
-c = conn.cursor()
-"""
-c.execute(''' CREATE TABLE date(
-            id       INTEGER     PRIMARY KEY,
-            username NOT NULL,
-            time_in  DATETIME   DEFAULT     CURRENT_TIMESTAMP
-            )''')
-"""
-c.execute("INSERT INTO date(username) VALUES('awaw')")
-c.execute("SELECT * FROM date")
-print(c.fetchall())
-conn.commit()
-conn.close()
+datetime = QDateTime.currentDateTime()
+
+print(datetime.toString())
+
+time = QTime.currentTime()
+
+print(time.toString(Qt.DefaultLocaleLongDate))

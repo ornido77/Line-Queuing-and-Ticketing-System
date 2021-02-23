@@ -58,6 +58,9 @@ class realMainWindow(QMainWindow):
         self.ui.vcTicket.setText(str(vaccine))
         self.ui.dtTicket.setText(str(dental))
         self.ui.ptTicket.setText(str(priority))
+        now = QDate.currentDate()
+        time = QTime.currentTime()
+        self.ui.dateTime.setText(now.toString())
 
 
     ## APP EVENTS
