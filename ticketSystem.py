@@ -17,6 +17,9 @@ checkup = 1
 vaccine = 1
 dental = 1
 priority = 1
+now = QDate.currentDate()
+date = now.toString()
+
 
 class realMainWindow(QMainWindow):
     def __init__(self):
@@ -44,7 +47,7 @@ class realMainWindow(QMainWindow):
 
         self.ui.checkUpBtn.clicked.connect(self.printCuTicket)
         self.ui.checkUpBtn.clicked.connect(self.cuIncre)
-        self.ui.vaccineBtn.clicked.connect(self.printVcTicket)
+        self.ui.vaccineBtn.clicked.connect(self.print_preview_dialog)
         self.ui.vaccineBtn.clicked.connect(self.vcIncre)
         self.ui.dentalBtn.clicked.connect(self.printDtTicket)
         self.ui.dentalBtn.clicked.connect(self.dtIncre)
@@ -54,12 +57,10 @@ class realMainWindow(QMainWindow):
         ## SHOW ==> MAIN WINDOW
         ########################################################################
         self.show()
-        self.ui.cuTicket.setText(str(checkup))
-        self.ui.vcTicket.setText(str(vaccine))
-        self.ui.dtTicket.setText(str(dental))
-        self.ui.ptTicket.setText(str(priority))
-        now = QDate.currentDate()
-        time = QTime.currentTime()
+        self.ui.cuTicket.setText("C"+ str(checkup))
+        self.ui.vcTicket.setText("V"+ str(vaccine))
+        self.ui.dtTicket.setText("D"+ str(dental))
+        self.ui.ptTicket.setText("P"+ str(priority))
         self.ui.dateTime.setText(now.toString())
 
 
@@ -70,24 +71,30 @@ class realMainWindow(QMainWindow):
 
     def printCuTicket(self):
         printer = QPrinter(QPrinter.HighResolution)
+        printer.setPageSize(QPrinter.A8)
+        printer.setPageMargins(1, 1, 1, 1)
         dialog = QPrintDialog(printer, self)
 
         if dialog.exec_() == QPrintDialog.Accepted:
             self.ui.cuTicket.print_(printer)
+            self.ui.dateTime.print_(printer)
     def printVcTicket(self):
         printer = QPrinter(QPrinter.HighResolution)
+        printer.setPageSize(QPrinter.A8)
         dialog = QPrintDialog(printer, self)
 
         if dialog.exec_() == QPrintDialog.Accepted:
             self.ui.vcTicket.print_(printer)
     def printDtTicket(self):
         printer = QPrinter(QPrinter.HighResolution)
+        printer.setPageSize(QPrinter.A8)
         dialog = QPrintDialog(printer, self)
 
         if dialog.exec_() == QPrintDialog.Accepted:
             self.ui.dtTicket.print_(printer)
     def printPtTicket(self):
         printer = QPrinter(QPrinter.HighResolution)
+        printer.setPageSize(QPrinter.A8)
         dialog = QPrintDialog(printer, self)
 
         if dialog.exec_() == QPrintDialog.Accepted:
@@ -118,13 +125,14 @@ class realMainWindow(QMainWindow):
 ###
     def print_preview_dialog(self):
         printer = QPrinter(QPrinter.HighResolution)
+        printer.setPageSize(QPrinter.A8)
+        printer.setPageMargins(10, 10, 10, 10)
         previewDialog = QPrintPreviewDialog(printer, self)
         previewDialog.paintRequested.connect(self.print_preview)
         previewDialog.exec()
 
     def print_preview(self, printer):
-        global checkup
-        self.ui.textEdit.print_(printer)
+        self.ui.cuTicket.print_(printer)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
