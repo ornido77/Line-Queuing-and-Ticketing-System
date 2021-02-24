@@ -47,7 +47,7 @@ class realMainWindow(QMainWindow):
 
         self.ui.checkUpBtn.clicked.connect(self.printCuTicket)
         self.ui.checkUpBtn.clicked.connect(self.cuIncre)
-        self.ui.vaccineBtn.clicked.connect(self.print_preview_dialog)
+        self.ui.vaccineBtn.clicked.connect(self.printVcTicket)
         self.ui.vaccineBtn.clicked.connect(self.vcIncre)
         self.ui.dentalBtn.clicked.connect(self.printDtTicket)
         self.ui.dentalBtn.clicked.connect(self.dtIncre)
@@ -72,7 +72,6 @@ class realMainWindow(QMainWindow):
     def printCuTicket(self):
         printer = QPrinter(QPrinter.HighResolution)
         printer.setPageSize(QPrinter.A8)
-        printer.setPageMargins(1, 1, 1, 1)
         dialog = QPrintDialog(printer, self)
 
         if dialog.exec_() == QPrintDialog.Accepted:
@@ -103,19 +102,19 @@ class realMainWindow(QMainWindow):
     def cuIncre(self):
         global checkup
         checkup += 1
-        self.ui.cuTicket.setText(str(checkup))
+        self.ui.cuTicket.setText("C" + str(checkup))
     def vcIncre(self):
         global vaccine
         vaccine += 1
-        self.ui.vcTicket.setText(str(vaccine))
+        self.ui.vcTicket.setText("V" + str(vaccine))
     def dtIncre(self):
         global dental
         dental += 1
-        self.ui.dtTicket.setText(str(dental))
+        self.ui.dtTicket.setText("D" + str(dental))
     def ptIncre(self):
         global priority
         priority += 1
-        self.ui.ptTicket.setText(str(priority))
+        self.ui.ptTicket.setText("P" + str(priority))
 
 
 

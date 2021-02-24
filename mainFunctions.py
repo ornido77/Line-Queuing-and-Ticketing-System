@@ -86,15 +86,7 @@ class UIFunctions(realMainWindow):
 class ticketFunction(realMainWindow):
     def ticketIncrement1(self):
         global value1
-        if value1 > 99:
-            self.ui.label_ticketValue1.setText(("CU") + str(value1))
-            self.ui.label_ticketValue.setText(("CU") + str(value1))
-        elif value1 < 10:
-            self.ui.label_ticketValue1.setText(("CU00") + str(value1))
-            self.ui.label_ticketValue.setText(("CU00") + str(value1))
-        else:
-            self.ui.label_ticketValue1.setText(("CU0") + str(value1))
-            self.ui.label_ticketValue.setText(("CU0") + str(value1))
+        self.ui.label_ticketValue1.setText(str(value1))
         self.ui.label_procedure.setText("Please Proceed To")
         self.ui.label_roomNo.setText("Room 101")
         self.ui.frame_rightBody.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0.688, "
@@ -103,15 +95,7 @@ class ticketFunction(realMainWindow):
         value1 += 1
     def ticketIncrement2(self):
         global value2
-        if value2 > 99:
-            self.ui.label_ticketValue2.setText(("VC") + str(value2))
-            self.ui.label_ticketValue.setText(("VC") + str(value2))
-        elif value2 < 10:
-            self.ui.label_ticketValue2.setText(("VC00") + str(value2))
-            self.ui.label_ticketValue.setText(("VC00") + str(value2))
-        else:
-            self.ui.label_ticketValue2.setText(("VC0") + str(value2))
-            self.ui.label_ticketValue.setText(("VC0") + str(value2))
+        self.ui.label_ticketValue2.setText(str(value2))
         self.ui.label_procedure.setText("Please Proceed To")
         self.ui.label_roomNo.setText("Room 102")
         self.ui.frame_rightBody.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0.994318, "
@@ -120,15 +104,7 @@ class ticketFunction(realMainWindow):
         value2 += 1
     def ticketIncrement3(self):
         global value3
-        if value3 > 99:
-            self.ui.label_ticketValue3.setText(("DT") + str(value3))
-            self.ui.label_ticketValue.setText(("DT") + str(value3))
-        elif value3 < 10:
-            self.ui.label_ticketValue3.setText(("DT00") + str(value3))
-            self.ui.label_ticketValue.setText(("DT00") + str(value3))
-        else:
-            self.ui.label_ticketValue3.setText(("DT0") + str(value3))
-            self.ui.label_ticketValue.setText(("DT0") + str(value3))
+        self.ui.label_ticketValue3.setText(str(value3))
         self.ui.label_procedure.setText("Please Proceed To")
         self.ui.label_roomNo.setText("Room 103")
         self.ui.frame_rightBody.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, "
@@ -137,15 +113,7 @@ class ticketFunction(realMainWindow):
 
     def ticketIncrement4(self):
         global value3
-        if value3 > 99:
-            self.ui.label_ticketValue4.setText(("DT") + str(value3))
-            self.ui.label_ticketValue.setText(("DT") + str(value3))
-        elif value3 < 10:
-            self.ui.label_ticketValue4.setText(("DT00") + str(value3))
-            self.ui.label_ticketValue.setText(("DT00") + str(value3))
-        else:
-            self.ui.label_ticketValue4.setText(("DT0") + str(value3))
-            self.ui.label_ticketValue.setText(("DT0") + str(value3))
+        self.ui.label_ticketValue4.setText(str(value3))
         self.ui.label_procedure.setText("You Can Now")
         self.ui.label_roomNo.setText("Proceed")
         self.ui.frame_rightBody.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, "
