@@ -332,7 +332,7 @@ class Ui_MainWindow(object):
         self.label_4.setObjectName("label_4")
         self.horizontalLayout_4.addWidget(self.label_4)
         self.layoutWidget2 = QtWidgets.QWidget(self.frame_buttons)
-        self.layoutWidget2.setGeometry(QtCore.QRect(60, 230, 961, 102))
+        self.layoutWidget2.setGeometry(QtCore.QRect(40, 780, 306, 16))
         self.layoutWidget2.setObjectName("layoutWidget2")
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.layoutWidget2)
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
@@ -340,9 +340,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.cuTicket = QtWidgets.QTextEdit(self.layoutWidget2)
         self.cuTicket.setMinimumSize(QtCore.QSize(0, 0))
-        self.cuTicket.setMaximumSize(QtCore.QSize(150, 100))
+        self.cuTicket.setMaximumSize(QtCore.QSize(1, 1))
         font = QtGui.QFont()
-        font.setPointSize(28)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.cuTicket.setFont(font)
@@ -363,9 +363,9 @@ class Ui_MainWindow(object):
         self.cuTicket.setObjectName("cuTicket")
         self.horizontalLayout_3.addWidget(self.cuTicket)
         self.vcTicket = QtWidgets.QTextEdit(self.layoutWidget2)
-        self.vcTicket.setMaximumSize(QtCore.QSize(150, 100))
+        self.vcTicket.setMaximumSize(QtCore.QSize(1, 1))
         font = QtGui.QFont()
-        font.setPointSize(28)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.vcTicket.setFont(font)
@@ -386,9 +386,9 @@ class Ui_MainWindow(object):
         self.vcTicket.setObjectName("vcTicket")
         self.horizontalLayout_3.addWidget(self.vcTicket)
         self.dtTicket = QtWidgets.QTextEdit(self.layoutWidget2)
-        self.dtTicket.setMaximumSize(QtCore.QSize(150, 100))
+        self.dtTicket.setMaximumSize(QtCore.QSize(1, 1))
         font = QtGui.QFont()
-        font.setPointSize(28)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.dtTicket.setFont(font)
@@ -409,9 +409,9 @@ class Ui_MainWindow(object):
         self.dtTicket.setObjectName("dtTicket")
         self.horizontalLayout_3.addWidget(self.dtTicket)
         self.ptTicket = QtWidgets.QTextEdit(self.layoutWidget2)
-        self.ptTicket.setMaximumSize(QtCore.QSize(150, 100))
+        self.ptTicket.setMaximumSize(QtCore.QSize(1, 1))
         font = QtGui.QFont()
-        font.setPointSize(28)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.ptTicket.setFont(font)
@@ -470,6 +470,106 @@ class Ui_MainWindow(object):
 "mid-width: 10px;")
         self.label_6.setAlignment(QtCore.Qt.AlignCenter)
         self.label_6.setObjectName("label_6")
+        self.layoutWidget_2 = QtWidgets.QWidget(self.frame_buttons)
+        self.layoutWidget_2.setGeometry(QtCore.QRect(90, 220, 891, 102))
+        self.layoutWidget_2.setObjectName("layoutWidget_2")
+        self.horizontalLayout_6 = QtWidgets.QHBoxLayout(self.layoutWidget_2)
+        self.horizontalLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_6.setSpacing(100)
+        self.horizontalLayout_6.setObjectName("horizontalLayout_6")
+        self.cuTicket1 = QtWidgets.QTextEdit(self.layoutWidget_2)
+        self.cuTicket1.setMinimumSize(QtCore.QSize(0, 0))
+        self.cuTicket1.setMaximumSize(QtCore.QSize(150, 100))
+        font = QtGui.QFont()
+        font.setPointSize(28)
+        font.setBold(True)
+        font.setWeight(75)
+        self.cuTicket1.setFont(font)
+        self.cuTicket1.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.ForbiddenCursor))
+        self.cuTicket1.setLayoutDirection(QtCore.Qt.RightToLeft)
+        self.cuTicket1.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"color: green;\n"
+"border-style: outset;\n"
+"border-width:1px;\n"
+"border-radius: 10px;\n"
+"border-color: black;\n"
+"padding: 6px;\n"
+"mid-width: 10px;")
+        self.cuTicket1.setFrameShadow(QtWidgets.QFrame.Plain)
+        self.cuTicket1.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.cuTicket1.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.cuTicket1.setReadOnly(True)
+        self.cuTicket1.setObjectName("cuTicket1")
+        self.horizontalLayout_6.addWidget(self.cuTicket1)
+        self.vcTicket1 = QtWidgets.QTextEdit(self.layoutWidget_2)
+        self.vcTicket1.setMaximumSize(QtCore.QSize(150, 100))
+        font = QtGui.QFont()
+        font.setPointSize(28)
+        font.setBold(True)
+        font.setWeight(75)
+        self.vcTicket1.setFont(font)
+        self.vcTicket1.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.ForbiddenCursor))
+        self.vcTicket1.setLayoutDirection(QtCore.Qt.RightToLeft)
+        self.vcTicket1.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"color: green;\n"
+"border-style: outset;\n"
+"border-width:1px;\n"
+"border-radius: 10px;\n"
+"border-color: black;\n"
+"padding: 6px;\n"
+"mid-width: 10px;")
+        self.vcTicket1.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.vcTicket1.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.vcTicket1.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.vcTicket1.setReadOnly(True)
+        self.vcTicket1.setObjectName("vcTicket1")
+        self.horizontalLayout_6.addWidget(self.vcTicket1)
+        self.dtTicket1 = QtWidgets.QTextEdit(self.layoutWidget_2)
+        self.dtTicket1.setMaximumSize(QtCore.QSize(150, 100))
+        font = QtGui.QFont()
+        font.setPointSize(28)
+        font.setBold(True)
+        font.setWeight(75)
+        self.dtTicket1.setFont(font)
+        self.dtTicket1.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.ForbiddenCursor))
+        self.dtTicket1.setLayoutDirection(QtCore.Qt.RightToLeft)
+        self.dtTicket1.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"color: green;\n"
+"border-style: outset;\n"
+"border-width:1px;\n"
+"border-radius: 10px;\n"
+"border-color: black;\n"
+"padding: 6px;\n"
+"mid-width: 10px;")
+        self.dtTicket1.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.dtTicket1.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.dtTicket1.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.dtTicket1.setReadOnly(True)
+        self.dtTicket1.setObjectName("dtTicket1")
+        self.horizontalLayout_6.addWidget(self.dtTicket1)
+        self.ptTicket1 = QtWidgets.QTextEdit(self.layoutWidget_2)
+        self.ptTicket1.setMaximumSize(QtCore.QSize(150, 100))
+        font = QtGui.QFont()
+        font.setPointSize(28)
+        font.setBold(True)
+        font.setWeight(75)
+        self.ptTicket1.setFont(font)
+        self.ptTicket1.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.ForbiddenCursor))
+        self.ptTicket1.setLayoutDirection(QtCore.Qt.RightToLeft)
+        self.ptTicket1.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"color: red;\n"
+"border-style: outset;\n"
+"border-width:1px;\n"
+"border-radius: 10px;\n"
+"border-color: black;\n"
+"padding: 6px;\n"
+"mid-width: 10px;")
+        self.ptTicket1.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.ptTicket1.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.ptTicket1.setSizeAdjustPolicy(QtWidgets.QAbstractScrollArea.AdjustIgnored)
+        self.ptTicket1.setReadOnly(True)
+        self.ptTicket1.setObjectName("ptTicket1")
+        self.horizontalLayout_6.addWidget(self.ptTicket1)
         self.horizontalLayout.addWidget(self.frame_buttons)
         self.frame_3 = QtWidgets.QFrame(self.frame_content_bar)
         self.frame_3.setMaximumSize(QtCore.QSize(50, 16777215))
@@ -533,6 +633,16 @@ class Ui_MainWindow(object):
         self.label_3.setText(_translate("MainWindow", "Vaccine"))
         self.label_5.setText(_translate("MainWindow", "Dental"))
         self.label_4.setText(_translate("MainWindow", "Priority"))
+        self.cuTicket.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:10pt; font-weight:600; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:10px; margin-bottom:10px; margin-left:30px; margin-right:30px; -qt-block-indent:0; text-indent:0px; font-size:28pt;\"><br /></p></body></html>"))
         self.label_6.setText(_translate("MainWindow", "Date"))
+        self.cuTicket1.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:28pt; font-weight:600; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:10px; margin-bottom:10px; margin-left:30px; margin-right:30px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.label_credits.setText(_translate("MainWindow", "Powered By: Python"))
 
