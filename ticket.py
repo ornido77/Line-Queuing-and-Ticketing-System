@@ -126,7 +126,7 @@ class Ui_MainWindow(object):
         self.frame_buttons = QtWidgets.QFrame(self.frame_content_bar)
         self.frame_buttons.setStyleSheet("background-color: rgb(0, 85, 127);")
         self.frame_buttons.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_buttons.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_buttons.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.frame_buttons.setObjectName("frame_buttons")
         self.label = QtWidgets.QLabel(self.frame_buttons)
         self.label.setGeometry(QtCore.QRect(40, 30, 1000, 100))
@@ -431,32 +431,8 @@ class Ui_MainWindow(object):
         self.ptTicket.setReadOnly(True)
         self.ptTicket.setObjectName("ptTicket")
         self.horizontalLayout_3.addWidget(self.ptTicket)
-        self.dateTime = QtWidgets.QTextEdit(self.frame_buttons)
-        self.dateTime.setGeometry(QtCore.QRect(940, 760, 121, 61))
-        self.dateTime.setMinimumSize(QtCore.QSize(0, 0))
-        self.dateTime.setMaximumSize(QtCore.QSize(150, 100))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.dateTime.setFont(font)
-        self.dateTime.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.ForbiddenCursor))
-        self.dateTime.setLayoutDirection(QtCore.Qt.RightToLeft)
-        self.dateTime.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"color: green;\n"
-"border-style: outset;\n"
-"border-width:1px;\n"
-"border-radius: 10px;\n"
-"border-color: black;\n"
-"padding: 6px;\n"
-"mid-width: 10px;")
-        self.dateTime.setFrameShadow(QtWidgets.QFrame.Plain)
-        self.dateTime.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.dateTime.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.dateTime.setReadOnly(False)
-        self.dateTime.setObjectName("dateTime")
         self.label_6 = QtWidgets.QLabel(self.frame_buttons)
-        self.label_6.setGeometry(QtCore.QRect(950, 730, 101, 31))
+        self.label_6.setGeometry(QtCore.QRect(950, 740, 101, 31))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(12)
@@ -570,6 +546,25 @@ class Ui_MainWindow(object):
         self.ptTicket1.setReadOnly(True)
         self.ptTicket1.setObjectName("ptTicket1")
         self.horizontalLayout_6.addWidget(self.ptTicket1)
+        self.dateTime = QtWidgets.QLabel(self.frame_buttons)
+        self.dateTime.setGeometry(QtCore.QRect(940, 770, 121, 31))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.dateTime.setFont(font)
+        self.dateTime.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"color: green;\n"
+"border-style: outset;\n"
+"border-width:1px;\n"
+"border-radius: 10px;\n"
+"border-color: black;\n"
+"padding: 6px;\n"
+"mid-width: 10px;")
+        self.dateTime.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.dateTime.setText("")
+        self.dateTime.setAlignment(QtCore.Qt.AlignCenter)
+        self.dateTime.setObjectName("dateTime")
         self.horizontalLayout.addWidget(self.frame_buttons)
         self.frame_3 = QtWidgets.QFrame(self.frame_content_bar)
         self.frame_3.setMaximumSize(QtCore.QSize(50, 16777215))
@@ -638,7 +633,7 @@ class Ui_MainWindow(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:10pt; font-weight:600; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:10px; margin-bottom:10px; margin-left:30px; margin-right:30px; -qt-block-indent:0; text-indent:0px; font-size:28pt;\"><br /></p></body></html>"))
-        self.label_6.setText(_translate("MainWindow", "Date"))
+        self.label_6.setText(_translate("MainWindow", "Time Now"))
         self.cuTicket1.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"

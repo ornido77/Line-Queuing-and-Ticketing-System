@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1239</width>
-    <height>830</height>
+    <height>990</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -877,7 +877,8 @@ background-image: url(:/newPrefix/01.png);</string>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">color: rgb(71, 214, 214); background-color:none;</string>
+                <string notr="true">color: rgb(0, 0, 127);
+ background-color:none</string>
                </property>
                <property name="text">
                 <string>Ticket Number</string>
@@ -891,11 +892,12 @@ background-image: url(:/newPrefix/01.png);</string>
               <widget class="QLabel" name="label_ticketValue">
                <property name="font">
                 <font>
-                 <pointsize>120</pointsize>
+                 <pointsize>200</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">color: rgb(255, 0, 0); background-color:none</string>
+                <string notr="true">color: green;
+background-color:none;</string>
                </property>
                <property name="text">
                 <string>---</string>
@@ -916,7 +918,8 @@ background-image: url(:/newPrefix/01.png);</string>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">color: rgb(71, 214, 214); background-color:none</string>
+                <string notr="true">color: rgb(0, 0, 127);
+ background-color:none</string>
                </property>
                <property name="text">
                 <string>Please Proceed To</string>
@@ -934,7 +937,8 @@ background-image: url(:/newPrefix/01.png);</string>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">color: rgb(255, 0, 0); background-color:none</string>
+                <string notr="true">color: green;
+background-color:none</string>
                </property>
                <property name="text">
                 <string>Room 101</string>

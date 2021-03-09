@@ -319,7 +319,7 @@ QPushButton:hover{
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
+             <enum>QFrame::Sunken</enum>
             </property>
             <widget class="QLabel" name="label">
              <property name="geometry">
@@ -900,68 +900,11 @@ mid-width: 10px;</string>
               </item>
              </layout>
             </widget>
-            <widget class="QTextEdit" name="dateTime">
-             <property name="geometry">
-              <rect>
-               <x>940</x>
-               <y>760</y>
-               <width>121</width>
-               <height>61</height>
-              </rect>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>100</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>10</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="cursor" stdset="0">
-              <cursorShape>ForbiddenCursor</cursorShape>
-             </property>
-             <property name="layoutDirection">
-              <enum>Qt::RightToLeft</enum>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(255, 255, 255);
-color: green;
-border-style: outset;
-border-width:1px;
-border-radius: 10px;
-border-color: black;
-padding: 6px;
-mid-width: 10px;</string>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Plain</enum>
-             </property>
-             <property name="verticalScrollBarPolicy">
-              <enum>Qt::ScrollBarAlwaysOff</enum>
-             </property>
-             <property name="horizontalScrollBarPolicy">
-              <enum>Qt::ScrollBarAlwaysOff</enum>
-             </property>
-             <property name="readOnly">
-              <bool>false</bool>
-             </property>
-            </widget>
             <widget class="QLabel" name="label_6">
              <property name="geometry">
               <rect>
                <x>950</x>
-               <y>730</y>
+               <y>740</y>
                <width>101</width>
                <height>31</height>
               </rect>
@@ -982,7 +925,7 @@ border-color: black;
 mid-width: 10px;</string>
              </property>
              <property name="text">
-              <string>Date</string>
+              <string>Time Now</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
@@ -1195,6 +1138,42 @@ mid-width: 10px;</string>
                </widget>
               </item>
              </layout>
+            </widget>
+            <widget class="QLabel" name="dateTime">
+             <property name="geometry">
+              <rect>
+               <x>940</x>
+               <y>770</y>
+               <width>121</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);
+color: green;
+border-style: outset;
+border-width:1px;
+border-radius: 10px;
+border-color: black;
+padding: 6px;
+mid-width: 10px;</string>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
             </widget>
            </widget>
           </item>

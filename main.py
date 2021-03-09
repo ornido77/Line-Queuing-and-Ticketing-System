@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1239, 830)
+        MainWindow.resize(1239, 990)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.frame_centralwidget_layout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -352,15 +352,17 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(48)
         self.label_ticket.setFont(font)
-        self.label_ticket.setStyleSheet("color: rgb(71, 214, 214); background-color:none;")
+        self.label_ticket.setStyleSheet("color: rgb(0, 0, 127);\n"
+" background-color:none")
         self.label_ticket.setAlignment(QtCore.Qt.AlignCenter)
         self.label_ticket.setObjectName("label_ticket")
         self.frame_rightBody_layout.addWidget(self.label_ticket)
         self.label_ticketValue = QtWidgets.QLabel(self.frame_rightBody)
         font = QtGui.QFont()
-        font.setPointSize(120)
+        font.setPointSize(200)
         self.label_ticketValue.setFont(font)
-        self.label_ticketValue.setStyleSheet("color: rgb(255, 0, 0); background-color:none")
+        self.label_ticketValue.setStyleSheet("color: green;\n"
+"background-color:none;")
         self.label_ticketValue.setAlignment(QtCore.Qt.AlignCenter)
         self.label_ticketValue.setObjectName("label_ticketValue")
         self.frame_rightBody_layout.addWidget(self.label_ticketValue)
@@ -368,7 +370,8 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(48)
         self.label_procedure.setFont(font)
-        self.label_procedure.setStyleSheet("color: rgb(71, 214, 214); background-color:none")
+        self.label_procedure.setStyleSheet("color: rgb(0, 0, 127);\n"
+" background-color:none")
         self.label_procedure.setAlignment(QtCore.Qt.AlignCenter)
         self.label_procedure.setObjectName("label_procedure")
         self.frame_rightBody_layout.addWidget(self.label_procedure)
@@ -376,7 +379,8 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(72)
         self.label_roomNo.setFont(font)
-        self.label_roomNo.setStyleSheet("color: rgb(255, 0, 0); background-color:none")
+        self.label_roomNo.setStyleSheet("color: green;\n"
+"background-color:none")
         self.label_roomNo.setAlignment(QtCore.Qt.AlignCenter)
         self.label_roomNo.setObjectName("label_roomNo")
         self.frame_rightBody_layout.addWidget(self.label_roomNo)
