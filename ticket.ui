@@ -383,52 +383,6 @@ mid-width: 10px;</string>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout">
-              <item row="1" column="0">
-               <widget class="QPushButton" name="dentalBtn">
-                <property name="minimumSize">
-                 <size>
-                  <width>250</width>
-                  <height>150</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>0</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Times New Roman</family>
-                  <pointsize>24</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
-                 </font>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">QPushButton{
-	background-color: rgb(138, 155, 197);
-	color: white;
-	border-style: outset;
-	border-width:1px;
-	border-radius: 10px;
-	border-color: black;
-	padding: 6px;
-	mid-width: 10px;
-}
-QPushButton:hover{
-	background-color: rgb(186, 172, 255);
-	color: blue;
-}</string>
-                </property>
-                <property name="text">
-                 <string>Dental</string>
-                </property>
-               </widget>
-              </item>
               <item row="0" column="1">
                <widget class="QPushButton" name="vaccineBtn">
                 <property name="minimumSize">
@@ -475,52 +429,6 @@ QPushButton:hover{
                 </property>
                </widget>
               </item>
-              <item row="1" column="1">
-               <widget class="QPushButton" name="priorityBtn">
-                <property name="minimumSize">
-                 <size>
-                  <width>250</width>
-                  <height>150</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>0</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Times New Roman</family>
-                  <pointsize>24</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
-                 </font>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">QPushButton{
-	background-color: rgb(170, 42, 62);
-	color: white;
-	border-style: outset;
-	border-width:1px;
-	border-radius: 10px;
-	border-color: black;
-	padding: 6px;
-	mid-width: 10px;
-}
-QPushButton:hover{
-	background-color: rgba(170, 0, 0, 150);
-	color: red;
-}</string>
-                </property>
-                <property name="text">
-                 <string>Priority</string>
-                </property>
-               </widget>
-              </item>
               <item row="0" column="0">
                <widget class="QPushButton" name="checkUpBtn">
                 <property name="minimumSize">
@@ -564,6 +472,98 @@ QPushButton:hover{
                 </property>
                 <property name="text">
                  <string>Check Up</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="dentalBtn">
+                <property name="minimumSize">
+                 <size>
+                  <width>250</width>
+                  <height>150</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>0</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>24</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+	background-color: rgb(138, 155, 197);
+	color: white;
+	border-style: outset;
+	border-width:1px;
+	border-radius: 10px;
+	border-color: black;
+	padding: 6px;
+	mid-width: 10px;
+}
+QPushButton:hover{
+	background-color: rgb(186, 172, 255);
+	color: blue;
+}</string>
+                </property>
+                <property name="text">
+                 <string>Dental</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="priorityBtn">
+                <property name="minimumSize">
+                 <size>
+                  <width>250</width>
+                  <height>150</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>0</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>24</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+	background-color: rgb(170, 42, 62);
+	color: white;
+	border-style: outset;
+	border-width:1px;
+	border-radius: 10px;
+	border-color: black;
+	padding: 6px;
+	mid-width: 10px;
+}
+QPushButton:hover{
+	background-color: rgba(170, 0, 0, 150);
+	color: red;
+}</string>
+                </property>
+                <property name="text">
+                 <string>Priority</string>
                 </property>
                </widget>
               </item>
@@ -945,13 +945,7 @@ mid-width: 10px;</string>
                <number>100</number>
               </property>
               <item>
-               <widget class="QTextEdit" name="cuTicket1">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>0</height>
-                 </size>
-                </property>
+               <widget class="QLabel" name="cuTicket1">
                 <property name="maximumSize">
                  <size>
                   <width>150</width>
@@ -960,16 +954,8 @@ mid-width: 10px;</string>
                 </property>
                 <property name="font">
                  <font>
-                  <pointsize>28</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
+                  <pointsize>45</pointsize>
                  </font>
-                </property>
-                <property name="cursor" stdset="0">
-                 <cursorShape>ForbiddenCursor</cursorShape>
-                </property>
-                <property name="layoutDirection">
-                 <enum>Qt::RightToLeft</enum>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">background-color: rgb(255, 255, 255);
@@ -981,29 +967,16 @@ border-color: black;
 padding: 6px;
 mid-width: 10px;</string>
                 </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Plain</enum>
+                <property name="text">
+                 <string/>
                 </property>
-                <property name="verticalScrollBarPolicy">
-                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                </property>
-                <property name="horizontalScrollBarPolicy">
-                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                </property>
-                <property name="readOnly">
-                 <bool>true</bool>
-                </property>
-                <property name="html">
-                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:28pt; font-weight:600; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:10px; margin-bottom:10px; margin-left:30px; margin-right:30px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QTextEdit" name="vcTicket1">
+               <widget class="QLabel" name="vcTicket1">
                 <property name="maximumSize">
                  <size>
                   <width>150</width>
@@ -1012,16 +985,8 @@ p, li { white-space: pre-wrap; }
                 </property>
                 <property name="font">
                  <font>
-                  <pointsize>28</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
+                  <pointsize>45</pointsize>
                  </font>
-                </property>
-                <property name="cursor" stdset="0">
-                 <cursorShape>ForbiddenCursor</cursorShape>
-                </property>
-                <property name="layoutDirection">
-                 <enum>Qt::RightToLeft</enum>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">background-color: rgb(255, 255, 255);
@@ -1033,22 +998,16 @@ border-color: black;
 padding: 6px;
 mid-width: 10px;</string>
                 </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
+                <property name="text">
+                 <string/>
                 </property>
-                <property name="verticalScrollBarPolicy">
-                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                </property>
-                <property name="horizontalScrollBarPolicy">
-                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                </property>
-                <property name="readOnly">
-                 <bool>true</bool>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QTextEdit" name="dtTicket1">
+               <widget class="QLabel" name="dtTicket1">
                 <property name="maximumSize">
                  <size>
                   <width>150</width>
@@ -1057,16 +1016,8 @@ mid-width: 10px;</string>
                 </property>
                 <property name="font">
                  <font>
-                  <pointsize>28</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
+                  <pointsize>45</pointsize>
                  </font>
-                </property>
-                <property name="cursor" stdset="0">
-                 <cursorShape>ForbiddenCursor</cursorShape>
-                </property>
-                <property name="layoutDirection">
-                 <enum>Qt::RightToLeft</enum>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">background-color: rgb(255, 255, 255);
@@ -1078,22 +1029,16 @@ border-color: black;
 padding: 6px;
 mid-width: 10px;</string>
                 </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
+                <property name="text">
+                 <string/>
                 </property>
-                <property name="verticalScrollBarPolicy">
-                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                </property>
-                <property name="horizontalScrollBarPolicy">
-                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                </property>
-                <property name="readOnly">
-                 <bool>true</bool>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QTextEdit" name="ptTicket1">
+               <widget class="QLabel" name="ptTicket1">
                 <property name="maximumSize">
                  <size>
                   <width>150</width>
@@ -1102,20 +1047,12 @@ mid-width: 10px;</string>
                 </property>
                 <property name="font">
                  <font>
-                  <pointsize>28</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
+                  <pointsize>45</pointsize>
                  </font>
-                </property>
-                <property name="cursor" stdset="0">
-                 <cursorShape>ForbiddenCursor</cursorShape>
-                </property>
-                <property name="layoutDirection">
-                 <enum>Qt::RightToLeft</enum>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">background-color: rgb(255, 255, 255);
-color: red;
+color: green;
 border-style: outset;
 border-width:1px;
 border-radius: 10px;
@@ -1123,17 +1060,11 @@ border-color: black;
 padding: 6px;
 mid-width: 10px;</string>
                 </property>
-                <property name="verticalScrollBarPolicy">
-                 <enum>Qt::ScrollBarAlwaysOff</enum>
+                <property name="text">
+                 <string/>
                 </property>
-                <property name="horizontalScrollBarPolicy">
-                 <enum>Qt::ScrollBarAlwaysOff</enum>
-                </property>
-                <property name="sizeAdjustPolicy">
-                 <enum>QAbstractScrollArea::AdjustIgnored</enum>
-                </property>
-                <property name="readOnly">
-                 <bool>true</bool>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
                 </property>
                </widget>
               </item>

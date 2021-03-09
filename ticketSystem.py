@@ -81,13 +81,45 @@ class realMainWindow(QMainWindow):
         ########################################################################
         self.show()
 
-        self.html ="<p class= 'head'>Bagbaguin Health Center and Lying In Clinic</h1>" \
-               "<p class= 'service'>Service: Check Up</p> <p class = 'ticket'>C%s</p>" \
-               "<p class= 'dateTime'>%s %s</p>" % (str(checkup), str(date), self.ui.dateTime.text())
+        ##### TICKETS
+        # CHECKUP
+        self.cuhtml ="<p class= 'head'>Bagbaguin Health Center and Lying In Clinic</h1>" \
+                    "<p class= 'service'>Service: Vaccine       /       Room: 101</p> <p class = 'ticket'>C%s</p>" \
+                    "<p class= 'dateTime'>%s %s</p>" % (str(checkup), str(date), self.ui.dateTime.text())
         self.cuDoc = QtGui.QTextDocument(self)
         self.cuDoc.setDefaultStyleSheet(".head { font-size: 60px; text-align:center }" ".service{ font-size: 45px}"
-                                        ".ticket{ font-size: 275px; text-align: center; font-style: bold}" ".dateTime{font-size: 60px}")
-        self.cuDoc.setHtml(self.html)
+                                        ".ticket{ font-size: 275px; text-align: center; font-style: bold}" ".dateTime{font-size: 70px}")
+        self.cuDoc.setHtml(self.cuhtml)
+
+        # VACCINE
+        self.vchtml = "<p class= 'head'>Bagbaguin Health Center and Lying In Clinic</h1>" \
+                    "<p class= 'service'>Service: Vaccine       /       Room: 102</p><p class = 'ticket'>V%s</p>" \
+                    "<p class= 'dateTime'>%s %s</p>" % (str(vaccine), str(date), self.ui.dateTime.text())
+        self.vcDoc = QtGui.QTextDocument(self)
+        self.vcDoc.setDefaultStyleSheet(".head { font-size: 60px; text-align:center }" ".service{ font-size: 45px}"
+                                        ".ticket{ font-size: 275px; text-align: center; font-style: bold}" ".dateTime{font-size: 70px}")
+        self.vcDoc.setHtml(self.vchtml)
+
+        # DENTAL
+        self.dthtml = "<p class= 'head'>Bagbaguin Health Center and Lying In Clinic</h1>" \
+                      "<p class= 'service'>Service: Vaccine       /       Room: 103</p> <p class = 'ticket'>D%s</p>" \
+                      "<p class= 'dateTime'>%s %s</p>" % (str(dental), str(date), self.ui.dateTime.text())
+        self.dtDoc = QtGui.QTextDocument(self)
+        self.dtDoc.setDefaultStyleSheet(".head { font-size: 60px; text-align:center }" ".service{ font-size: 45px}"
+                                        ".ticket{ font-size: 275px; text-align: center; font-style: bold}" ".dateTime{font-size: 70px}")
+        self.dtDoc.setHtml(self.dthtml)
+
+        # PRIORITY
+        self.pthtml = "<p class= 'head'>Bagbaguin Health Center and Lying In Clinic</h1>" \
+                      "<p class= 'service'>PRIORITY</p> <p class = 'ticket'>P%s</p>" \
+                      "<p class= 'dateTime'>%s %s</p>" % (str(priority), str(date), self.ui.dateTime.text())
+        self.ptDoc = QtGui.QTextDocument(self)
+        self.ptDoc.setDefaultStyleSheet(".head { font-size: 60px; text-align:center }" ".service{ font-size: 45px}"
+                                        ".ticket{ font-size: 275px; text-align: center; font-style: bold}" ".dateTime{font-size: 70px}")
+        self.ptDoc.setHtml(self.pthtml)
+
+
+
         self.ui.cuTicket1.setText(str(checkup1))
         self.ui.vcTicket1.setText(str(vaccine1))
         self.ui.dtTicket1.setText(str(dental1))
@@ -108,7 +140,7 @@ class realMainWindow(QMainWindow):
         dialog = QPrintDialog(printer, self)
 
         if dialog.exec_() == QPrintDialog.Accepted:
-            self.document1.print_(printer)
+            self.cuDoc.print_(printer)
     def printVcTicket(self):
         printer = QPrinter(QPrinter.HighResolution)
         printer.setOrientation(QPrinter.Landscape)
@@ -116,7 +148,7 @@ class realMainWindow(QMainWindow):
         dialog = QPrintDialog(printer, self)
 
         if dialog.exec_() == QPrintDialog.Accepted:
-            self.ui.vcTicket.print_(printer)
+            self.vcDoc.print_(printer)
     def printDtTicket(self):
         printer = QPrinter(QPrinter.HighResolution)
         printer.setOrientation(QPrinter.Landscape)
@@ -124,7 +156,7 @@ class realMainWindow(QMainWindow):
         dialog = QPrintDialog(printer, self)
 
         if dialog.exec_() == QPrintDialog.Accepted:
-            self.ui.dtTicket.print_(printer)
+            self.dtDoc.print_(printer)
     def printPtTicket(self):
         printer = QPrinter(QPrinter.HighResolution)
         printer.setOrientation(QPrinter.Landscape)
@@ -132,31 +164,31 @@ class realMainWindow(QMainWindow):
         dialog = QPrintDialog(printer, self)
 
         if dialog.exec_() == QPrintDialog.Accepted:
-            self.ui.ptTicket.print_(printer)
+            self.ptDoc.print_(printer)
 ### INCREMENT
     def cuIncre(self):
         global checkup, checkup1
         checkup += 1
         checkup1 += 1
-        self.cuDoc.setHtml(self.html)
+        self.cuDoc.setHtml(self.cuhtml)
         self.ui.cuTicket1.setText(str(checkup1))
     def vcIncre(self):
         global vaccine, vaccine1
         vaccine += 1
         vaccine1 += 1
-        self.ui.vcTicket.setText(str(self.ui.label.text()) + "\nTicket Number: V"+ str(vaccine) + "\nService: Vaccine" + "\nDate and Time: "+ str(date) + " " + str(timenow))
+        self.vcDoc.setHtml(self.vchtml)
         self.ui.vcTicket1.setText(str(vaccine1))
     def dtIncre(self):
         global dental, dental1
         dental += 1
         dental1 += 1
-        self.ui.dtTicket.setText(str(self.ui.label.text()) + "\nTicket Number: D"+ str(dental) + "\nService: Dental" + "\nDate and Time: "+ str(date) + " " + str(timenow))
+        self.dtDoc.setHtml(self.dthtml)
         self.ui.dtTicket1.setText(str(dental1))
     def ptIncre(self):
         global priority, priority1
         priority += 1
         priority1 += 1
-        self.ui.ptTicket.setText(str(self.ui.label.text()) + "\nTicket Number: P"+ str(priority) + "\nService: Priority" + "\nDate and Time: "+ str(date) + " " + str(timenow))
+        self.ptDoc.setHtml(self.pthtml)
         self.ui.ptTicket1.setText(str(priority1))
 
 ### PREVIEW
@@ -176,35 +208,41 @@ class realMainWindow(QMainWindow):
     def vprint_preview_dialog(self):
         printer = QPrinter(QPrinter.HighResolution)
         printer.setOrientation(QPrinter.Landscape)
-        printer.setPageSize(QPrinter.A7)
+        printer.setPageSize(QPrinter.A8)
+        self.vcDoc.setPageSize(
+            QtCore.QSizeF(printer.width(), printer.height()))
         previewDialog = QPrintPreviewDialog(printer, self)
         previewDialog.paintRequested.connect(self.vprint_preview)
         previewDialog.exec()
 
     def vprint_preview(self, printer):
-        self.ui.vcTicket.print_(printer)
+        self.vcDoc.print_(printer)
 
     def dprint_preview_dialog(self):
         printer = QPrinter(QPrinter.HighResolution)
         printer.setOrientation(QPrinter.Landscape)
-        printer.setPageSize(QPrinter.A7)
+        printer.setPageSize(QPrinter.A8)
+        self.dtDoc.setPageSize(
+            QtCore.QSizeF(printer.width(), printer.height()))
         previewDialog = QPrintPreviewDialog(printer, self)
         previewDialog.paintRequested.connect(self.dprint_preview)
         previewDialog.exec()
 
     def dprint_preview(self, printer):
-        self.ui.dtTicket.print_(printer)
+        self.dtDoc.print_(printer)
 
     def pprint_preview_dialog(self):
         printer = QPrinter(QPrinter.HighResolution)
         printer.setOrientation(QPrinter.Landscape)
-        printer.setPageSize(QPrinter.A7)
+        printer.setPageSize(QPrinter.A8)
+        self.ptDoc.setPageSize(
+            QtCore.QSizeF(printer.width(), printer.height()))
         previewDialog = QPrintPreviewDialog(printer, self)
         previewDialog.paintRequested.connect(self.pprint_preview)
         previewDialog.exec()
 
     def pprint_preview(self, printer):
-        self.ui.ptTicket.print_(printer)
+        self.ptDoc.print_(printer)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

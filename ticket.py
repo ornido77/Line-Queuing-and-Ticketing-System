@@ -152,32 +152,6 @@ class Ui_MainWindow(object):
         self.gridLayout = QtWidgets.QGridLayout(self.layoutWidget)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.gridLayout.setObjectName("gridLayout")
-        self.dentalBtn = QtWidgets.QPushButton(self.layoutWidget)
-        self.dentalBtn.setMinimumSize(QtCore.QSize(250, 150))
-        self.dentalBtn.setMaximumSize(QtCore.QSize(0, 16777215))
-        font = QtGui.QFont()
-        font.setFamily("Times New Roman")
-        font.setPointSize(24)
-        font.setBold(True)
-        font.setWeight(75)
-        self.dentalBtn.setFont(font)
-        self.dentalBtn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.dentalBtn.setStyleSheet("QPushButton{\n"
-"    background-color: rgb(138, 155, 197);\n"
-"    color: white;\n"
-"    border-style: outset;\n"
-"    border-width:1px;\n"
-"    border-radius: 10px;\n"
-"    border-color: black;\n"
-"    padding: 6px;\n"
-"    mid-width: 10px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"    background-color: rgb(186, 172, 255);\n"
-"    color: blue;\n"
-"}")
-        self.dentalBtn.setObjectName("dentalBtn")
-        self.gridLayout.addWidget(self.dentalBtn, 1, 0, 1, 1)
         self.vaccineBtn = QtWidgets.QPushButton(self.layoutWidget)
         self.vaccineBtn.setMinimumSize(QtCore.QSize(250, 150))
         self.vaccineBtn.setMaximumSize(QtCore.QSize(0, 16777215))
@@ -204,32 +178,6 @@ class Ui_MainWindow(object):
 "}")
         self.vaccineBtn.setObjectName("vaccineBtn")
         self.gridLayout.addWidget(self.vaccineBtn, 0, 1, 1, 1)
-        self.priorityBtn = QtWidgets.QPushButton(self.layoutWidget)
-        self.priorityBtn.setMinimumSize(QtCore.QSize(250, 150))
-        self.priorityBtn.setMaximumSize(QtCore.QSize(0, 16777215))
-        font = QtGui.QFont()
-        font.setFamily("Times New Roman")
-        font.setPointSize(24)
-        font.setBold(True)
-        font.setWeight(75)
-        self.priorityBtn.setFont(font)
-        self.priorityBtn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.priorityBtn.setStyleSheet("QPushButton{\n"
-"    background-color: rgb(170, 42, 62);\n"
-"    color: white;\n"
-"    border-style: outset;\n"
-"    border-width:1px;\n"
-"    border-radius: 10px;\n"
-"    border-color: black;\n"
-"    padding: 6px;\n"
-"    mid-width: 10px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"    background-color: rgba(170, 0, 0, 150);\n"
-"    color: red;\n"
-"}")
-        self.priorityBtn.setObjectName("priorityBtn")
-        self.gridLayout.addWidget(self.priorityBtn, 1, 1, 1, 1)
         self.checkUpBtn = QtWidgets.QPushButton(self.layoutWidget)
         self.checkUpBtn.setMinimumSize(QtCore.QSize(250, 150))
         self.checkUpBtn.setMaximumSize(QtCore.QSize(0, 16777215))
@@ -256,6 +204,58 @@ class Ui_MainWindow(object):
 "}")
         self.checkUpBtn.setObjectName("checkUpBtn")
         self.gridLayout.addWidget(self.checkUpBtn, 0, 0, 1, 1)
+        self.dentalBtn = QtWidgets.QPushButton(self.layoutWidget)
+        self.dentalBtn.setMinimumSize(QtCore.QSize(250, 150))
+        self.dentalBtn.setMaximumSize(QtCore.QSize(0, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(24)
+        font.setBold(True)
+        font.setWeight(75)
+        self.dentalBtn.setFont(font)
+        self.dentalBtn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.dentalBtn.setStyleSheet("QPushButton{\n"
+"    background-color: rgb(138, 155, 197);\n"
+"    color: white;\n"
+"    border-style: outset;\n"
+"    border-width:1px;\n"
+"    border-radius: 10px;\n"
+"    border-color: black;\n"
+"    padding: 6px;\n"
+"    mid-width: 10px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"    background-color: rgb(186, 172, 255);\n"
+"    color: blue;\n"
+"}")
+        self.dentalBtn.setObjectName("dentalBtn")
+        self.gridLayout.addWidget(self.dentalBtn, 1, 0, 1, 1)
+        self.priorityBtn = QtWidgets.QPushButton(self.layoutWidget)
+        self.priorityBtn.setMinimumSize(QtCore.QSize(250, 150))
+        self.priorityBtn.setMaximumSize(QtCore.QSize(0, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(24)
+        font.setBold(True)
+        font.setWeight(75)
+        self.priorityBtn.setFont(font)
+        self.priorityBtn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.priorityBtn.setStyleSheet("QPushButton{\n"
+"    background-color: rgb(170, 42, 62);\n"
+"    color: white;\n"
+"    border-style: outset;\n"
+"    border-width:1px;\n"
+"    border-radius: 10px;\n"
+"    border-color: black;\n"
+"    padding: 6px;\n"
+"    mid-width: 10px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"    background-color: rgba(170, 0, 0, 150);\n"
+"    color: red;\n"
+"}")
+        self.priorityBtn.setObjectName("priorityBtn")
+        self.gridLayout.addWidget(self.priorityBtn, 1, 1, 1, 1)
         self.layoutWidget1 = QtWidgets.QWidget(self.frame_buttons)
         self.layoutWidget1.setGeometry(QtCore.QRect(60, 160, 961, 61))
         self.layoutWidget1.setObjectName("layoutWidget1")
@@ -453,16 +453,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout_6.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_6.setSpacing(100)
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
-        self.cuTicket1 = QtWidgets.QTextEdit(self.layoutWidget_2)
-        self.cuTicket1.setMinimumSize(QtCore.QSize(0, 0))
+        self.cuTicket1 = QtWidgets.QLabel(self.layoutWidget_2)
         self.cuTicket1.setMaximumSize(QtCore.QSize(150, 100))
         font = QtGui.QFont()
-        font.setPointSize(28)
-        font.setBold(True)
-        font.setWeight(75)
+        font.setPointSize(45)
         self.cuTicket1.setFont(font)
-        self.cuTicket1.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.ForbiddenCursor))
-        self.cuTicket1.setLayoutDirection(QtCore.Qt.RightToLeft)
         self.cuTicket1.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "color: green;\n"
 "border-style: outset;\n"
@@ -471,21 +466,15 @@ class Ui_MainWindow(object):
 "border-color: black;\n"
 "padding: 6px;\n"
 "mid-width: 10px;")
-        self.cuTicket1.setFrameShadow(QtWidgets.QFrame.Plain)
-        self.cuTicket1.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.cuTicket1.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.cuTicket1.setReadOnly(True)
+        self.cuTicket1.setText("")
+        self.cuTicket1.setAlignment(QtCore.Qt.AlignCenter)
         self.cuTicket1.setObjectName("cuTicket1")
         self.horizontalLayout_6.addWidget(self.cuTicket1)
-        self.vcTicket1 = QtWidgets.QTextEdit(self.layoutWidget_2)
+        self.vcTicket1 = QtWidgets.QLabel(self.layoutWidget_2)
         self.vcTicket1.setMaximumSize(QtCore.QSize(150, 100))
         font = QtGui.QFont()
-        font.setPointSize(28)
-        font.setBold(True)
-        font.setWeight(75)
+        font.setPointSize(45)
         self.vcTicket1.setFont(font)
-        self.vcTicket1.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.ForbiddenCursor))
-        self.vcTicket1.setLayoutDirection(QtCore.Qt.RightToLeft)
         self.vcTicket1.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "color: green;\n"
 "border-style: outset;\n"
@@ -494,21 +483,15 @@ class Ui_MainWindow(object):
 "border-color: black;\n"
 "padding: 6px;\n"
 "mid-width: 10px;")
-        self.vcTicket1.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.vcTicket1.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.vcTicket1.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.vcTicket1.setReadOnly(True)
+        self.vcTicket1.setText("")
+        self.vcTicket1.setAlignment(QtCore.Qt.AlignCenter)
         self.vcTicket1.setObjectName("vcTicket1")
         self.horizontalLayout_6.addWidget(self.vcTicket1)
-        self.dtTicket1 = QtWidgets.QTextEdit(self.layoutWidget_2)
+        self.dtTicket1 = QtWidgets.QLabel(self.layoutWidget_2)
         self.dtTicket1.setMaximumSize(QtCore.QSize(150, 100))
         font = QtGui.QFont()
-        font.setPointSize(28)
-        font.setBold(True)
-        font.setWeight(75)
+        font.setPointSize(45)
         self.dtTicket1.setFont(font)
-        self.dtTicket1.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.ForbiddenCursor))
-        self.dtTicket1.setLayoutDirection(QtCore.Qt.RightToLeft)
         self.dtTicket1.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "color: green;\n"
 "border-style: outset;\n"
@@ -517,33 +500,25 @@ class Ui_MainWindow(object):
 "border-color: black;\n"
 "padding: 6px;\n"
 "mid-width: 10px;")
-        self.dtTicket1.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.dtTicket1.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.dtTicket1.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.dtTicket1.setReadOnly(True)
+        self.dtTicket1.setText("")
+        self.dtTicket1.setAlignment(QtCore.Qt.AlignCenter)
         self.dtTicket1.setObjectName("dtTicket1")
         self.horizontalLayout_6.addWidget(self.dtTicket1)
-        self.ptTicket1 = QtWidgets.QTextEdit(self.layoutWidget_2)
+        self.ptTicket1 = QtWidgets.QLabel(self.layoutWidget_2)
         self.ptTicket1.setMaximumSize(QtCore.QSize(150, 100))
         font = QtGui.QFont()
-        font.setPointSize(28)
-        font.setBold(True)
-        font.setWeight(75)
+        font.setPointSize(45)
         self.ptTicket1.setFont(font)
-        self.ptTicket1.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.ForbiddenCursor))
-        self.ptTicket1.setLayoutDirection(QtCore.Qt.RightToLeft)
         self.ptTicket1.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"color: red;\n"
+"color: green;\n"
 "border-style: outset;\n"
 "border-width:1px;\n"
 "border-radius: 10px;\n"
 "border-color: black;\n"
 "padding: 6px;\n"
 "mid-width: 10px;")
-        self.ptTicket1.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.ptTicket1.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.ptTicket1.setSizeAdjustPolicy(QtWidgets.QAbstractScrollArea.AdjustIgnored)
-        self.ptTicket1.setReadOnly(True)
+        self.ptTicket1.setText("")
+        self.ptTicket1.setAlignment(QtCore.Qt.AlignCenter)
         self.ptTicket1.setObjectName("ptTicket1")
         self.horizontalLayout_6.addWidget(self.ptTicket1)
         self.dateTime = QtWidgets.QLabel(self.frame_buttons)
@@ -620,10 +595,10 @@ class Ui_MainWindow(object):
         self.label.setToolTip(_translate("MainWindow", "<html><head/><body><p>Bagbaguin Health Center and Lying-In Clinic</p></body></html>"))
         self.label.setWhatsThis(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
         self.label.setText(_translate("MainWindow", "Bagbaguin Health Center and Lying - In Clinic"))
-        self.dentalBtn.setText(_translate("MainWindow", "Dental"))
         self.vaccineBtn.setText(_translate("MainWindow", "Vaccine"))
-        self.priorityBtn.setText(_translate("MainWindow", "Priority"))
         self.checkUpBtn.setText(_translate("MainWindow", "Check Up"))
+        self.dentalBtn.setText(_translate("MainWindow", "Dental"))
+        self.priorityBtn.setText(_translate("MainWindow", "Priority"))
         self.label_2.setText(_translate("MainWindow", "Check Up"))
         self.label_3.setText(_translate("MainWindow", "Vaccine"))
         self.label_5.setText(_translate("MainWindow", "Dental"))
@@ -634,10 +609,5 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:10pt; font-weight:600; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:10px; margin-bottom:10px; margin-left:30px; margin-right:30px; -qt-block-indent:0; text-indent:0px; font-size:28pt;\"><br /></p></body></html>"))
         self.label_6.setText(_translate("MainWindow", "Time Now"))
-        self.cuTicket1.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:28pt; font-weight:600; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:10px; margin-bottom:10px; margin-left:30px; margin-right:30px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.label_credits.setText(_translate("MainWindow", "Powered By: Python"))
 
