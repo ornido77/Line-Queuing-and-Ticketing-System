@@ -111,11 +111,11 @@ class realMainWindow(QMainWindow):
 
         # PRIORITY
         self.pthtml = "<p class= 'head'>Bagbaguin Health Center</p><p class= 'head'> and Lying In Clinic</p>" \
-                      "<p class= 'service'>PRIORITY</p> <p class = 'ticket'>PRRTY-%s</p>" \
+                      "<p class= 'service'>PRIORITY</p> <p class = 'ticket'>PRIO-%s</p>" \
                       "<p class= 'dateTime'>%s %s</p>" % (str(priority), str(date), self.ui.dateTime.text())
         self.ptDoc = QtGui.QTextDocument(self)
         self.ptDoc.setDefaultStyleSheet(".head { font-size: 60px; text-align:center }" ".service{ font-size: 45px; text-align: center}"
-                                        ".ticket{ font-size: 200px; text-align: center; font-style: bold}" ".dateTime{font-size: 70px; text-align: center}")
+                                        ".ticket{ font-size: 200px; text-align: center;color: red}" ".dateTime{font-size: 70px; text-align: center}")
         self.ptDoc.setHtml(self.pthtml)
 
 
