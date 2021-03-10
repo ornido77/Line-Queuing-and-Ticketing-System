@@ -84,38 +84,38 @@ class realMainWindow(QMainWindow):
         ##### TICKETS
         # CHECKUP
         self.cuhtml ="<p class= 'head'>Bagbaguin Health Center</p><p class= 'head'> and Lying In Clinic</p>" \
-                    "<p class= 'service'>Service: Vaccine       /       Room: 101</p> <p class = 'ticket'>C%s</p>" \
+                    "<p class= 'service'>Service: Checkup       /       Room: 101</p> <p class = 'ticket'>CHKUP-%s</p>" \
                     "<p class= 'dateTime'>%s %s</p>" % (str(checkup), str(date), self.ui.dateTime.text())
         self.cuDoc = QtGui.QTextDocument(self)
         self.cuDoc.setDefaultStyleSheet(".head { font-size: 60px; text-align: center }" ".service{ font-size: 45px; text-align: center}"
-                                        ".ticket{ font-size: 275px; font-style: bold; text-align: center}" ".dateTime{font-size: 70px; text-align: center}")
+                                        ".ticket{ font-size: 200px; font-style: bold; text-align: center}" ".dateTime{font-size: 70px; text-align: center}")
         self.cuDoc.setHtml(self.cuhtml)
 
         # VACCINE
         self.vchtml = "<p class= 'head'>Bagbaguin Health Center</p><p class= 'head'> and Lying In Clinic</p>"\
-                    "<p class= 'service'>Service: Vaccine       /       Room: 102</p><p class = 'ticket'>V%s</p>" \
+                    "<p class= 'service'>Service: Vaccine       /       Room: 102</p><p class = 'ticket'>VAC-%s</p>" \
                     "<p class= 'dateTime'>%s %s</p>" % (str(vaccine), str(date), self.ui.dateTime.text())
         self.vcDoc = QtGui.QTextDocument(self)
         self.vcDoc.setDefaultStyleSheet(".head { font-size: 60px; text-align:center }" ".service{ font-size: 45px; text-align: center}"
-                                        ".ticket{ font-size: 275px; text-align: center; font-style: bold}" ".dateTime{font-size: 70px; text-align: center}")
+                                        ".ticket{ font-size: 200px; text-align: center; font-style: bold}" ".dateTime{font-size: 70px; text-align: center}")
         self.vcDoc.setHtml(self.vchtml)
 
         # DENTAL
         self.dthtml = "<p class= 'head'>Bagbaguin Health Center</p><p class= 'head'> and Lying In Clinic</p>" \
-                      "<p class= 'service'>Service: Vaccine       /       Room: 103</p> <p class = 'ticket'>D%s</p>" \
+                      "<p class= 'service'>Service: Dental       /       Room: 103</p> <p class = 'ticket'>DNTL-%s</p>" \
                       "<p class= 'dateTime'>%s %s</p>" % (str(dental), str(date), self.ui.dateTime.text())
         self.dtDoc = QtGui.QTextDocument(self)
         self.dtDoc.setDefaultStyleSheet(".head { font-size: 60px; text-align:center }" ".service{ font-size: 45px; text-align: center}"
-                                        ".ticket{ font-size: 275px; text-align: center; font-style: bold}" ".dateTime{font-size: 70px; text-align: center}")
+                                        ".ticket{ font-size: 200px; text-align: center; font-style: bold}" ".dateTime{font-size: 70px; text-align: center}")
         self.dtDoc.setHtml(self.dthtml)
 
         # PRIORITY
         self.pthtml = "<p class= 'head'>Bagbaguin Health Center</p><p class= 'head'> and Lying In Clinic</p>" \
-                      "<p class= 'service'>PRIORITY</p> <p class = 'ticket'>P%s</p>" \
+                      "<p class= 'service'>PRIORITY</p> <p class = 'ticket'>PRRTY-%s</p>" \
                       "<p class= 'dateTime'>%s %s</p>" % (str(priority), str(date), self.ui.dateTime.text())
         self.ptDoc = QtGui.QTextDocument(self)
         self.ptDoc.setDefaultStyleSheet(".head { font-size: 60px; text-align:center }" ".service{ font-size: 45px; text-align: center}"
-                                        ".ticket{ font-size: 275px; text-align: center; font-style: bold}" ".dateTime{font-size: 70px; text-align: center}")
+                                        ".ticket{ font-size: 200px; text-align: center; font-style: bold}" ".dateTime{font-size: 70px; text-align: center}")
         self.ptDoc.setHtml(self.pthtml)
 
 
